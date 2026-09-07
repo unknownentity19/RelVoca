@@ -1,0 +1,4 @@
+{
+  "_comment": "OFFLINE ARCHIVAL STUB - /f5240b06061a5887/vitals. Not part of the original crawl. This is the Vercel Speed Insights beacon endpoint, proxied first-party through voiceflow.com and named by the inline speed-insights config in every archived page. The live endpoint accepted POSTed web-vital samples and answered with an empty body; nothing in the page reads the response. Serving this static file turns the 404 into a 200 so no telemetry write fails loudly. Inert: static data, and because the paired script.js stub never assembles a sample, nothing is ever sent here.",
+  "_stub": true
+}

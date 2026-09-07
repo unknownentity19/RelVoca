@@ -1,0 +1,2158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/agent/get-agent</loc>
+    <lastmod>2026-08-23T18:57:58.746Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/agent/update-agent</loc>
+    <lastmod>2026-08-23T18:57:58.763Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-api-tool-usage</loc>
+    <lastmod>2026-08-23T18:58:00.313Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-call-count</loc>
+    <lastmod>2026-08-23T18:58:00.072Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-call-duration</loc>
+    <lastmod>2026-08-23T18:58:00.081Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-category-token-usage</loc>
+    <lastmod>2026-08-23T18:58:00.256Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-daily-token-usage</loc>
+    <lastmod>2026-08-23T18:58:00.239Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-entity-token-usage</loc>
+    <lastmod>2026-08-23T18:58:00.248Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-function-usage</loc>
+    <lastmod>2026-08-23T18:58:00.302Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-hourly-organization-token-usage</loc>
+    <lastmod>2026-08-23T18:58:00.218Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-hourly-project-token-usage</loc>
+    <lastmod>2026-08-23T18:58:00.230Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-integration-usage</loc>
+    <lastmod>2026-08-23T18:58:00.348Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-intent-usage</loc>
+    <lastmod>2026-08-23T18:58:00.290Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-knowledge-base-document-usage</loc>
+    <lastmod>2026-08-23T18:58:00.336Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-mcp-tool-usage</loc>
+    <lastmod>2026-08-23T18:58:00.324Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-organization-token-usage</loc>
+    <lastmod>2026-08-23T18:58:00.189Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-playbook-usage</loc>
+    <lastmod>2026-08-23T18:58:00.264Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-project-interaction-count</loc>
+    <lastmod>2026-08-23T18:58:00.125Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-project-token-usage</loc>
+    <lastmod>2026-08-23T18:58:00.209Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-project-transcript-count</loc>
+    <lastmod>2026-08-23T18:58:00.099Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-prompt-usage</loc>
+    <lastmod>2026-08-23T18:58:00.280Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-transcript-cost</loc>
+    <lastmod>2026-08-23T18:58:00.108Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-unique-user-count</loc>
+    <lastmod>2026-08-23T18:58:00.359Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-workflow-usage</loc>
+    <lastmod>2026-08-23T18:58:00.272Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-workspace-interaction-count</loc>
+    <lastmod>2026-08-23T18:58:00.117Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-workspace-token-usage</loc>
+    <lastmod>2026-08-23T18:58:00.199Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/analytics/query-workspace-transcript-count</loc>
+    <lastmod>2026-08-23T18:58:00.090Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-overview</loc>
+    <lastmod>2026-08-17T18:54:25.312Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool-variable/create-many-variables</loc>
+    <lastmod>2026-08-23T18:57:59.271Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool-variable/create-variable</loc>
+    <lastmod>2026-08-23T18:57:59.262Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool-variable/delete-variable</loc>
+    <lastmod>2026-08-23T18:57:59.296Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool-variable/get-variable</loc>
+    <lastmod>2026-08-23T18:57:59.279Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool-variable/list-variables</loc>
+    <lastmod>2026-08-23T18:57:59.254Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool-variable/update-variable</loc>
+    <lastmod>2026-08-23T18:57:59.287Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool/create-api-tool</loc>
+    <lastmod>2026-08-23T18:57:59.211Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool/create-many-api-tools</loc>
+    <lastmod>2026-08-23T18:57:59.219Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool/delete-api-tool</loc>
+    <lastmod>2026-08-23T18:57:59.245Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool/get-api-tool</loc>
+    <lastmod>2026-08-23T18:57:59.227Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool/list-api-tools</loc>
+    <lastmod>2026-08-23T18:57:59.202Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/api-tool/update-api-tool</loc>
+    <lastmod>2026-08-23T18:57:59.236Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/authentication</loc>
+    <lastmod>2026-08-16T13:30:46.529Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/conversation-state/delete-state</loc>
+    <lastmod>2026-08-23T18:57:58.704Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/conversation-state/get-state</loc>
+    <lastmod>2026-08-23T18:57:58.680Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/conversation-state/update-state</loc>
+    <lastmod>2026-08-23T18:57:58.692Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/conversation-state/update-variables</loc>
+    <lastmod>2026-08-23T18:57:58.719Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/conversation/send</loc>
+    <lastmod>2026-08-23T18:57:58.664Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/conversations-api/interact-socket</loc>
+    <lastmod>2026-08-17T18:54:25.317Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/document/create-table-document</loc>
+    <lastmod>2026-08-23T18:57:59.503Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/document/create-text-document</loc>
+    <lastmod>2026-08-23T18:57:59.488Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/document/create-url-document</loc>
+    <lastmod>2026-08-23T18:57:59.435Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/document/delete-document</loc>
+    <lastmod>2026-08-23T18:57:59.542Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/document/get-document</loc>
+    <lastmod>2026-08-23T18:57:59.516Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/document/list-documents</loc>
+    <lastmod>2026-08-23T18:57:59.426Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/document/update-document</loc>
+    <lastmod>2026-08-23T18:57:59.531Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/environment/clone-environment</loc>
+    <lastmod>2026-08-23T18:57:59.724Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/environment/compile-environment</loc>
+    <lastmod>2026-08-23T18:57:59.716Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/environment/delete-environment</loc>
+    <lastmod>2026-08-23T18:57:59.698Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/environment/export-environment</loc>
+    <lastmod>2026-08-23T18:57:59.707Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/environment/get-environment</loc>
+    <lastmod>2026-08-23T18:57:59.680Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/environment/list-environments</loc>
+    <lastmod>2026-08-23T18:57:59.652Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/environment/merge-environments</loc>
+    <lastmod>2026-08-23T18:57:59.661Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/environment/publish-environment</loc>
+    <lastmod>2026-08-23T18:57:59.732Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/environment/update-environment</loc>
+    <lastmod>2026-08-23T18:57:59.689Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/environment/update-traffic-split</loc>
+    <lastmod>2026-08-23T18:57:59.670Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/evaluation/create-evaluation</loc>
+    <lastmod>2026-08-23T18:57:59.817Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/evaluation/delete-evaluation</loc>
+    <lastmod>2026-08-23T18:57:59.841Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/evaluation/get-evaluation</loc>
+    <lastmod>2026-08-23T18:57:59.825Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/evaluation/list-evaluations</loc>
+    <lastmod>2026-08-23T18:57:59.808Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/evaluation/run-evaluation</loc>
+    <lastmod>2026-08-23T18:57:59.849Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/evaluation/update-evaluation</loc>
+    <lastmod>2026-08-23T18:57:59.833Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-path/create-many-paths</loc>
+    <lastmod>2026-08-23T18:57:58.948Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-path/create-path</loc>
+    <lastmod>2026-08-23T18:57:58.933Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-path/delete-path</loc>
+    <lastmod>2026-08-23T18:57:58.988Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-path/get-path</loc>
+    <lastmod>2026-08-23T18:57:58.959Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-path/list-paths</loc>
+    <lastmod>2026-08-23T18:57:58.917Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-path/update-path</loc>
+    <lastmod>2026-08-23T18:57:58.973Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-variable/create-many-variables</loc>
+    <lastmod>2026-08-23T18:57:59.027Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-variable/create-variable</loc>
+    <lastmod>2026-08-23T18:57:59.014Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-variable/delete-variable</loc>
+    <lastmod>2026-08-23T18:57:59.100Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-variable/get-variable</loc>
+    <lastmod>2026-08-23T18:57:59.069Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-variable/list-variables</loc>
+    <lastmod>2026-08-23T18:57:59.001Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function-variable/update-variable</loc>
+    <lastmod>2026-08-23T18:57:59.082Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function/create-function</loc>
+    <lastmod>2026-08-23T18:57:58.857Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function/create-many-functions</loc>
+    <lastmod>2026-08-23T18:57:58.869Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function/delete-function</loc>
+    <lastmod>2026-08-23T18:57:58.905Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function/get-function</loc>
+    <lastmod>2026-08-23T18:57:58.882Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function/list-functions</loc>
+    <lastmod>2026-08-23T18:57:58.845Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/function/update-function</loc>
+    <lastmod>2026-08-23T18:57:58.894Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/knowledge-base/query-knowledge-base</loc>
+    <lastmod>2026-08-23T18:57:58.733Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/mcp-server/create-mcp-server</loc>
+    <lastmod>2026-08-23T18:57:59.365Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/mcp-server/delete-mcp-server</loc>
+    <lastmod>2026-08-23T18:57:59.392Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/mcp-server/get-mcp-server</loc>
+    <lastmod>2026-08-23T18:57:59.374Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/mcp-server/list-mcp-servers</loc>
+    <lastmod>2026-08-23T18:57:59.357Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/mcp-server/sync-mcp-server</loc>
+    <lastmod>2026-08-23T18:57:59.400Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/mcp-server/update-mcp-server</loc>
+    <lastmod>2026-08-23T18:57:59.383Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/mcp-tool/get-mcp-tool</loc>
+    <lastmod>2026-08-23T18:57:59.418Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/mcp-tool/list-mcp-tools</loc>
+    <lastmod>2026-08-23T18:57:59.409Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/playbook/create-many-playbooks</loc>
+    <lastmod>2026-08-23T18:57:58.797Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/playbook/create-playbook</loc>
+    <lastmod>2026-08-23T18:57:58.786Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/playbook/delete-playbook</loc>
+    <lastmod>2026-08-23T18:57:58.833Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/playbook/get-playbook</loc>
+    <lastmod>2026-08-23T18:57:58.809Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/playbook/list-playbooks</loc>
+    <lastmod>2026-08-23T18:57:58.776Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/playbook/update-playbook</loc>
+    <lastmod>2026-08-23T18:57:58.821Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/project/create-project</loc>
+    <lastmod>2026-08-23T18:57:59.564Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/project/delete-project</loc>
+    <lastmod>2026-08-23T18:57:59.592Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/project/get-project</loc>
+    <lastmod>2026-08-23T18:57:59.575Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/project/list-projects</loc>
+    <lastmod>2026-08-23T18:57:59.554Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/project/update-project</loc>
+    <lastmod>2026-08-23T18:57:59.584Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/quickstart</loc>
+    <lastmod>2026-08-26T03:02:25.587Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/sections/analytics</loc>
+    <lastmod>2026-08-17T18:54:25.234Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/sections/build</loc>
+    <lastmod>2026-08-17T18:54:25.233Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/sections/insights</loc>
+    <lastmod>2026-08-17T18:54:25.237Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/sections/manage</loc>
+    <lastmod>2026-08-17T18:54:25.246Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/sections/observe</loc>
+    <lastmod>2026-08-17T18:54:25.236Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/sections/publishing</loc>
+    <lastmod>2026-08-17T18:54:25.240Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/sections/qa</loc>
+    <lastmod>2026-08-17T18:54:25.240Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/sections/running-agents</loc>
+    <lastmod>2026-08-17T18:54:25.233Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-check/create-check</loc>
+    <lastmod>2026-08-23T18:57:59.969Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-check/create-many-checks</loc>
+    <lastmod>2026-08-23T18:57:59.977Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-check/delete-check</loc>
+    <lastmod>2026-08-23T18:58:00.005Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-check/get-check</loc>
+    <lastmod>2026-08-23T18:57:59.986Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-check/list-checks</loc>
+    <lastmod>2026-08-23T18:57:59.961Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-check/update-check</loc>
+    <lastmod>2026-08-23T18:57:59.996Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-run/create-many-runs</loc>
+    <lastmod>2026-08-23T18:58:00.050Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-run/create-run</loc>
+    <lastmod>2026-08-23T18:58:00.023Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-run/get-run</loc>
+    <lastmod>2026-08-23T18:58:00.063Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-run/search-runs</loc>
+    <lastmod>2026-08-23T18:58:00.015Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-turn/create-many-turns</loc>
+    <lastmod>2026-08-23T18:57:59.926Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-turn/create-turn</loc>
+    <lastmod>2026-08-23T18:57:59.918Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-turn/delete-turn</loc>
+    <lastmod>2026-08-23T18:57:59.952Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-turn/get-turn</loc>
+    <lastmod>2026-08-23T18:57:59.934Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-turn/list-turns</loc>
+    <lastmod>2026-08-23T18:57:59.909Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test-turn/update-turn</loc>
+    <lastmod>2026-08-23T18:57:59.942Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test/create-many-tests</loc>
+    <lastmod>2026-08-23T18:57:59.874Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test/create-test</loc>
+    <lastmod>2026-08-23T18:57:59.866Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test/delete-test</loc>
+    <lastmod>2026-08-23T18:57:59.901Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test/get-test</loc>
+    <lastmod>2026-08-23T18:57:59.883Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test/list-tests</loc>
+    <lastmod>2026-08-23T18:57:59.857Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/test/update-test</loc>
+    <lastmod>2026-08-23T18:57:59.892Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/tool/create-many-tools</loc>
+    <lastmod>2026-08-23T18:57:59.166Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/tool/create-tool</loc>
+    <lastmod>2026-08-23T18:57:59.130Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/tool/delete-tool</loc>
+    <lastmod>2026-08-23T18:57:59.194Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/tool/get-tool</loc>
+    <lastmod>2026-08-23T18:57:59.175Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/tool/list-tools</loc>
+    <lastmod>2026-08-23T18:57:59.113Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/tool/update-tool</loc>
+    <lastmod>2026-08-23T18:57:59.185Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/trace-types</loc>
+    <lastmod>2026-08-17T18:54:25.243Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/transcript-property/create-property</loc>
+    <lastmod>2026-08-23T18:57:59.767Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/transcript-property/delete-property</loc>
+    <lastmod>2026-08-23T18:57:59.792Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/transcript-property/get-property</loc>
+    <lastmod>2026-08-23T18:57:59.775Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/transcript-property/list-properties</loc>
+    <lastmod>2026-08-23T18:57:59.759Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/transcript-property/set-property-value</loc>
+    <lastmod>2026-08-23T18:57:59.800Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/transcript-property/update-property</loc>
+    <lastmod>2026-08-23T18:57:59.783Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/transcript/get-transcript</loc>
+    <lastmod>2026-08-23T18:57:59.751Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/transcript/search-transcripts</loc>
+    <lastmod>2026-08-23T18:57:59.741Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/variable/create-many-variables</loc>
+    <lastmod>2026-08-23T18:57:59.322Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/variable/create-variable</loc>
+    <lastmod>2026-08-23T18:57:59.313Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/variable/delete-variable</loc>
+    <lastmod>2026-08-23T18:57:59.346Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/variable/get-variable</loc>
+    <lastmod>2026-08-23T18:57:59.330Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/variable/list-variables</loc>
+    <lastmod>2026-08-23T18:57:59.305Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/variable/update-variable</loc>
+    <lastmod>2026-08-23T18:57:59.338Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/webhooks/org-events</loc>
+    <lastmod>2026-07-31T21:18:20.069Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/webhooks/session-lifecycle</loc>
+    <lastmod>2026-08-10T16:03:48.743Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/workspace/create-workspace</loc>
+    <lastmod>2026-08-23T18:57:59.612Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/workspace/delete-workspace</loc>
+    <lastmod>2026-08-23T18:57:59.643Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/workspace/get-workspace</loc>
+    <lastmod>2026-08-23T18:57:59.622Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/workspace/list-workspaces</loc>
+    <lastmod>2026-08-23T18:57:59.603Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/api-reference/workspace/update-workspace</loc>
+    <lastmod>2026-08-23T18:57:59.633Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/changelog/changelog</loc>
+    <lastmod>2026-09-02T21:58:15.955Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/authentication</loc>
+    <lastmod>2026-08-26T03:02:25.583Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/agent</loc>
+    <lastmod>2026-08-16T15:15:32.046Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/agent/get</loc>
+    <lastmod>2026-08-16T15:15:32.041Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/agent/update</loc>
+    <lastmod>2026-08-16T15:15:32.059Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics</loc>
+    <lastmod>2026-08-16T15:15:32.049Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query</loc>
+    <lastmod>2026-08-16T15:15:32.048Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/api-tool-usage</loc>
+    <lastmod>2026-08-16T15:15:32.035Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/call-count</loc>
+    <lastmod>2026-08-16T15:15:32.038Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/call-duration</loc>
+    <lastmod>2026-08-16T15:15:32.049Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/category-token-usage</loc>
+    <lastmod>2026-08-16T15:15:32.039Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/daily-token-usage</loc>
+    <lastmod>2026-08-16T15:15:32.039Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/entity-token-usage</loc>
+    <lastmod>2026-08-16T15:15:32.036Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/function-usage</loc>
+    <lastmod>2026-08-16T15:15:32.058Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/hourly-organization-token-usage</loc>
+    <lastmod>2026-08-16T15:15:32.043Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/hourly-project-token-usage</loc>
+    <lastmod>2026-08-16T15:15:32.036Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/integration-usage</loc>
+    <lastmod>2026-08-16T15:15:32.060Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/intent-usage</loc>
+    <lastmod>2026-08-16T15:15:32.040Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/knowledge-base-document-usage</loc>
+    <lastmod>2026-08-16T15:15:32.045Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/mcp-tool-usage</loc>
+    <lastmod>2026-08-16T15:15:32.051Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/organization-token-usage</loc>
+    <lastmod>2026-08-16T15:15:32.053Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/playbook-usage</loc>
+    <lastmod>2026-08-16T15:15:32.051Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/project-interaction-count</loc>
+    <lastmod>2026-08-16T15:15:32.053Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/project-token-usage</loc>
+    <lastmod>2026-08-16T15:15:32.052Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/project-transcript-cost</loc>
+    <lastmod>2026-08-16T15:15:32.037Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/project-transcript-count</loc>
+    <lastmod>2026-08-16T15:15:32.038Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/prompt-usage</loc>
+    <lastmod>2026-08-16T15:15:32.046Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/unique-user-count</loc>
+    <lastmod>2026-08-16T15:15:32.037Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/workflow-usage</loc>
+    <lastmod>2026-08-16T15:15:32.044Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/workspace-interaction-count</loc>
+    <lastmod>2026-08-16T15:15:32.040Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/workspace-token-usage</loc>
+    <lastmod>2026-08-16T15:15:31.978Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/analytics/query/workspace-transcript-count</loc>
+    <lastmod>2026-08-16T15:15:31.979Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool</loc>
+    <lastmod>2026-08-16T15:15:31.968Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/create</loc>
+    <lastmod>2026-08-16T15:15:31.976Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/delete</loc>
+    <lastmod>2026-08-16T15:15:31.976Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/get</loc>
+    <lastmod>2026-08-16T15:15:31.989Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/list</loc>
+    <lastmod>2026-08-16T15:15:31.970Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/update</loc>
+    <lastmod>2026-08-16T15:15:31.991Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/variable</loc>
+    <lastmod>2026-08-16T15:15:31.981Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/variable/create</loc>
+    <lastmod>2026-08-16T15:15:31.991Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/variable/delete</loc>
+    <lastmod>2026-08-16T15:15:31.977Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/variable/get</loc>
+    <lastmod>2026-08-16T15:15:31.969Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/variable/list</loc>
+    <lastmod>2026-08-16T15:15:31.973Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/api-tool/variable/update</loc>
+    <lastmod>2026-08-16T15:15:31.974Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/auth</loc>
+    <lastmod>2026-08-16T15:15:31.989Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/auth/login</loc>
+    <lastmod>2026-08-16T15:15:31.981Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/auth/logout</loc>
+    <lastmod>2026-08-16T15:15:31.990Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/auth/whoami</loc>
+    <lastmod>2026-08-16T15:15:31.979Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/configure</loc>
+    <lastmod>2026-08-16T15:15:31.967Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/conversation</loc>
+    <lastmod>2026-08-16T15:15:31.972Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/conversation/send</loc>
+    <lastmod>2026-08-16T15:15:31.974Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/conversation/state</loc>
+    <lastmod>2026-08-16T15:15:31.970Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/conversation/state/delete</loc>
+    <lastmod>2026-08-16T15:15:31.975Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/conversation/state/get</loc>
+    <lastmod>2026-08-16T15:15:31.965Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/conversation/state/update</loc>
+    <lastmod>2026-08-16T15:15:31.985Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/conversation/state/update-variables</loc>
+    <lastmod>2026-08-16T15:15:31.990Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/document</loc>
+    <lastmod>2026-08-16T15:15:31.982Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/document/create-table</loc>
+    <lastmod>2026-08-16T15:15:31.978Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/document/create-text</loc>
+    <lastmod>2026-08-16T15:15:31.982Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/document/create-url</loc>
+    <lastmod>2026-08-16T15:15:31.969Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/document/delete</loc>
+    <lastmod>2026-08-16T15:15:31.964Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/document/get</loc>
+    <lastmod>2026-08-16T15:15:31.965Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/document/list</loc>
+    <lastmod>2026-08-16T15:15:31.974Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/document/update</loc>
+    <lastmod>2026-08-16T15:15:31.984Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/environment</loc>
+    <lastmod>2026-08-16T15:15:31.980Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/environment/clone</loc>
+    <lastmod>2026-08-16T15:15:31.980Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/environment/compile</loc>
+    <lastmod>2026-08-16T15:15:31.977Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/environment/delete</loc>
+    <lastmod>2026-08-16T15:15:31.967Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/environment/get</loc>
+    <lastmod>2026-08-16T15:15:31.973Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/environment/list</loc>
+    <lastmod>2026-08-16T15:15:31.971Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/environment/merge</loc>
+    <lastmod>2026-08-16T15:15:31.966Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/environment/publish</loc>
+    <lastmod>2026-08-16T15:15:31.983Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/environment/update</loc>
+    <lastmod>2026-08-16T15:15:31.975Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/environment/update-traffic-split</loc>
+    <lastmod>2026-08-16T15:15:31.936Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/evaluation</loc>
+    <lastmod>2026-08-16T15:15:31.983Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/evaluation/create</loc>
+    <lastmod>2026-08-16T15:15:31.984Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/evaluation/delete</loc>
+    <lastmod>2026-08-16T15:15:31.968Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/evaluation/get</loc>
+    <lastmod>2026-08-16T15:15:31.966Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/evaluation/list</loc>
+    <lastmod>2026-08-16T15:15:31.972Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/evaluation/run</loc>
+    <lastmod>2026-08-16T15:15:31.971Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/evaluation/update</loc>
+    <lastmod>2026-08-16T15:15:31.901Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/explore</loc>
+    <lastmod>2026-08-16T15:15:31.898Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function</loc>
+    <lastmod>2026-08-16T15:15:31.894Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/create</loc>
+    <lastmod>2026-08-16T15:15:31.894Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/delete</loc>
+    <lastmod>2026-08-16T15:15:31.914Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/get</loc>
+    <lastmod>2026-08-16T15:15:31.915Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/list</loc>
+    <lastmod>2026-08-16T15:15:31.900Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/path</loc>
+    <lastmod>2026-08-16T15:15:31.908Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/path/create</loc>
+    <lastmod>2026-08-16T15:15:31.907Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/path/delete</loc>
+    <lastmod>2026-08-16T15:15:31.916Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/path/get</loc>
+    <lastmod>2026-08-16T15:15:31.917Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/path/list</loc>
+    <lastmod>2026-08-16T15:15:31.909Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/path/update</loc>
+    <lastmod>2026-08-16T15:15:31.908Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/update</loc>
+    <lastmod>2026-08-16T15:15:31.898Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/variable</loc>
+    <lastmod>2026-08-16T15:15:31.903Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/variable/create</loc>
+    <lastmod>2026-08-16T15:15:31.905Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/variable/delete</loc>
+    <lastmod>2026-08-16T15:15:31.890Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/variable/get</loc>
+    <lastmod>2026-08-16T15:15:31.905Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/variable/list</loc>
+    <lastmod>2026-08-16T15:15:31.896Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/function/variable/update</loc>
+    <lastmod>2026-08-16T15:15:31.899Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/knowledge-base</loc>
+    <lastmod>2026-08-16T15:15:31.895Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/knowledge-base/query</loc>
+    <lastmod>2026-08-16T15:15:31.902Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/mcp-server</loc>
+    <lastmod>2026-08-16T15:15:31.907Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/mcp-server/create</loc>
+    <lastmod>2026-08-16T15:15:31.900Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/mcp-server/delete</loc>
+    <lastmod>2026-08-16T15:15:31.906Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/mcp-server/get</loc>
+    <lastmod>2026-08-16T15:15:31.893Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/mcp-server/list</loc>
+    <lastmod>2026-08-16T15:15:31.906Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/mcp-server/sync</loc>
+    <lastmod>2026-08-16T15:15:31.902Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/mcp-server/update</loc>
+    <lastmod>2026-08-16T15:15:31.899Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/mcp-tool</loc>
+    <lastmod>2026-08-16T15:15:31.897Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/mcp-tool/get</loc>
+    <lastmod>2026-08-16T15:15:31.895Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/mcp-tool/list</loc>
+    <lastmod>2026-08-16T15:15:31.916Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/overview</loc>
+    <lastmod>2026-08-16T15:15:31.904Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/playbook</loc>
+    <lastmod>2026-08-16T15:15:31.903Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/playbook/create</loc>
+    <lastmod>2026-08-16T15:15:31.892Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/playbook/delete</loc>
+    <lastmod>2026-08-16T15:15:31.904Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/playbook/get</loc>
+    <lastmod>2026-08-16T15:15:31.890Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/playbook/list</loc>
+    <lastmod>2026-08-16T15:15:31.910Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/playbook/update</loc>
+    <lastmod>2026-08-16T15:15:31.889Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/project</loc>
+    <lastmod>2026-08-16T15:15:31.901Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/project/create</loc>
+    <lastmod>2026-08-16T15:15:31.897Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/project/delete</loc>
+    <lastmod>2026-08-16T15:15:31.896Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/project/get</loc>
+    <lastmod>2026-08-16T15:15:31.891Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/project/list</loc>
+    <lastmod>2026-08-16T15:15:31.903Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/project/update</loc>
+    <lastmod>2026-08-16T15:15:31.892Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/tool</loc>
+    <lastmod>2026-08-16T15:15:31.909Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/tool/create</loc>
+    <lastmod>2026-08-16T15:15:31.893Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/tool/delete</loc>
+    <lastmod>2026-08-16T15:15:31.891Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/tool/get</loc>
+    <lastmod>2026-08-16T15:15:31.894Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/tool/list</loc>
+    <lastmod>2026-08-16T15:15:31.917Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/tool/update</loc>
+    <lastmod>2026-08-16T15:15:31.821Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/transcript</loc>
+    <lastmod>2026-08-16T15:15:31.828Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/transcript/get</loc>
+    <lastmod>2026-08-16T15:15:31.827Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/transcript/property</loc>
+    <lastmod>2026-08-16T15:15:31.828Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/transcript/property/create</loc>
+    <lastmod>2026-08-16T15:15:31.825Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/transcript/property/delete</loc>
+    <lastmod>2026-08-16T15:15:31.824Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/transcript/property/get</loc>
+    <lastmod>2026-08-16T15:15:31.829Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/transcript/property/list</loc>
+    <lastmod>2026-08-16T15:15:31.829Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/transcript/property/set-value</loc>
+    <lastmod>2026-08-16T15:15:31.820Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/transcript/property/update</loc>
+    <lastmod>2026-08-16T15:15:31.827Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/transcript/search</loc>
+    <lastmod>2026-08-16T15:15:31.826Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/variable</loc>
+    <lastmod>2026-08-16T15:15:31.830Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/variable/create</loc>
+    <lastmod>2026-08-16T15:15:31.830Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/variable/delete</loc>
+    <lastmod>2026-08-16T15:15:31.823Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/variable/get</loc>
+    <lastmod>2026-08-16T15:15:31.836Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/variable/list</loc>
+    <lastmod>2026-08-16T15:15:31.829Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/variable/update</loc>
+    <lastmod>2026-08-16T15:15:31.823Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/version</loc>
+    <lastmod>2026-08-16T15:15:31.825Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/whoami</loc>
+    <lastmod>2026-08-16T15:15:31.822Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/workspace</loc>
+    <lastmod>2026-08-16T15:15:31.817Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/workspace/create</loc>
+    <lastmod>2026-08-16T15:15:31.824Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/workspace/delete</loc>
+    <lastmod>2026-08-16T15:15:31.816Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/workspace/get</loc>
+    <lastmod>2026-08-16T15:15:31.819Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/workspace/list</loc>
+    <lastmod>2026-08-16T15:15:31.816Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/commands/workspace/update</loc>
+    <lastmod>2026-08-16T15:15:31.835Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/install</loc>
+    <lastmod>2026-08-16T13:30:46.217Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cli/overview</loc>
+    <lastmod>2026-08-26T03:02:25.585Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cookbook/clone-and-publish</loc>
+    <lastmod>2026-08-17T18:54:24.812Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cookbook/create-a-playbook</loc>
+    <lastmod>2026-08-17T18:54:24.833Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cookbook/find-a-conversation</loc>
+    <lastmod>2026-08-17T18:54:24.810Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cookbook/find-your-project</loc>
+    <lastmod>2026-08-17T18:54:24.811Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cookbook/first-conversation-turn</loc>
+    <lastmod>2026-08-26T03:02:25.586Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cookbook/overview</loc>
+    <lastmod>2026-08-17T18:54:24.832Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cookbook/query-token-usage</loc>
+    <lastmod>2026-08-17T18:54:24.831Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cookbook/score-a-conversation</loc>
+    <lastmod>2026-08-17T18:54:24.221Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cookbook/stream-a-response</loc>
+    <lastmod>2026-08-17T18:54:24.219Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/cookbook/test-a-conversation-flow</loc>
+    <lastmod>2026-08-17T18:54:24.221Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/courses/advanced-knowledge-base</loc>
+    <lastmod>2026-08-17T18:54:24.222Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/courses/build-your-first-workflow</loc>
+    <lastmod>2026-08-15T19:47:34.657Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/courses/chat-agent-quick-start</loc>
+    <lastmod>2026-08-15T19:47:34.660Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/courses/home</loc>
+    <lastmod>2026-08-15T19:47:34.651Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/courses/initialization-workflow</loc>
+    <lastmod>2026-08-15T19:47:34.661Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/courses/integrate-with-third-party-tools</loc>
+    <lastmod>2026-08-15T19:47:34.655Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/courses/migrate-to-environments</loc>
+    <lastmod>2026-07-31T21:54:29.223Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/courses/phone-agent-quick-start</loc>
+    <lastmod>2026-08-15T19:47:34.658Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/courses/simple-knowledge-base</loc>
+    <lastmod>2026-08-15T19:47:34.653Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/account-management/billing</loc>
+    <lastmod>2026-08-16T13:30:46.151Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/account-management/billing/credits-pricing-table</loc>
+    <lastmod>2026-05-04T10:01:58.028Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/account-management/billing/managing-your-subscription</loc>
+    <lastmod>2026-05-04T10:01:58.032Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/account-management/collaboration</loc>
+    <lastmod>2026-08-12T12:49:29.374Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/behaviour</loc>
+    <lastmod>2026-07-31T21:18:20.074Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/data/personas</loc>
+    <lastmod>2026-07-31T19:58:52.455Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/data/pii-redaction</loc>
+    <lastmod>2026-08-15T19:46:21.533Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/data/secrets</loc>
+    <lastmod>2026-08-13T13:20:37.881Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/data/variables</loc>
+    <lastmod>2026-08-15T19:46:21.528Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/editor/keyboard-shortcuts</loc>
+    <lastmod>2026-08-16T13:30:46.131Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/editor/markdown</loc>
+    <lastmod>2026-08-16T13:30:46.132Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/editor/overview</loc>
+    <lastmod>2026-08-16T13:30:46.153Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/editor/references</loc>
+    <lastmod>2026-08-16T13:30:46.152Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/framework/choosing-a-framework</loc>
+    <lastmod>2026-07-31T21:18:20.063Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/framework/initialization-workflow</loc>
+    <lastmod>2026-07-31T21:18:20.064Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/global-prompt</loc>
+    <lastmod>2026-08-15T19:46:21.559Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/importing-data-sources</loc>
+    <lastmod>2026-08-17T18:54:24.219Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/instructions</loc>
+    <lastmod>2026-08-15T19:46:21.538Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/overview</loc>
+    <lastmod>2026-08-16T13:30:46.141Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/playbooks</loc>
+    <lastmod>2026-08-15T19:46:21.540Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/querying-the-knowledge-base</loc>
+    <lastmod>2026-08-17T18:54:24.218Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/api</loc>
+    <lastmod>2026-08-16T13:30:46.137Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/buttons</loc>
+    <lastmod>2026-07-31T21:54:28.207Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/call-forward</loc>
+    <lastmod>2026-07-31T21:18:20.066Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/card</loc>
+    <lastmod>2026-07-31T21:54:28.207Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/carousel</loc>
+    <lastmod>2026-07-31T21:54:28.206Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/code</loc>
+    <lastmod>2026-07-31T21:54:26.214Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/condition</loc>
+    <lastmod>2026-07-31T21:54:26.214Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/crew</loc>
+    <lastmod>2026-07-31T21:54:26.213Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/end</loc>
+    <lastmod>2026-07-31T21:54:26.197Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/function</loc>
+    <lastmod>2026-07-31T21:54:26.203Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/handoff</loc>
+    <lastmod>2026-08-13T20:22:25.434Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/integration</loc>
+    <lastmod>2026-07-31T21:54:26.206Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/listen</loc>
+    <lastmod>2026-07-31T21:54:26.211Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/mcp</loc>
+    <lastmod>2026-07-31T21:54:26.213Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/message</loc>
+    <lastmod>2026-07-31T21:54:26.211Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/operator</loc>
+    <lastmod>2026-07-31T21:54:26.201Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/playbook</loc>
+    <lastmod>2026-07-31T21:54:26.202Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/set</loc>
+    <lastmod>2026-07-31T21:54:26.203Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/steps/workflow</loc>
+    <lastmod>2026-07-31T21:54:26.205Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/airtable-tool</loc>
+    <lastmod>2026-08-15T19:47:33.449Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/api-tool</loc>
+    <lastmod>2026-08-15T19:46:19.752Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/function-tool</loc>
+    <lastmod>2026-08-15T19:46:19.744Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/global-tools</loc>
+    <lastmod>2026-07-31T21:18:20.060Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/gmail-tool</loc>
+    <lastmod>2026-08-15T19:47:33.452Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/google-sheets-tool</loc>
+    <lastmod>2026-08-15T19:47:33.447Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/hubspot-tool</loc>
+    <lastmod>2026-08-15T19:47:33.447Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/make-tool</loc>
+    <lastmod>2026-08-15T19:47:33.448Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/mcp-tool</loc>
+    <lastmod>2026-08-15T19:46:19.735Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/overview</loc>
+    <lastmod>2026-08-16T13:30:46.086Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/salesforce-tool</loc>
+    <lastmod>2026-08-15T19:47:33.445Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/shopify</loc>
+    <lastmod>2026-08-15T19:47:33.450Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/system-tools</loc>
+    <lastmod>2026-08-15T19:46:19.737Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/twilio-tool</loc>
+    <lastmod>2026-08-15T19:47:33.457Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/tools/zendesk-tool</loc>
+    <lastmod>2026-08-15T19:47:33.453Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/build/workflows</loc>
+    <lastmod>2026-07-31T21:18:20.054Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/environments/merging</loc>
+    <lastmod>2026-08-12T12:49:29.379Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/environments/overview</loc>
+    <lastmod>2026-08-12T12:49:29.379Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/environments/publishing</loc>
+    <lastmod>2026-08-12T12:49:29.372Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/environments/traffic-split</loc>
+    <lastmod>2026-07-31T21:18:20.052Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/environments/version-history</loc>
+    <lastmod>2026-08-16T13:30:46.090Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/phone/connect-a-phone-number</loc>
+    <lastmod>2026-07-31T21:54:26.201Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/phone/inbound-calling</loc>
+    <lastmod>2026-07-31T21:54:26.190Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/phone/outbound-calling</loc>
+    <lastmod>2026-07-31T21:54:26.198Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/widget/custom-web-chat-styling</loc>
+    <lastmod>2026-07-31T21:18:20.052Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/widget/embedding-the-chat-widget</loc>
+    <lastmod>2026-07-31T21:54:26.207Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-api</loc>
+    <lastmod>2026-08-17T21:51:41.775Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/deploy/widget/web-chat-extensions</loc>
+    <lastmod>2026-08-17T21:51:41.775Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/introduction</loc>
+    <lastmod>2026-08-17T18:54:23.512Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/measure/analytics</loc>
+    <lastmod>2026-08-11T13:50:32.708Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/measure/evaluations</loc>
+    <lastmod>2026-07-31T21:54:26.192Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/measure/tests</loc>
+    <lastmod>2026-07-31T21:54:26.191Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/documentation/measure/transcripts</loc>
+    <lastmod>2026-07-31T21:54:26.189Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/mcp/authentication</loc>
+    <lastmod>2026-08-20T16:37:06.581Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/mcp/claude-code</loc>
+    <lastmod>2026-08-20T16:37:06.580Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/mcp/codex</loc>
+    <lastmod>2026-08-20T16:37:06.585Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/mcp/cursor</loc>
+    <lastmod>2026-08-20T16:37:06.549Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/mcp/overview</loc>
+    <lastmod>2026-08-20T16:37:06.584Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/mcp/setup</loc>
+    <lastmod>2026-08-20T16:37:06.578Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/mcp/vscode</loc>
+    <lastmod>2026-08-20T16:37:06.579Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/resources/glossary</loc>
+    <lastmod>2026-08-16T15:15:31.254Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/resources/glossary/ai-terms</loc>
+    <lastmod>2026-08-16T15:15:31.254Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/resources/glossary/build</loc>
+    <lastmod>2026-08-16T15:15:31.255Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/resources/glossary/core-objects</loc>
+    <lastmod>2026-08-16T15:15:31.250Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/resources/glossary/deploy</loc>
+    <lastmod>2026-08-16T15:15:31.251Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/resources/glossary/developer-surfaces</loc>
+    <lastmod>2026-08-16T15:15:31.251Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/resources/glossary/knowledge-and-data</loc>
+    <lastmod>2026-08-16T15:15:31.252Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.voiceflow.com/docs/resources/glossary/measure</loc>
+    <lastmod>2026-08-16T15:15:31.250Z</lastmod>
+  </url>
+</urlset>

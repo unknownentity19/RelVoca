@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Changelog]]></title>
+        <description><![CDATA[Stay up to date with RelVoca product updates, new features, bug fixes, and platform improvements shipped across the agent builder and APIs.]]></description>
+        <link>https://www.voiceflow.com/docs</link>
+        <generator>Mintlify</generator>
+        <lastBuildDate>Thu, 03 Sep 2026 16:25:53 GMT</lastBuildDate>
+        <atom:link href="https://www.voiceflow.com/docs/changelog/changelog/rss.xml" rel="self" type="application/rss+xml"/>
+        <copyright><![CDATA[RelVoca Documentation]]></copyright>
+        <docs>https://www.voiceflow.com/docs</docs>
+        <item>
+            <title><![CDATA[August 31st, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-31st-2026</link>
+            <guid isPermaLink="false">9e913692a40d4c3c</guid>
+            <category><![CDATA[Improved]]></category>
+            <pubDate>Wed, 02 Sep 2026 02:05:50 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Atlas improvements</h2>
+<p><a id="atlas-s-prompt-and-instruction-edits-stream-into-the-prompt-"></a></p>
+<p>Atlas now edits prompts in front of you. Ask it to change your global prompt, agent instructions or a playbook's instructions, and you watch the rewrite happen in the editor rather than waiting for a finished result. In Safe mode the proposal appears as a word-level diff you accept or reject; in Autonomous mode the text is typed straight in.</p>
+<p>You can also ask about one part of a prompt instead of the whole thing. Select any text in an editor and choose <strong>Ask Atlas</strong> from the toolbar above the selection, and that passage is attached to your next question as a chip.</p>
+<p>And Atlas can set up credentials with you. When something needs a secret, an integration or an MCP server, it offers a card that opens the normal RelVoca flow. You fill it in, the card reports back, and Atlas carries on from where it stopped. <strong>The credential is entered by you and never passes through the chat or the model.</strong></p>
+<p>{/* manifest: atlas-s-prompt-and-instruction-edits-stream-into-the-prompt-, ask-atlas-about-a-selected-passage-of-a-prompt-from-the-edit, atlas-sets-up-secrets-integrations-and-mcp-servers-by-offeri */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 31st, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-31st-2026</link>
+            <guid isPermaLink="false">ec8a7fd241446e91</guid>
+            <category><![CDATA[Added]]></category>
+            <pubDate>Wed, 02 Sep 2026 02:05:50 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Secret and integration endpoints</h2>
+<p><a id="secret-and-integration-resource-families-on-the-stable-api-w"></a></p>
+<p>Secrets and third-party integrations can now be listed, created, connected and disconnected through the stable API, the CLI and the RelVoca MCP server, scoped by project. Secret values are write-only and never returned.</p>
+<p>Integrations report whether they can be connected through the API at all. Browser-flow ones such as Zendesk and Salesforce still have to be connected in the builder. A credential value is refused when it arrives from an MCP client.</p>
+<p>{/* manifest: secret-and-integration-resource-families-on-the-stable-api-w */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 31st, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-31st-2026</link>
+            <guid isPermaLink="false">964163a63fb9b778</guid>
+            <category><![CDATA[Improved]]></category>
+            <pubDate>Wed, 02 Sep 2026 02:05:50 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Pending changes indicator</h2>
+<p><a id="an-environment-with-unpublished-work-is-marked-on-the-publis"></a></p>
+<p>An environment with unpublished work now says so. The <strong>Publish</strong> control carries an amber dot, and its menu offers <strong>View pending changes</strong> so you can read the diff without opening the Publish form. The environments table shows the same dot in place of the old Draft tag.</p>
+<p>{/* manifest: an-environment-with-unpublished-work-is-marked-on-the-publis */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 26th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-26th-2026</link>
+            <guid isPermaLink="false">24e44d49b64c9984</guid>
+            <category><![CDATA[Added]]></category>
+            <pubDate>Fri, 28 Aug 2026 15:46:36 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Atlas</h2>
+<p><a id="atlas-the-builder-ai-assistant-rebuilt-as-a-persistent-panel"></a></p>
+<p>Meet Atlas, your in-app copilot for building and monitoring agents. Ask how an agent performed this week, how that compares to last week, or where customers are dropping off. Ask for a change to the agent and Atlas makes it.</p>
+<p>Atlas holds a single conversation as you move around the product, so you never have to re-explain what you are working on. You can watch it think: a live activity line shows the tools it is calling and the reasoning behind each step.</p>
+<p>Anything you find yourself asking repeatedly can become a Skill. Save your own in <strong>Settings → Skills</strong>, then pick them from Atlas whenever you need them.</p>
+<p>Atlas is in Beta, available on agentic projects, and its usage is broken out in your workspace usage charts.</p>
+<p>{/* manifest: atlas-the-builder-ai-assistant-rebuilt-as-a-persistent-panel */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 20th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-20th-2026</link>
+            <guid isPermaLink="false">3632ef03fbf2ae7f</guid>
+            <category><![CDATA[Added]]></category>
+            <pubDate>Fri, 28 Aug 2026 15:13:26 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Transcript keyword search</h2>
+<p><a id="transcripts-can-be-searched-by-keywords-in-user-and-agent-me"></a></p>
+<p>You can now find transcripts by what was actually said in them. Search for a phrase and the list narrows to conversations containing it, with each result showing how many messages matched and a short excerpt around the first hit.</p>
+<p>You can also narrow to just what the user said, or just the agent. Search terms can be up to 256 characters, and the same filter is available on the transcript search API.</p>
+<p>{/* manifest: transcripts-can-be-searched-by-keywords-in-user-and-agent-me */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 20th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-20th-2026</link>
+            <guid isPermaLink="false">58138144dc42dd46</guid>
+            <category><![CDATA[Improved]]></category>
+            <pubDate>Fri, 28 Aug 2026 18:50:31 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Max conversation duration</h2>
+<p><a id="max-conversation-duration-is-always-on-set-with-a-slider-and"></a></p>
+<p>Voice conversations can now run up to sixty minutes, double the previous ceiling. You can set the limit from <strong>Behaviour → Session &#x26; timeout</strong>.</p>
+<p>Agents that had the setting switched off move to a thirty-minute default. If you previously entered a value above thirty minutes, note that it was silently capped before and will now apply in full.</p>
+<p>{/* manifest: max-conversation-duration-is-always-on-set-with-a-slider-and */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 20th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-20th-2026</link>
+            <guid isPermaLink="false">0a947dfd4aa54906</guid>
+            <category><![CDATA[Improved]]></category>
+            <pubDate>Fri, 28 Aug 2026 15:13:26 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>MCP token authentication</h2>
+<p><a id="the-voiceflow-mcp-server-accepts-a-personal-access-token-ins"></a></p>
+<p>The RelVoca MCP server now accepts a personal access token as a bearer credential, so a client that cannot open a browser for OAuth can connect using the same token that authenticates the REST API and the CLI. Send it in the <code>Authorization</code> header instead of completing the browser sign-in. The OAuth flow is unchanged.</p>
+<p>{/* manifest: the-voiceflow-mcp-server-accepts-a-personal-access-token-ins */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 20th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-20th-2026</link>
+            <guid isPermaLink="false">411c099a8697b70a</guid>
+            <category><![CDATA[Improved]]></category>
+            <pubDate>Fri, 28 Aug 2026 15:13:26 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Trace filtering on the conversation endpoint</h2>
+<p><a id="trace-types-can-be-excluded-from-the-stable-conversation-end"></a></p>
+<p>A caller of the stable conversation endpoint can now list trace types to drop from the response, so an integration only receives the traces it renders. Send a <code>config</code> object alongside the action with <code>excludeTypes</code> listing the types to drop. Omit it and every trace comes back as before.</p>
+<p>One trace is always returned even when its type is excluded: the debug trace reporting that the credit limit was reached.</p>
+<p>{/* manifest: trace-types-can-be-excluded-from-the-stable-conversation-end */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 19th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-19th-2026</link>
+            <guid isPermaLink="false">2d6e28298a5ee370</guid>
+            <category><![CDATA[Improved]]></category>
+            <pubDate>Fri, 28 Aug 2026 14:53:27 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Late variable writes</h2>
+<p><a id="a-variable-written-after-a-turn-is-sealed-is-no-longer-rever"></a></p>
+<p>A variable set after the agent has already replied, which is the normal case for an asynchronous tool that finishes late, now survives into the following turn instead of being quietly reverted. The agent reads what was actually written.</p>
+<p>Nothing to configure. If your agent was built to expect late writes to be discarded, note that it will now see the updated values instead.</p>
+<p>{/* manifest: a-variable-written-after-a-turn-is-sealed-is-no-longer-rever */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 18th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-18th-2026</link>
+            <guid isPermaLink="false">81254474270affe8</guid>
+            <category><![CDATA[Improved]]></category>
+            <pubDate>Fri, 28 Aug 2026 14:16:37 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Multilingual Cartesia voices</h2>
+<p><a id="cartesia-voices-support-forty-languages-with-samples-that-pl"></a></p>
+<p>Cartesia text-to-speech now covers over forty languages, up from fifteen. Each voice declares which languages it speaks, and the preview sample plays in the language you selected. Choose a provider, voice and language from <strong>Settings → Behaviour → Voice output</strong>.</p>
+<p>The voice menu now filters by language, so a voice that does not support the language you pick will not appear in the list. Existing selections are untouched.</p>
+<p>{/* manifest: cartesia-voices-support-forty-languages-with-samples-that-pl */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 18th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-18th-2026</link>
+            <guid isPermaLink="false">2062f1e4602914e2</guid>
+            <category><![CDATA[Improved]]></category>
+            <pubDate>Fri, 28 Aug 2026 14:16:37 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Knowledge base logs in evaluations</h2>
+<p><a id="an-evaluation-can-be-given-the-agent-s-knowledge-base-search"></a></p>
+<p><strong>Knowledge base logs</strong> joins Playbook, Workflow and Tool logs in an evaluation's <strong>Log visibility</strong> settings. With it on, the evaluating model can see the knowledge base searches your agent ran, so a criterion about whether an answer came from your content is something it can actually check. As with the other log types, including them makes each prompt longer and raises the average cost per evaluation.</p>
+<p>{/* manifest: an-evaluation-can-be-given-the-agent-s-knowledge-base-search */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 18th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-18th-2026</link>
+            <guid isPermaLink="false">06b09304b7dd836b</guid>
+            <category><![CDATA[Improved]]></category>
+            <pubDate>Fri, 28 Aug 2026 14:16:37 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Transcript environment fields</h2>
+<p><a id="transcripts-from-the-stable-rest-api-carry-their-environment"></a></p>
+<p>A transcript fetched from the REST API now reports which environment the conversation ran in, and whether it ran against the draft or published version. Both fields are null for conversations recorded before environments existed.</p>
+<p>{/* manifest: transcripts-from-the-stable-rest-api-carry-their-environment */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 17th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-17th-2026</link>
+            <guid isPermaLink="false">8b86cbebab2a0c4a</guid>
+            <category><![CDATA[Added]]></category>
+            <pubDate>Fri, 28 Aug 2026 01:00:58 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Live agent typing indicator</h2>
+<p><a id="a-typing-indicator-while-a-live-agent-is-replying-during-a-h"></a></p>
+<p>When a live agent is composing a reply during a handoff, the user now sees that the agent is typing instead of waiting in silence.</p>
+<p>Nothing to configure. This currently applies to handoffs to Dixa; other providers are unchanged.</p>
+<p>{/* manifest: a-typing-indicator-while-a-live-agent-is-replying-during-a-h */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 14th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-14th-2026</link>
+            <guid isPermaLink="false">76b5e15252594ed0</guid>
+            <category><![CDATA[Improved]]></category>
+            <pubDate>Fri, 28 Aug 2026 14:37:28 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Parallel tool calls</h2>
+<p><a id="more-than-one-knowledge-base-search-in-a-single-turn-no-long"></a></p>
+<p>When an agent makes several tool calls in a single turn, all of them now run and every result comes back. Previously all but the last were discarded, so an agent that searched the knowledge base three times answered from one search.</p>
+<p>Nothing to configure. This covers every kind of tool call an agent makes in a turn, including knowledge base searches, API tools, functions and integrations. Each result is matched back to the call that asked for it, and turns that make several calls are faster.</p>
+<p>{/* manifest: more-than-one-knowledge-base-search-in-a-single-turn-no-long */}</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[August 11th, 2026]]></title>
+            <link>https://www.voiceflow.com/docs/changelog/changelog#august-11th-2026</link>
+            <guid isPermaLink="false">5d6aad094f4b191f</guid>
+            <category><![CDATA[Added]]></category>
+            <pubDate>Fri, 28 Aug 2026 14:37:28 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>Tool message traces</h2>
+<p><a id="a-generated-tool-call-message-reaches-callers-that-do-not-co"></a></p>
+<p>The message an agent speaks while a slow tool runs now reaches applications that call the API without streaming. It arrives as an ordinary <code>text</code> trace for chat or a <code>speak</code> trace for voice, generated through the same path as any other agent message. Previously it was dropped.</p>
+<p>Nothing to configure. If your integration consumes completion events, it keeps receiving the message as a completion sequence. If it does not, responses from non-streaming endpoints now carry one additional trace.</p>
+<p>{/* manifest: a-generated-tool-call-message-reaches-callers-that-do-not-co */}</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

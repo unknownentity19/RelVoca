@@ -1,0 +1,45 @@
+{
+  "_comment": "OFFLINE ARCHIVAL STUB - not part of the original www.voiceflow.com crawl. The live site served this from a serverless route; the HTTrack mirror could not capture it, so the homepage's /js/vf-qualify.js got a 404 here. This static file reproduces the response shape that vf-qualify.js accepts (freemail[] and own[] are required arrays; competitors[]/excluded[] optional arrays; minEmp/maxRank optional numbers) and its values are copied verbatim from vf-qualify.js's own built-in fallbacks, so page behaviour is identical to the un-stubbed path. Inert: static data only, no network activity.",
+  "_stub": true,
+  "freemail": [
+    "gmail.com",
+    "yahoo.com",
+    "hotmail.com",
+    "outlook.com",
+    "icloud.com",
+    "aol.com",
+    "proton.html",
+    "protonmail.com",
+    "live.com",
+    "msn.com",
+    "me.com",
+    "mail.com",
+    "gmx.com",
+    "yandex.com",
+    "qq.com",
+    "duck.com",
+    "hey.com",
+    "fastmail.com",
+    "zoho.com",
+    "yopmail.com",
+    "mailinator.com"
+  ],
+  "own": [
+    "voiceflow.com"
+  ],
+  "competitors": [],
+  "minEmp": 200,
+  "maxRank": 150000,
+  "excluded": [
+    "government administration",
+    "religious institutions",
+    "political organization",
+    "higher education",
+    "education management",
+    "primary/secondary education",
+    "e-learning",
+    "nonprofit organization management",
+    "philanthropy",
+    "fund-raising"
+  ]
+}

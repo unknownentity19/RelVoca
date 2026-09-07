@@ -1,0 +1,5 @@
+{
+  "_comment": "OFFLINE ARCHIVAL STUB - /api/vlead. Not part of the original crawl, and the sole entry in the audit report's dynamic bucket (5 refs, from /demo and /js/vf-cta.js). The CTA email widget fires a keepalive POST here describing the qualification verdict for a submitted address; the response is discarded and the call is .catch()-swallowed, so this was a silent 404. Serving this static file answers 200 instead. Inert: static data, accepts nothing, stores nothing, contacts nothing - a submitted address is neither recorded nor forwarded.",
+  "_stub": true,
+  "ok": true
+}

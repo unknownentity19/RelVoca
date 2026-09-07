@@ -1,0 +1,1050 @@
+<title>Agent Patchbay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+
+<style>
+/* ---- tokens: light is the base set; both dark paths redefine only tokens ---- */
+:root {
+  --paper:#F4F6F7; --surface:#FFFFFF; --surface-2:#EDF1F2; --sunken:#E4EAEC;
+  --line:#D3DCDF; --line-strong:#B6C4C8;
+  --ink:#0F1A1C; --ink-2:#3E5257; --ink-3:#6B8085;
+  --signal:#0E7C86; --signal-ink:#FFFFFF; --signal-soft:#DCEEF0;
+  --think:#B4690E; --think-soft:#FBEBD6;
+  --ok:#1F7A4D; --warn:#B4690E; --err:#B3261E;
+  --shadow:0 1px 2px rgba(15,26,28,.06), 0 8px 24px -12px rgba(15,26,28,.18);
+  --grid:#DCE3E5;
+  --r:8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:#0C1113; --surface:#131A1D; --surface-2:#182126; --sunken:#0A0E10;
+    --line:#26343A; --line-strong:#3A4D54;
+    --ink:#E8EFF0; --ink-2:#A3B6BA; --ink-3:#728A90;
+    --signal:#2AA5AF; --signal-ink:#04191B; --signal-soft:#0E2C30;
+    --think:#D98C24; --think-soft:#33240E;
+    --ok:#3DA772; --warn:#D98C24; --err:#E06A60;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 28px -14px rgba(0,0,0,.8);
+    --grid:#1B252A;
+  }
+}
+:root[data-theme="dark"] {
+  --paper:#0C1113; --surface:#131A1D; --surface-2:#182126; --sunken:#0A0E10;
+  --line:#26343A; --line-strong:#3A4D54;
+  --ink:#E8EFF0; --ink-2:#A3B6BA; --ink-3:#728A90;
+  --signal:#2AA5AF; --signal-ink:#04191B; --signal-soft:#0E2C30;
+  --think:#D98C24; --think-soft:#33240E;
+  --ok:#3DA772; --warn:#D98C24; --err:#E06A60;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 10px 28px -14px rgba(0,0,0,.8);
+  --grid:#1B252A;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font:400 14px/1.5 "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  height:100vh; overflow:hidden;
+}
+.mono{font-family:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--signal); outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---- shell ---- */
+.app{display:grid; grid-template-rows:auto 1fr; height:100vh}
+.bar{
+  display:flex; align-items:center; gap:14px; padding:0 14px; height:52px;
+  background:var(--surface); border-bottom:1px solid var(--line);
+}
+.brand{display:flex; align-items:center; gap:9px; font-weight:700; letter-spacing:-.01em}
+.jack{width:17px;height:17px;border-radius:50%;border:3px solid var(--signal);position:relative;flex:none}
+.jack::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--signal)}
+.bar-sep{width:1px;height:22px;background:var(--line)}
+.agent-name{
+  font-weight:600; background:transparent; border:1px solid transparent;
+  padding:5px 8px; border-radius:6px; min-width:150px; max-width:240px;
+}
+.agent-name:hover{border-color:var(--line)}
+.agent-name:focus{border-color:var(--signal); background:var(--paper); outline:none}
+.spacer{flex:1}
+.status{
+  display:flex; align-items:center; gap:6px; font-size:12px; color:var(--ink-3);
+  font-family:"IBM Plex Mono",monospace;
+}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ink-3);flex:none}
+.dot.on{background:var(--ok)} .dot.off{background:var(--ink-3)} .dot.busy{background:var(--warn)}
+
+.btn{
+  border:1px solid var(--line-strong); background:var(--surface); color:var(--ink);
+  padding:7px 12px; border-radius:6px; cursor:pointer; font-weight:500; font-size:13px;
+  display:inline-flex; align-items:center; gap:6px; white-space:nowrap;
+}
+.btn:hover{background:var(--surface-2)}
+.btn.primary{background:var(--signal); border-color:var(--signal); color:var(--signal-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.ghost{border-color:transparent; background:transparent; color:var(--ink-2)}
+.btn.ghost:hover{background:var(--surface-2); color:var(--ink)}
+.btn:disabled{opacity:.45; cursor:not-allowed}
+.btn.sm{padding:4px 8px; font-size:12px}
+
+.main{display:grid; grid-template-columns:212px 1fr 340px; min-height:0}
+.pane{background:var(--surface); display:flex; flex-direction:column; min-height:0}
+.pane.left{border-right:1px solid var(--line)}
+.pane.right{border-left:1px solid var(--line)}
+.pane-h{
+  padding:11px 13px; font-size:11px; font-weight:600; letter-spacing:.07em;
+  text-transform:uppercase; color:var(--ink-3); border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:space-between; gap:8px; flex:none;
+}
+.scroll{overflow-y:auto; min-height:0; flex:1}
+
+/* ---- palette ---- */
+.plist{padding:9px; display:flex; flex-direction:column; gap:5px}
+.pitem{
+  display:flex; align-items:center; gap:9px; padding:8px 9px; border-radius:var(--r);
+  border:1px solid var(--line); background:var(--surface); cursor:grab; user-select:none;
+}
+.pitem:hover{border-color:var(--signal); background:var(--signal-soft)}
+.pitem:active{cursor:grabbing}
+.chip{
+  width:24px;height:24px;border-radius:6px;flex:none;display:grid;place-items:center;
+  font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:600;
+  background:var(--sunken); color:var(--ink-2); border:1px solid var(--line);
+}
+.chip.ai{background:var(--think-soft); color:var(--think); border-color:var(--think)}
+.chip.io{background:var(--signal-soft); color:var(--signal); border-color:var(--signal)}
+.pitem b{font-weight:500; font-size:13px}
+.pitem small{display:block; color:var(--ink-3); font-size:11px}
+
+.agents{padding:9px; display:flex; flex-direction:column; gap:3px}
+.arow{
+  display:flex; align-items:center; gap:7px; padding:7px 9px; border-radius:6px;
+  cursor:pointer; border:1px solid transparent; font-size:13px;
+}
+.arow:hover{background:var(--surface-2)}
+.arow.sel{background:var(--signal-soft); border-color:var(--signal); font-weight:500}
+.arow span{flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.arow .x{opacity:0; color:var(--ink-3); padding:2px 4px; border-radius:4px; font-size:15px; line-height:1}
+.arow:hover .x{opacity:1}
+.arow .x:hover{background:var(--err); color:#fff}
+
+/* ---- canvas ---- */
+.canvas-wrap{position:relative; overflow:hidden; background:var(--paper); min-height:0}
+.canvas{position:absolute; inset:0; transform-origin:0 0}
+.gridbg{
+  position:absolute; inset:0;
+  background-image:radial-gradient(var(--grid) 1.2px, transparent 1.2px);
+  background-size:22px 22px;
+}
+.wires{position:absolute; inset:0; overflow:visible; pointer-events:none}
+.wire{fill:none; stroke:var(--line-strong); stroke-width:2}
+.wire.live{stroke:var(--signal); stroke-width:2.5}
+.wire.ghost{stroke:var(--signal); stroke-dasharray:5 4}
+
+.node{
+  position:absolute; width:206px; background:var(--surface); border:1px solid var(--line);
+  border-radius:10px; box-shadow:var(--shadow); user-select:none; cursor:grab;
+}
+.node:hover{border-color:var(--line-strong)}
+.node.sel{border-color:var(--signal); box-shadow:0 0 0 3px var(--signal-soft), var(--shadow)}
+.node.active{border-color:var(--think); box-shadow:0 0 0 3px var(--think-soft), var(--shadow)}
+.node.dragging{cursor:grabbing; z-index:50}
+.nhead{
+  display:flex; align-items:center; gap:7px; padding:8px 10px;
+  border-bottom:1px solid var(--line);
+}
+.nhead b{font-size:12px; font-weight:600; flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.nkind{
+  font-family:"IBM Plex Mono",monospace; font-size:9.5px; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--ink-3);
+}
+.nbody{padding:8px 10px; font-size:12px; color:var(--ink-2); min-height:34px}
+.nbody .ph{color:var(--ink-3); font-style:italic}
+.nvar{
+  font-family:"IBM Plex Mono",monospace; font-size:11px; color:var(--signal);
+  background:var(--signal-soft); padding:1px 5px; border-radius:4px;
+}
+.branches{border-top:1px solid var(--line)}
+.brow{
+  display:flex; align-items:center; justify-content:space-between; gap:6px;
+  padding:5px 10px; font-size:11.5px; position:relative;
+}
+.brow + .brow{border-top:1px dashed var(--line)}
+
+.port{
+  position:absolute; width:11px; height:11px; border-radius:50%;
+  background:var(--surface); border:2px solid var(--line-strong); cursor:crosshair; z-index:5;
+}
+.port:hover{border-color:var(--signal); background:var(--signal); transform:scale(1.35)}
+.port.in{left:-6px; top:14px}
+.port.out{right:-6px; top:14px}
+.port.branch{right:-6px; top:50%; margin-top:-5.5px}
+
+.zoom{
+  position:absolute; left:12px; bottom:12px; display:flex; gap:4px; z-index:20;
+  background:var(--surface); border:1px solid var(--line); border-radius:7px; padding:3px;
+  box-shadow:var(--shadow);
+}
+.hint{
+  position:absolute; right:12px; bottom:12px; z-index:20; font-size:11px; color:var(--ink-3);
+  background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:5px 9px;
+  font-family:"IBM Plex Mono",monospace;
+}
+
+/* ---- inspector + chat ---- */
+.tabs{display:flex; border-bottom:1px solid var(--line); flex:none}
+.tab{
+  flex:1; padding:10px 8px; text-align:center; font-size:12px; font-weight:500;
+  cursor:pointer; color:var(--ink-3); border-bottom:2px solid transparent; background:none; border-top:none; border-left:none; border-right:none;
+}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--signal); border-bottom-color:var(--signal)}
+
+.form{padding:13px; display:flex; flex-direction:column; gap:13px}
+.field{display:flex; flex-direction:column; gap:5px}
+.field label{
+  font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-3);
+}
+.field .help{font-size:11px; color:var(--ink-3); line-height:1.45}
+input[type=text],textarea,select{
+  width:100%; padding:7px 9px; border:1px solid var(--line); border-radius:6px;
+  background:var(--paper); color:var(--ink); font-size:13px;
+}
+textarea{resize:vertical; min-height:64px; line-height:1.5}
+input:focus,textarea:focus,select:focus{outline:none; border-color:var(--signal); box-shadow:0 0 0 3px var(--signal-soft)}
+.empty{padding:34px 20px; text-align:center; color:var(--ink-3); font-size:13px; line-height:1.6}
+
+.brhead{display:flex; align-items:center; justify-content:space-between}
+.bedit{border:1px solid var(--line); border-radius:7px; padding:9px; display:flex; flex-direction:column; gap:7px; background:var(--paper)}
+.brule{display:grid; grid-template-columns:1fr 62px 1fr; gap:5px}
+.brule input,.brule select{padding:5px 7px; font-size:12px}
+
+.chat{display:flex; flex-direction:column; min-height:0; flex:1}
+.log{flex:1; overflow-y:auto; padding:13px; display:flex; flex-direction:column; gap:9px; min-height:0}
+.msg{max-width:87%; padding:8px 11px; border-radius:11px; font-size:13px; line-height:1.5; white-space:pre-wrap; overflow-wrap:anywhere}
+.msg.bot{background:var(--surface-2); border:1px solid var(--line); border-bottom-left-radius:3px; align-self:flex-start}
+.msg.usr{background:var(--signal); color:var(--signal-ink); border-bottom-right-radius:3px; align-self:flex-end}
+.msg.sys{
+  align-self:center; background:transparent; border:1px dashed var(--line); color:var(--ink-3);
+  font-family:"IBM Plex Mono",monospace; font-size:11px; max-width:100%; padding:4px 9px;
+}
+.msg.err{align-self:center; background:var(--err); color:#fff; font-size:12px; max-width:100%}
+.msg.think{color:var(--think); border-color:var(--think)}
+.composer{border-top:1px solid var(--line); padding:9px; display:flex; gap:7px; flex:none}
+.composer input{flex:1}
+.vars{
+  border-top:1px solid var(--line); padding:9px 13px; font-size:11.5px; flex:none;
+  max-height:112px; overflow-y:auto; background:var(--paper);
+}
+.vrow{display:flex; gap:7px; padding:2px 0; font-family:"IBM Plex Mono",monospace}
+.vrow b{color:var(--signal); font-weight:500}
+.vrow span{color:var(--ink-2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+
+.banner{
+  margin:9px; padding:9px 11px; border-radius:7px; font-size:12px; line-height:1.5;
+  background:var(--think-soft); border:1px solid var(--think); color:var(--ink);
+}
+.banner b{color:var(--think)}
+</style>
+
+<div class="app">
+  <header class="bar">
+    <div class="brand"><span class="jack"></span> Agent Patchbay</div>
+    <div class="bar-sep"></div>
+    <input class="agent-name" id="aname" value="Support Triage" aria-label="Agent name">
+    <div class="status"><span class="dot" id="savedot"></span><span id="savetxt">saved</span></div>
+    <div class="spacer"></div>
+    <div class="status"><span class="dot" id="aidot"></span><span id="aitxt">checking Claude…</span></div>
+    <button class="btn ghost sm" id="btnExport">Export</button>
+    <button class="btn ghost sm" id="btnImport">Import</button>
+    <button class="btn primary" id="btnRun">▶ Run agent</button>
+  </header>
+
+  <div class="main">
+    <aside class="pane left">
+      <div class="pane-h">Blocks</div>
+      <div class="plist" id="palette"></div>
+      <div class="pane-h" style="border-top:1px solid var(--line)">
+        Agents <button class="btn ghost sm" id="btnNew">+ New</button>
+      </div>
+      <div class="scroll"><div class="agents" id="agents"></div></div>
+    </aside>
+
+    <div class="canvas-wrap" id="wrap">
+      <div class="gridbg" id="gridbg"></div>
+      <div class="canvas" id="canvas">
+        <svg class="wires" id="wires"></svg>
+        <div id="nodes"></div>
+      </div>
+      <div class="zoom">
+        <button class="btn ghost sm" id="zOut">−</button>
+        <button class="btn ghost sm" id="zFit">Fit</button>
+        <button class="btn ghost sm" id="zIn">+</button>
+      </div>
+      <div class="hint">drag canvas to pan · scroll to zoom · drag ○ to wire</div>
+    </div>
+
+    <aside class="pane right">
+      <div class="tabs">
+        <button class="tab on" data-tab="inspect">Inspector</button>
+        <button class="tab" data-tab="test">Test console</button>
+      </div>
+      <div id="panelInspect" class="scroll"></div>
+      <div id="panelTest" class="chat" hidden>
+        <div class="log" id="log"></div>
+        <div class="vars" id="vars"></div>
+        <div class="composer">
+          <input type="text" id="say" placeholder="Type a reply…" autocomplete="off">
+          <button class="btn primary" id="btnSend">Send</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+/* ============================ block catalogue ============================ */
+const KINDS = {
+  start:  {label:"Start",   tag:"IN",  cls:"io",  desc:"Where every run begins"},
+  say:    {label:"Say",     tag:"SAY", cls:"",    desc:"Send a message"},
+  ask:    {label:"Ask",     tag:"ASK", cls:"io",  desc:"Question, save the answer"},
+  ai:     {label:"Think",   tag:"AI",  cls:"ai",  desc:"Claude writes the reply"},
+  classify:{label:"Classify",tag:"CLS",cls:"ai",  desc:"Claude routes by intent"},
+  choice: {label:"Branch",  tag:"IF",  cls:"",    desc:"Route on a variable"},
+  set:    {label:"Set",     tag:"VAR", cls:"",    desc:"Assign a variable"},
+  end:    {label:"End",     tag:"END", cls:"io",  desc:"Finish the conversation"},
+};
+const uid = p => p + Math.random().toString(36).slice(2, 9);
+
+/* A real agent, so the canvas opens working rather than blank. */
+function seedAgent() {
+  const n = {
+    start: {id:"n_start", type:"start", x:60,  y:220, data:{}},
+    greet: {id:"n_greet", type:"say",   x:310, y:220, data:{text:"Hi — I'm the support desk. What's going on today?"}},
+    ask:   {id:"n_ask",   type:"ask",   x:560, y:220, data:{text:"", variable:"issue"}},
+    cls:   {id:"n_cls",   type:"classify", x:810, y:205, data:{
+              input:"{{issue}}",
+              variable:"intent",
+              labels:"billing, technical, cancel, other"}},
+    bill:  {id:"n_bill",  type:"ai",    x:1090, y:40,  data:{
+              system:"You are a billing specialist. Be concise, warm and concrete. Never invent account numbers or amounts — if you need one, ask for it.",
+              prompt:"The customer says: {{issue}}\n\nHelp them with their billing question in 2-3 sentences.",
+              variable:"reply", tier:"default"}},
+    tech:  {id:"n_tech",  type:"ai",    x:1090, y:210, data:{
+              system:"You are a technical support engineer. Give one clear first troubleshooting step, then ask one diagnostic question. Keep it under 60 words.",
+              prompt:"The customer reports: {{issue}}",
+              variable:"reply", tier:"default"}},
+    save:  {id:"n_save",  type:"say",   x:1090, y:380, data:{
+              text:"Before you go — I can pass this to a specialist who may have options for you. Want me to?"}},
+    other: {id:"n_other", type:"ai",    x:1090, y:520, data:{
+              system:"You are a helpful support generalist. If the request is unclear, ask one clarifying question rather than guessing.",
+              prompt:"The customer says: {{issue}}",
+              variable:"reply", tier:"quick"}},
+    out:   {id:"n_out",   type:"say",   x:1390, y:210, data:{text:"{{reply}}"}},
+    end:   {id:"n_end",   type:"end",   x:1640, y:210, data:{}},
+  };
+  n.cls.data.branchIds = ["billing","technical","cancel","other"];
+  return {
+    id: uid("a_"), name: "Support Triage",
+    nodes: Object.values(n),
+    edges: [
+      {id:uid("e_"), from:"n_start", port:"out", to:"n_greet"},
+      {id:uid("e_"), from:"n_greet", port:"out", to:"n_ask"},
+      {id:uid("e_"), from:"n_ask",   port:"out", to:"n_cls"},
+      {id:uid("e_"), from:"n_cls",   port:"billing",   to:"n_bill"},
+      {id:uid("e_"), from:"n_cls",   port:"technical", to:"n_tech"},
+      {id:uid("e_"), from:"n_cls",   port:"cancel",    to:"n_save"},
+      {id:uid("e_"), from:"n_cls",   port:"other",     to:"n_other"},
+      {id:uid("e_"), from:"n_bill",  port:"out", to:"n_out"},
+      {id:uid("e_"), from:"n_tech",  port:"out", to:"n_out"},
+      {id:uid("e_"), from:"n_other", port:"out", to:"n_out"},
+      {id:uid("e_"), from:"n_out",   port:"out", to:"n_end"},
+    ],
+  };
+}
+
+/* ============================== state ============================== */
+const S = {
+  agents: [], cur: 0, sel: null,
+  view: {x:40, y:20, k:.72},
+  run: null, sample: null, db: null, downloads: null,
+};
+const agent = () => S.agents[S.cur];
+const nodeById = id => agent().nodes.find(n => n.id === id);
+
+const $  = s => document.querySelector(s);
+const el = (t, c, txt) => { const e = document.createElement(t); if (c) e.className = c; if (txt != null) e.textContent = txt; return e; };
+
+/* ============================ persistence ============================ */
+/* db when the viewer grants it, localStorage otherwise — always one of the two. */
+const LS = "agent-patchbay/v1";
+let saveTimer = null;
+
+function markSaving(state) {
+  const d = $("#savedot"), t = $("#savetxt");
+  d.className = "dot " + (state === "saving" ? "busy" : state === "error" ? "off" : "on");
+  t.textContent = state === "saving" ? "saving…" : state === "error" ? "local only" : "saved";
+}
+function scheduleSave() {
+  markSaving("saving");
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(save, 550);
+}
+async function save() {
+  const payload = {agents: S.agents, cur: S.cur};
+  try { localStorage.setItem(LS, JSON.stringify(payload)); } catch {}
+  if (S.db) {
+    try { await S.db.doc("workspace/agents").set(payload); markSaving("saved"); return; }
+    catch { markSaving("error"); return; }
+  }
+  markSaving("saved");
+}
+async function load() {
+  if (S.db) {
+    try {
+      const snap = await S.db.doc("workspace/agents").get();
+      const d = snap && snap.exists ? snap.data() : null;
+      if (d && Array.isArray(d.agents) && d.agents.length) return d;
+    } catch {}
+  }
+  try {
+    const raw = localStorage.getItem(LS);
+    if (raw) { const d = JSON.parse(raw); if (d && d.agents && d.agents.length) return d; }
+  } catch {}
+  return null;
+}
+
+/* ============================== canvas ============================== */
+function applyView() {
+  const {x, y, k} = S.view;
+  $("#canvas").style.transform = `translate(${x}px,${y}px) scale(${k})`;
+  $("#gridbg").style.backgroundSize = `${22 * k}px ${22 * k}px`;
+  $("#gridbg").style.backgroundPosition = `${x}px ${y}px`;
+}
+
+const NODE_W = 206;
+function portPos(nodeId, port) {
+  const n = nodeById(nodeId);
+  if (!n) return {x:0, y:0};
+  if (port === "in") return {x:n.x, y:n.y + 20};
+  const branches = branchList(n);
+  if (branches.length) {
+    const i = branches.indexOf(port);
+    if (i >= 0) {
+      const headH = 35, bodyH = bodyHeight(n);
+      return {x:n.x + NODE_W, y:n.y + headH + bodyH + 26 * i + 13};
+    }
+  }
+  return {x:n.x + NODE_W, y:n.y + 20};
+}
+function bodyHeight(n) { return n._bodyH || 42; }
+function branchList(n) {
+  if (n.type === "classify") return (n.data.labels || "").split(",").map(s => s.trim()).filter(Boolean);
+  if (n.type === "choice")   return [...(n.data.branches || []).map(b => b.label), "else"];
+  return [];
+}
+
+function drawWires(ghost) {
+  const svg = $("#wires");
+  svg.innerHTML = "";
+  const path = (a, b, cls) => {
+    const dx = Math.max(46, Math.abs(b.x - a.x) * .45);
+    const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    p.setAttribute("d", `M ${a.x} ${a.y} C ${a.x + dx} ${a.y}, ${b.x - dx} ${b.y}, ${b.x} ${b.y}`);
+    p.setAttribute("class", cls);
+    svg.appendChild(p);
+  };
+  for (const e of agent().edges) {
+    const live = S.run && S.run.lastEdge === e.id;
+    path(portPos(e.from, e.port), portPos(e.to, "in"), "wire" + (live ? " live" : ""));
+  }
+  if (ghost) path(ghost.from, ghost.to, "wire ghost");
+}
+
+function renderCanvas() {
+  const host = $("#nodes");
+  host.innerHTML = "";
+  for (const n of agent().nodes) {
+    const k = KINDS[n.type];
+    const d = el("div", "node" + (S.sel === n.id ? " sel" : "") + (S.run && S.run.at === n.id ? " active" : ""));
+    d.style.left = n.x + "px"; d.style.top = n.y + "px";
+    d.dataset.id = n.id;
+
+    const head = el("div", "nhead");
+    const chip = el("div", "chip " + k.cls, k.tag);
+    head.appendChild(chip);
+    head.appendChild(el("b", null, n.data.title || k.label));
+    d.appendChild(head);
+
+    const body = el("div", "nbody");
+    body.innerHTML = summarize(n);
+    d.appendChild(body);
+
+    const branches = branchList(n);
+    if (branches.length) {
+      const wrap = el("div", "branches");
+      branches.forEach(b => {
+        const r = el("div", "brow");
+        r.appendChild(el("span", null, b));
+        const p = el("div", "port branch"); p.dataset.node = n.id; p.dataset.port = b;
+        r.appendChild(p);
+        wrap.appendChild(r);
+      });
+      d.appendChild(wrap);
+    }
+
+    if (n.type !== "start") { const pi = el("div", "port in"); pi.dataset.node = n.id; pi.dataset.port = "in"; d.appendChild(pi); }
+    if (n.type !== "end" && !branches.length) { const po = el("div", "port out"); po.dataset.node = n.id; po.dataset.port = "out"; d.appendChild(po); }
+
+    host.appendChild(d);
+    n._bodyH = body.offsetHeight;
+  }
+  drawWires();
+}
+
+const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const clip = (s, n) => { s = String(s || ""); return s.length > n ? s.slice(0, n) + "…" : s; };
+const varTag = v => v ? `<span class="nvar">${esc(v)}</span>` : `<span class="ph">no variable</span>`;
+
+function summarize(n) {
+  const d = n.data;
+  switch (n.type) {
+    case "start": return `<span class="ph">Entry point</span>`;
+    case "end":   return `<span class="ph">Conversation ends</span>`;
+    case "say":   return d.text ? esc(clip(d.text, 78)) : `<span class="ph">No message yet</span>`;
+    case "ask":   return `${d.text ? esc(clip(d.text, 52)) + "<br>" : ""}→ ${varTag(d.variable)}`;
+    case "set":   return `${varTag(d.variable)} = ${esc(clip(d.value, 34)) || `<span class="ph">empty</span>`}`;
+    case "ai":    return `${esc(clip(d.prompt || d.system, 72)) || `<span class="ph">No prompt</span>`}<br>→ ${varTag(d.variable)}`;
+    case "classify": return `route ${esc(clip(d.input, 34))}<br>→ ${varTag(d.variable)}`;
+    case "choice": return `on ${varTag(d.variable)}`;
+    default: return "";
+  }
+}
+
+/* =========================== canvas interaction =========================== */
+let drag = null, pan = null, wiring = null;
+
+$("#wrap").addEventListener("mousedown", ev => {
+  const port = ev.target.closest(".port");
+  if (port) {
+    ev.preventDefault(); ev.stopPropagation();
+    wiring = {from:port.dataset.node, port:port.dataset.port, isIn:port.dataset.port === "in"};
+    return;
+  }
+  const nodeEl = ev.target.closest(".node");
+  if (nodeEl) {
+    const n = nodeById(nodeEl.dataset.id);
+    select(n.id);
+    drag = {id:n.id, dx:ev.clientX / S.view.k - n.x, dy:ev.clientY / S.view.k - n.y};
+    nodeEl.classList.add("dragging");
+    return;
+  }
+  pan = {x:ev.clientX - S.view.x, y:ev.clientY - S.view.y};
+  select(null);
+});
+
+window.addEventListener("mousemove", ev => {
+  if (drag) {
+    const n = nodeById(drag.id);
+    n.x = Math.round(ev.clientX / S.view.k - drag.dx);
+    n.y = Math.round(ev.clientY / S.view.k - drag.dy);
+    const d = document.querySelector(`.node[data-id="${n.id}"]`);
+    if (d) { d.style.left = n.x + "px"; d.style.top = n.y + "px"; }
+    drawWires();
+  } else if (pan) {
+    S.view.x = ev.clientX - pan.x; S.view.y = ev.clientY - pan.y; applyView();
+  } else if (wiring) {
+    const r = $("#wrap").getBoundingClientRect();
+    const to = {x:(ev.clientX - r.left - S.view.x) / S.view.k, y:(ev.clientY - r.top - S.view.y) / S.view.k};
+    drawWires(wiring.isIn ? {from:to, to:portPos(wiring.from, "in")} : {from:portPos(wiring.from, wiring.port), to});
+  }
+});
+
+window.addEventListener("mouseup", ev => {
+  if (drag) { document.querySelectorAll(".node").forEach(d => d.classList.remove("dragging")); drag = null; scheduleSave(); }
+  pan = null;
+  if (wiring) {
+    const port = ev.target.closest(".port");
+    if (port) {
+      const a = wiring, b = {node:port.dataset.node, port:port.dataset.port};
+      const src = a.isIn ? b : a, dst = a.isIn ? {node:a.from} : b;
+      const from = a.isIn ? b.node : a.from, fromPort = a.isIn ? b.port : a.port, to = a.isIn ? a.from : b.node;
+      if (from !== to && fromPort !== "in" && (a.isIn ? true : b.port === "in")) {
+        agent().edges = agent().edges.filter(e => !(e.from === from && e.port === fromPort));
+        agent().edges.push({id:uid("e_"), from, port:fromPort, to});
+        scheduleSave();
+      }
+    }
+    wiring = null; renderCanvas();
+  }
+});
+
+$("#wrap").addEventListener("wheel", ev => {
+  ev.preventDefault();
+  const r = $("#wrap").getBoundingClientRect();
+  const mx = ev.clientX - r.left, my = ev.clientY - r.top;
+  const k2 = Math.min(1.8, Math.max(.25, S.view.k * (ev.deltaY < 0 ? 1.1 : 1 / 1.1)));
+  S.view.x = mx - (mx - S.view.x) * (k2 / S.view.k);
+  S.view.y = my - (my - S.view.y) * (k2 / S.view.k);
+  S.view.k = k2; applyView();
+}, {passive:false});
+
+$("#zIn").onclick  = () => { S.view.k = Math.min(1.8, S.view.k * 1.2); applyView(); };
+$("#zOut").onclick = () => { S.view.k = Math.max(.25, S.view.k / 1.2); applyView(); };
+$("#zFit").onclick = fit;
+
+function bounds() {
+  const ns = agent().nodes;
+  return {
+    x0: Math.min(...ns.map(n => n.x)) - 50, x1: Math.max(...ns.map(n => n.x + NODE_W)) + 50,
+    y0: Math.min(...ns.map(n => n.y)) - 50, y1: Math.max(...ns.map(n => n.y + 150)) + 50,
+  };
+}
+/* Fit, but never below the point where block text stops being readable —
+   a graph shrunk to confetti is worse than one you have to pan. */
+function fit() {
+  if (!agent().nodes.length) return;
+  const r = $("#wrap").getBoundingClientRect(), b = bounds();
+  S.view.k = Math.min(1.3, Math.max(.5, Math.min(r.width / (b.x1 - b.x0), r.height / (b.y1 - b.y0))));
+  S.view.x = (r.width - (b.x1 - b.x0) * S.view.k) / 2 - b.x0 * S.view.k;
+  S.view.y = (r.height - (b.y1 - b.y0) * S.view.k) / 2 - b.y0 * S.view.k;
+  applyView();
+}
+/* Opening view: readable scale, anchored on the entry point. */
+function frameStart() {
+  const ns = agent().nodes;
+  if (!ns.length) return;
+  const r = $("#wrap").getBoundingClientRect(), b = bounds();
+  S.view.k = Math.min(.92, Math.max(.5, r.height / (b.y1 - b.y0)));
+  const start = ns.find(n => n.type === "start") || ns[0];
+  S.view.x = 60 - (start.x - 40) * S.view.k;
+  S.view.y = (r.height - (b.y1 - b.y0) * S.view.k) / 2 - b.y0 * S.view.k;
+  applyView();
+}
+
+/* palette: click to drop a block into view */
+function renderPalette() {
+  const p = $("#palette"); p.innerHTML = "";
+  Object.entries(KINDS).forEach(([type, k]) => {
+    if (type === "start") return;
+    const it = el("div", "pitem");
+    it.appendChild(el("div", "chip " + k.cls, k.tag));
+    const tx = el("div"); tx.appendChild(el("b", null, k.label)); tx.appendChild(el("small", null, k.desc));
+    it.appendChild(tx);
+    it.onclick = () => addNode(type);
+    p.appendChild(it);
+  });
+}
+function addNode(type) {
+  const r = $("#wrap").getBoundingClientRect();
+  const n = {
+    id:uid("n_"), type,
+    x:Math.round((r.width / 2 - S.view.x) / S.view.k - NODE_W / 2),
+    y:Math.round((r.height / 2 - S.view.y) / S.view.k - 40),
+    data:{},
+  };
+  if (type === "classify") n.data = {input:"{{issue}}", variable:"intent", labels:"yes, no"};
+  if (type === "choice")   n.data = {variable:"", branches:[{label:"match", op:"==", value:""}]};
+  if (type === "ai")       n.data = {system:"", prompt:"", variable:"reply", tier:"default"};
+  agent().nodes.push(n); select(n.id); renderCanvas(); scheduleSave();
+}
+
+/* ============================== inspector ============================== */
+function select(id) { S.sel = id; renderCanvas(); renderInspector(); }
+
+function field(label, help) {
+  const f = el("div", "field");
+  f.appendChild(el("label", null, label));
+  if (help) { const h = el("div", "help", help); f.appendChild(h); }
+  return f;
+}
+function bind(input, n, key, after) {
+  input.value = n.data[key] == null ? "" : n.data[key];
+  input.oninput = () => { n.data[key] = input.value; renderCanvas(); scheduleSave(); if (after) after(); };
+}
+
+function renderInspector() {
+  const host = $("#panelInspect");
+  host.innerHTML = "";
+  if (!S.sel) {
+    const e = el("div", "empty");
+    e.innerHTML = "Nothing selected.<br><br>Click a block to edit it, or add one from <b>Blocks</b>. Drag a ○ port onto another block to wire them together.";
+    host.appendChild(e); return;
+  }
+  const n = nodeById(S.sel);
+  if (!n) { S.sel = null; return renderInspector(); }
+  const k = KINDS[n.type], form = el("div", "form");
+
+  const head = el("div", "field");
+  const hl = el("div", "brhead");
+  hl.appendChild(el("label", null, k.label + " block"));
+  if (n.type !== "start") {
+    const del = el("button", "btn ghost sm", "Delete");
+    del.onclick = () => {
+      agent().nodes = agent().nodes.filter(x => x.id !== n.id);
+      agent().edges = agent().edges.filter(e => e.from !== n.id && e.to !== n.id);
+      select(null); scheduleSave();
+    };
+    hl.appendChild(del);
+  }
+  head.appendChild(hl);
+  const idl = el("div", "help mono", n.id);
+  head.appendChild(idl);
+  form.appendChild(head);
+
+  const titleF = field("Label", "Shown on the block");
+  const ti = el("input"); ti.type = "text"; ti.placeholder = k.label; bind(ti, n, "title");
+  titleF.appendChild(ti); form.appendChild(titleF);
+
+  const textArea = (lbl, key, help, ph) => {
+    const f = field(lbl, help);
+    const t = el("textarea"); t.placeholder = ph || ""; bind(t, n, key);
+    f.appendChild(t); form.appendChild(f); return t;
+  };
+  const textInput = (lbl, key, help, ph) => {
+    const f = field(lbl, help);
+    const i = el("input"); i.type = "text"; i.placeholder = ph || ""; bind(i, n, key);
+    f.appendChild(i); form.appendChild(f); return i;
+  };
+
+  if (n.type === "say")   textArea("Message", "text", "Use {{variable}} to insert a saved value.", "What should the agent say?");
+  if (n.type === "ask") {
+    textArea("Question", "text", "Leave empty to just wait for the next reply.", "Optional prompt");
+    textInput("Save answer as", "variable", "Referenced later as {{name}}.", "issue");
+  }
+  if (n.type === "set") {
+    textInput("Variable", "variable", null, "name");
+    textInput("Value", "value", "Supports {{other_variable}}.", "value");
+  }
+  if (n.type === "ai") {
+    textArea("System prompt", "system", "How Claude should behave in this step.", "You are a support engineer…");
+    textArea("Prompt", "prompt", "Sent as the user turn. {{variables}} are filled in.", "The customer says: {{issue}}");
+    textInput("Save reply as", "variable", "Reference the answer later as {{name}}.", "reply");
+    const f = field("Model tier", "Quick is cheaper and faster; complex reasons harder.");
+    const s = el("select");
+    [["quick","Quick"],["default","Default"],["complex","Complex"]].forEach(([v, l]) => {
+      const o = el("option", null, l); o.value = v; if ((n.data.tier || "default") === v) o.selected = true; s.appendChild(o);
+    });
+    s.onchange = () => { n.data.tier = s.value; scheduleSave(); };
+    f.appendChild(s); form.appendChild(f);
+  }
+  if (n.type === "classify") {
+    textInput("Text to route on", "input", "Usually a {{variable}} captured earlier.", "{{issue}}");
+    textInput("Save label as", "variable", null, "intent");
+    const t = textInput("Routes", "labels", "Comma separated. Each becomes an output port.", "billing, technical, other");
+    t.oninput = () => { n.data.labels = t.value; renderCanvas(); scheduleSave(); };
+  }
+  if (n.type === "choice") {
+    textInput("Variable to test", "variable", null, "intent");
+    const f = field("Rules", "First match wins; otherwise the else port is taken.");
+    const box = el("div", "bedit");
+    (n.data.branches || []).forEach((b, i) => {
+      const row = el("div", "brule");
+      const lab = el("input"); lab.type = "text"; lab.value = b.label; lab.placeholder = "label";
+      lab.oninput = () => { b.label = lab.value; renderCanvas(); scheduleSave(); };
+      const op = el("select");
+      [["==","is"],["!=","is not"],["contains","has"]].forEach(([v, l]) => {
+        const o = el("option", null, l); o.value = v; if (b.op === v) o.selected = true; op.appendChild(o);
+      });
+      op.onchange = () => { b.op = op.value; scheduleSave(); };
+      const val = el("input"); val.type = "text"; val.value = b.value; val.placeholder = "value";
+      val.oninput = () => { b.value = val.value; scheduleSave(); };
+      row.append(lab, op, val); box.appendChild(row);
+    });
+    const add = el("button", "btn ghost sm", "+ Add rule");
+    add.onclick = () => { (n.data.branches = n.data.branches || []).push({label:"rule " + (n.data.branches.length + 1), op:"==", value:""}); renderCanvas(); renderInspector(); scheduleSave(); };
+    box.appendChild(add);
+    f.appendChild(box); form.appendChild(f);
+  }
+  if (n.type === "start" || n.type === "end") {
+    const e = el("div", "help", n.type === "start"
+      ? "Every run starts here. Wire it to the first block."
+      : "Reaching this block ends the conversation.");
+    form.appendChild(e);
+  }
+  host.appendChild(form);
+}
+
+/* ============================== runtime ============================== */
+function fill(tpl, vars) {
+  return String(tpl == null ? "" : tpl).replace(/\{\{\s*([\w.]+)\s*\}\}/g, (_, k) =>
+    vars[k] == null ? "" : String(vars[k]));
+}
+function nextFrom(id, port) {
+  const e = agent().edges.find(e => e.from === id && e.port === (port || "out"));
+  return e ? {node:e.to, edge:e.id} : null;
+}
+function log(cls, text) {
+  const m = el("div", "msg " + cls, text);
+  $("#log").appendChild(m);
+  $("#log").scrollTop = $("#log").scrollHeight;
+  return m;
+}
+function renderVars() {
+  const v = $("#vars");
+  v.innerHTML = "";
+  const vars = (S.run && S.run.vars) || {};
+  const keys = Object.keys(vars);
+  if (!keys.length) { v.innerHTML = `<div class="vrow" style="color:var(--ink-3)">no variables set yet</div>`; return; }
+  keys.forEach(k => {
+    const r = el("div", "vrow");
+    r.appendChild(el("b", null, k));
+    r.appendChild(el("span", null, clip(vars[k], 64)));
+    v.appendChild(r);
+  });
+}
+
+function showTab(which) {
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("on", t.dataset.tab === which));
+  $("#panelInspect").hidden = which !== "inspect";
+  $("#panelTest").hidden = which !== "test";
+}
+document.querySelectorAll(".tab").forEach(t => t.onclick = () => showTab(t.dataset.tab));
+
+$("#btnRun").onclick = startRun;
+async function startRun() {
+  showTab("test");
+  $("#log").innerHTML = "";
+  const start = agent().nodes.find(n => n.type === "start");
+  if (!start) return log("err", "This agent has no Start block.");
+  S.run = {vars:{}, at:start.id, waiting:false, lastEdge:null, stop:false};
+  renderVars(); log("sys", "run started");
+  await step(nextFrom(start.id));
+}
+
+async function step(next) {
+  let guard = 0;
+  while (next && !S.run.stop) {
+    if (++guard > 100) { log("err", "Stopped: the flow looped more than 100 steps."); break; }
+    S.run.at = next.node; S.run.lastEdge = next.edge;
+    renderCanvas();
+    const n = nodeById(next.node);
+    if (!n) { log("err", "A wire points at a block that no longer exists."); break; }
+    next = await runNode(n);
+    renderVars();
+  }
+  if (!next && !S.run.stop && S.run.at) {
+    const n = nodeById(S.run.at);
+    if (n && n.type === "end") log("sys", "conversation ended");
+    else if (n && !S.run.waiting) log("sys", "end of flow — nothing wired from here");
+  }
+  S.run.lastEdge = null; renderCanvas();
+}
+
+async function runNode(n) {
+  const V = S.run.vars;
+  switch (n.type) {
+    case "say":
+      log("bot", fill(n.data.text, V) || "…");
+      return nextFrom(n.id);
+
+    case "set":
+      if (n.data.variable) V[n.data.variable] = fill(n.data.value, V);
+      return nextFrom(n.id);
+
+    case "ask": {
+      if (n.data.text) log("bot", fill(n.data.text, V));
+      S.run.waiting = {node:n.id, variable:n.data.variable};
+      $("#say").focus();
+      return null;
+    }
+
+    case "ai": {
+      if (!S.sample) { log("err", "AI blocks need Claude. Publish this page as an Artifact and open it there."); return null; }
+      const m = log("bot think", "Thinking…");
+      try {
+        const res = await S.sample(
+          [{role:"user", content:fill(n.data.prompt || "{{issue}}", V)}],
+          {
+            system: fill(n.data.system, V) || undefined,
+            modelTier: n.data.tier || "default",
+            onText: u => { m.textContent = u.text; $("#log").scrollTop = $("#log").scrollHeight; },
+          }
+        );
+        m.className = "msg bot";
+        m.textContent = res.text;
+        if (n.data.variable) V[n.data.variable] = res.text;
+      } catch (e) {
+        m.remove();
+        log("err", aiError(e));
+        return null;
+      }
+      return nextFrom(n.id);
+    }
+
+    case "classify": {
+      const labels = branchList(n);
+      if (!S.sample) { log("err", "Classify needs Claude. Publish this page as an Artifact and open it there."); return null; }
+      if (!labels.length) { log("err", "This Classify block has no routes."); return null; }
+      const m = log("sys think", "routing…");
+      let pick = labels[labels.length - 1];
+      try {
+        const out = await S.sample.json(
+          `Classify the message into exactly one category.\n\nCategories: ${labels.join(", ")}\n\nMessage: ${fill(n.data.input, V)}`,
+          {
+            system:`Reply with JSON only: {"category": one of [${labels.join(", ")}]}. Choose the closest match.`,
+            modelTier:"quick",
+          }
+        );
+        const got = out && String(out.category || "").trim().toLowerCase();
+        const hit = labels.find(l => l.toLowerCase() === got);
+        if (hit) pick = hit;
+      } catch (e) {
+        m.textContent = "routing failed — taking " + pick;
+      }
+      if (n.data.variable) V[n.data.variable] = pick;
+      m.textContent = "routed → " + pick;
+      return nextFrom(n.id, pick);
+    }
+
+    case "choice": {
+      const val = String(V[n.data.variable] == null ? "" : V[n.data.variable]);
+      for (const b of (n.data.branches || [])) {
+        const hit = b.op === "==" ? val === b.value
+                  : b.op === "!=" ? val !== b.value
+                  : val.toLowerCase().includes(String(b.value).toLowerCase());
+        if (hit) return nextFrom(n.id, b.label);
+      }
+      return nextFrom(n.id, "else");
+    }
+
+    case "end":
+      return null;
+
+    default:
+      return nextFrom(n.id);
+  }
+}
+
+function aiError(e) {
+  const c = e && e.code;
+  if (c === "not_granted")   return "Claude access was declined, so this block can't run.";
+  if (c === "rate_limited")  return "Too many requests just now — wait a moment and run again.";
+  if (c === "refused")       return "Claude declined to answer that prompt. Try rewording the block.";
+  if (c === "prompt_too_large") return "That prompt is too long. Shorten it or trim the variables it includes.";
+  if (c === "cancelled")     return "Run cancelled.";
+  return "Claude couldn't complete this step" + (e && e.message ? ": " + e.message : ".");
+}
+
+/* user reply */
+$("#btnSend").onclick = sendReply;
+$("#say").addEventListener("keydown", e => { if (e.key === "Enter") sendReply(); });
+async function sendReply() {
+  const box = $("#say"), text = box.value.trim();
+  if (!text) return;
+  if (!S.run) { log("sys", "press Run agent to start"); return; }
+  box.value = "";
+  log("usr", text);
+  const w = S.run.waiting;
+  if (!w) return;
+  S.run.waiting = false;
+  if (w.variable) S.run.vars[w.variable] = text;
+  renderVars();
+  await step(nextFrom(w.node));
+}
+
+/* ============================== agents list ============================== */
+function renderAgents() {
+  const host = $("#agents"); host.innerHTML = "";
+  S.agents.forEach((a, i) => {
+    const r = el("div", "arow" + (i === S.cur ? " sel" : ""));
+    r.appendChild(el("span", null, a.name || "Untitled"));
+    if (S.agents.length > 1) {
+      const x = el("button", "x", "×");
+      x.title = "Delete agent";
+      x.onclick = ev => {
+        ev.stopPropagation();
+        S.agents.splice(i, 1);
+        S.cur = Math.max(0, Math.min(S.cur, S.agents.length - 1));
+        switchAgent(); scheduleSave();
+      };
+      r.appendChild(x);
+    }
+    r.onclick = () => { S.cur = i; switchAgent(); };
+    host.appendChild(r);
+  });
+}
+function switchAgent() {
+  S.sel = null; S.run = null;
+  $("#aname").value = agent().name;
+  renderAgents(); renderCanvas(); renderInspector(); renderVars();
+  $("#log").innerHTML = "";
+  frameStart();
+}
+$("#btnNew").onclick = () => {
+  S.agents.push({id:uid("a_"), name:"New agent",
+    nodes:[{id:uid("n_"), type:"start", x:200, y:200, data:{}}], edges:[]});
+  S.cur = S.agents.length - 1; switchAgent(); scheduleSave();
+};
+$("#aname").oninput = () => { agent().name = $("#aname").value; renderAgents(); scheduleSave(); };
+
+/* ============================== import / export ============================== */
+$("#btnExport").onclick = async () => {
+  const data = JSON.stringify(agent(), (k, v) => k === "_bodyH" ? undefined : v, 2);
+  const filename = (agent().name || "agent").toLowerCase().replace(/[^a-z0-9]+/g, "-") + ".json";
+  if (S.downloads) {
+    try { await S.downloads.save({filename, data}); return; } catch {}
+  }
+  navigator.clipboard.writeText(data).then(
+    () => flash("Agent JSON copied to clipboard"),
+    () => flash("Could not export — clipboard blocked")
+  );
+};
+$("#btnImport").onclick = () => {
+  const inp = el("input"); inp.type = "file"; inp.accept = "application/json,.json";
+  inp.onchange = () => {
+    const f = inp.files && inp.files[0];
+    if (!f) return;
+    const rd = new FileReader();
+    rd.onload = () => {
+      try {
+        const a = JSON.parse(rd.result);
+        if (!a || !Array.isArray(a.nodes)) throw 0;
+        a.id = uid("a_"); a.name = (a.name || "Imported") + "";
+        S.agents.push(a); S.cur = S.agents.length - 1; switchAgent(); scheduleSave();
+      } catch { flash("That file isn't a valid agent export"); }
+    };
+    rd.readAsText(f);
+  };
+  inp.click();
+};
+function flash(msg) {
+  showTab("test"); log("sys", msg);
+}
+
+/* ============================== boot ============================== */
+async function boot() {
+  renderPalette();
+  S.agents = [seedAgent()]; S.cur = 0;
+  $("#aname").value = agent().name;
+  renderAgents(); renderCanvas(); renderInspector(); renderVars(); applyView();
+  requestAnimationFrame(frameStart);
+  markSaving("saved");
+
+  // Capabilities resolve later (or never). The page is fully usable meanwhile.
+  if (window.claude && typeof window.claude.use === "function") {
+    claude.use("sample").then(s => {
+      S.sample = s;
+      $("#aidot").className = "dot " + (s ? "on" : "off");
+      $("#aitxt").textContent = s ? "Claude connected" : "Claude unavailable";
+    }).catch(() => { $("#aidot").className = "dot off"; $("#aitxt").textContent = "Claude unavailable"; });
+
+    claude.use("db").then(async d => {
+      if (!d) return;
+      S.db = d;
+      const saved = await load();
+      if (saved) { S.agents = saved.agents; S.cur = Math.min(saved.cur || 0, S.agents.length - 1); switchAgent(); }
+    }).catch(() => {});
+
+    claude.use("downloads").then(d => { S.downloads = d; }).catch(() => {});
+  } else {
+    $("#aidot").className = "dot off";
+    $("#aitxt").textContent = "Claude unavailable";
+    const saved = await load();
+    if (saved) { S.agents = saved.agents; S.cur = Math.min(saved.cur || 0, S.agents.length - 1); switchAgent(); }
+  }
+}
+boot();
+</script>

@@ -1,0 +1,1 @@
+import"./tabs.viWZJ-9O.js?dpl=dpl_FQirkLLtHscmEqwp3MsaUMDDkGLE";

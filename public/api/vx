@@ -1,0 +1,5 @@
+{
+  "_comment": "OFFLINE ARCHIVAL STUB - /api/vx. Not part of the original crawl. This is voiceflow.com's own first-party analytics beacon (window.vfBeacon), defined at the end of /_astro/Base.astro_astro_type_script_index_0_lang.EQBSJDW75aa6.js. It POSTs page-view, click, scroll-depth and engagement events via navigator.sendBeacon with a fetch fallback; the response is never read and every call is wrapped in try/catch, so a 404 was silent but still logged an error per event. Serving this static file answers 200 instead. Inert: static data, no network activity, no storage writes. Note the emitting bundle is gated on location.hostname being www.voiceflow.com or voiceflow.com, so on localhost this path is not requested at all.",
+  "_stub": true,
+  "ok": true
+}

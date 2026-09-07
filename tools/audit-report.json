@@ -1,0 +1,3272 @@
+{
+  "scannedFiles": 1339,
+  "totalRefs": 141365,
+  "okRefs": 114895,
+  "missingDistinct": 181,
+  "missingTotal": 5426,
+  "dynamicDistinct": 0,
+  "externalHosts": [
+    [
+      "www.youtube.com",
+      1812
+    ],
+    [
+      "s3.amazonaws.com",
+      1673
+    ],
+    [
+      "www.linkedin.com",
+      1315
+    ],
+    [
+      "youtube.com",
+      1115
+    ],
+    [
+      "twitter.com",
+      578
+    ],
+    [
+      "www.google.com",
+      419
+    ],
+    [
+      "x.com",
+      417
+    ],
+    [
+      "claude.ai",
+      414
+    ],
+    [
+      "www.mintlify.com",
+      414
+    ],
+    [
+      "cdn.voiceflow.com",
+      414
+    ],
+    [
+      "chat.openai.com",
+      413
+    ],
+    [
+      "www.perplexity.ai",
+      413
+    ],
+    [
+      "grok.com",
+      413
+    ],
+    [
+      "github.com",
+      46
+    ],
+    [
+      "drive.google.com",
+      27
+    ],
+    [
+      "developer.voiceflow.com",
+      22
+    ],
+    [
+      "en.wikipedia.org",
+      20
+    ],
+    [
+      "youtu.be",
+      19
+    ],
+    [
+      "www.gartner.com",
+      18
+    ],
+    [
+      "res.cloudinary.com",
+      16
+    ],
+    [
+      "www.loom.com",
+      13
+    ],
+    [
+      "learn.voiceflow.com",
+      12
+    ],
+    [
+      "cdn.jsdelivr.net",
+      12
+    ],
+    [
+      "www.g2.com",
+      11
+    ],
+    [
+      "cloud.google.com",
+      11
+    ],
+    [
+      "huggingface.co",
+      10
+    ],
+    [
+      "www.mckinsey.com",
+      9
+    ],
+    [
+      "openai.com",
+      8
+    ],
+    [
+      "partners.voiceflow.com",
+      8
+    ],
+    [
+      "api.cal.com",
+      7
+    ],
+    [
+      "docs.google.com",
+      7
+    ],
+    [
+      "www.cathypearl.com",
+      7
+    ],
+    [
+      "medium.com",
+      6
+    ],
+    [
+      "hbr.org",
+      6
+    ],
+    [
+      "rosenfeldmedia.com",
+      6
+    ],
+    [
+      "www.npmjs.com",
+      6
+    ],
+    [
+      "www.parnidia.com",
+      5
+    ],
+    [
+      "developers.google.com",
+      5
+    ],
+    [
+      "www.zendesk.com",
+      5
+    ],
+    [
+      "arize.com",
+      5
+    ],
+    [
+      "www.braintrust.dev",
+      5
+    ],
+    [
+      "ca.linkedin.com",
+      5
+    ],
+    [
+      "www.anthropic.com",
+      5
+    ],
+    [
+      "www.conversationdesigninstitute.com",
+      4
+    ],
+    [
+      "www.ibm.com",
+      4
+    ],
+    [
+      "poe.com",
+      4
+    ],
+    [
+      "arxiv.org",
+      4
+    ],
+    [
+      "au.linkedin.com",
+      4
+    ],
+    [
+      "www.wix.com",
+      4
+    ],
+    [
+      "dns.google",
+      4
+    ],
+    [
+      "unsplash.com",
+      4
+    ],
+    [
+      "share.voiceflow.com",
+      4
+    ],
+    [
+      "community.voiceflow.com",
+      4
+    ],
+    [
+      "api.introvoke.com",
+      3
+    ],
+    [
+      "learn.microsoft.com",
+      3
+    ],
+    [
+      "chatgpt.com",
+      3
+    ],
+    [
+      "cal.com",
+      3
+    ],
+    [
+      "jetsetworldtravel.com",
+      3
+    ],
+    [
+      "aws.amazon.com",
+      3
+    ],
+    [
+      "calendar.google.com",
+      3
+    ],
+    [
+      "dalai.no",
+      3
+    ],
+    [
+      "calendar.app.google",
+      3
+    ],
+    [
+      "www.adeptiveai.com",
+      3
+    ],
+    [
+      "business.facebook.com",
+      3
+    ],
+    [
+      "developers.facebook.com",
+      3
+    ],
+    [
+      "console.groq.com",
+      3
+    ],
+    [
+      "play.google.com",
+      3
+    ],
+    [
+      "techcrunch.com",
+      3
+    ],
+    [
+      "aroundaboutcars.com",
+      3
+    ],
+    [
+      "r.jina.ai",
+      3
+    ],
+    [
+      "api.hsforms.com",
+      3
+    ],
+    [
+      "socket.io",
+      3
+    ],
+    [
+      "docs.microsoft.com",
+      3
+    ],
+    [
+      "developer.amazon.com",
+      3
+    ],
+    [
+      "www.pexels.com",
+      3
+    ],
+    [
+      "usertesting.com",
+      3
+    ],
+    [
+      "www.notion.so",
+      3
+    ],
+    [
+      "www.sas.upenn.edu",
+      3
+    ],
+    [
+      "fonts.googleapis.com",
+      2
+    ],
+    [
+      "www.trustpilot.com",
+      2
+    ],
+    [
+      "www.twilio.com",
+      2
+    ],
+    [
+      "cookbook.openai.com",
+      2
+    ],
+    [
+      "make.com",
+      2
+    ],
+    [
+      "cxtrends.zendesk.com",
+      2
+    ],
+    [
+      "www.python.org",
+      2
+    ],
+    [
+      "console.anthropic.com",
+      2
+    ],
+    [
+      "docs.cloud.google.com",
+      2
+    ],
+    [
+      "replit.com",
+      2
+    ],
+    [
+      "convocore.ai",
+      2
+    ],
+    [
+      "news.mit.edu",
+      2
+    ],
+    [
+      "www.make.com",
+      2
+    ],
+    [
+      "voisento.de",
+      2
+    ],
+    [
+      "colab.research.google.com",
+      2
+    ],
+    [
+      "azure.microsoft.com",
+      2
+    ],
+    [
+      "www.nvidia.com",
+      2
+    ],
+    [
+      "www.prnewswire.com",
+      2
+    ],
+    [
+      "js.langchain.com",
+      2
+    ],
+    [
+      "flowbridge.app",
+      2
+    ],
+    [
+      "www.bcg.com",
+      2
+    ],
+    [
+      "www.forbes.com",
+      2
+    ],
+    [
+      "www.shopify.com",
+      2
+    ],
+    [
+      "support.wix.com",
+      2
+    ],
+    [
+      "valchy.ai",
+      2
+    ],
+    [
+      "api.allorigins.win",
+      2
+    ],
+    [
+      "autocomplete.clearbit.com",
+      2
+    ],
+    [
+      "b",
+      2
+    ],
+    [
+      "xn--e1aybc",
+      2
+    ],
+    [
+      "a",
+      2
+    ],
+    [
+      "base-ui.com",
+      2
+    ],
+    [
+      "docs.svix.com",
+      2
+    ],
+    [
+      "dashboard.nexmo.com",
+      2
+    ],
+    [
+      "krisp.ai",
+      2
+    ],
+    [
+      "goroute.demo.voiceflow.com",
+      2
+    ],
+    [
+      "ico.org.uk",
+      2
+    ],
+    [
+      "airtable.com",
+      2
+    ],
+    [
+      "www.theguardian.com",
+      2
+    ],
+    [
+      "cdn.embedly.com",
+      2
+    ],
+    [
+      "vux.world",
+      2
+    ],
+    [
+      "www.nytimes.com",
+      2
+    ],
+    [
+      "uxdesign.cc",
+      2
+    ],
+    [
+      "denyslinkov.medium.com",
+      2
+    ],
+    [
+      "www.tiktok.com",
+      2
+    ],
+    [
+      "linktr.ee",
+      2
+    ],
+    [
+      "uxcontent.com",
+      2
+    ],
+    [
+      "sanlamstudios.substack.com",
+      2
+    ],
+    [
+      "tech.adp.com",
+      2
+    ],
+    [
+      "www.psychologytoday.com",
+      2
+    ],
+    [
+      "ngrok.com",
+      2
+    ],
+    [
+      "core.telegram.org",
+      2
+    ],
+    [
+      "www.ubisoft.com",
+      2
+    ],
+    [
+      "fonts.gstatic.com",
+      1
+    ],
+    [
+      "add-to-calendar-pro.com",
+      1
+    ],
+    [
+      "blogs.cisco.com",
+      1
+    ],
+    [
+      "docs.fcc.gov",
+      1
+    ],
+    [
+      "www.wakingdigital.com",
+      1
+    ],
+    [
+      "www.servicenow.com",
+      1
+    ],
+    [
+      "digital-strategy.ec.europa.eu",
+      1
+    ],
+    [
+      "artificialintelligenceact.eu",
+      1
+    ],
+    [
+      "www.gibsondunn.com",
+      1
+    ],
+    [
+      "www.aicpa-cima.com",
+      1
+    ],
+    [
+      "cheatsheetseries.owasp.org",
+      1
+    ],
+    [
+      "www.langchain.com",
+      1
+    ],
+    [
+      "openai.github.io",
+      1
+    ],
+    [
+      "www.llamaindex.ai",
+      1
+    ],
+    [
+      "pydantic.dev",
+      1
+    ],
+    [
+      "www.venasolutions.com",
+      1
+    ],
+    [
+      "www.visme.co",
+      1
+    ],
+    [
+      "www.heygen.com",
+      1
+    ],
+    [
+      "www.salesforce.com",
+      1
+    ],
+    [
+      "www.zurich.co.uk",
+      1
+    ],
+    [
+      "www.generali.pl",
+      1
+    ],
+    [
+      "www.lightningdesignsystem.com",
+      1
+    ],
+    [
+      "www.bain.com",
+      1
+    ],
+    [
+      "www.theatlantic.com",
+      1
+    ],
+    [
+      "qz.com",
+      1
+    ],
+    [
+      "www.reddit.com",
+      1
+    ],
+    [
+      "www.bland.ai",
+      1
+    ],
+    [
+      "www.retellai.com",
+      1
+    ],
+    [
+      "synthflow.ai",
+      1
+    ],
+    [
+      "autocalls.ai",
+      1
+    ],
+    [
+      "www.jasper.ai",
+      1
+    ],
+    [
+      "superhuman.com",
+      1
+    ],
+    [
+      "docs.aws.amazon.com",
+      1
+    ],
+    [
+      "www.onvego.com",
+      1
+    ],
+    [
+      "www.sobot.io",
+      1
+    ],
+    [
+      "whippy.ai",
+      1
+    ],
+    [
+      "convertitmarketing.com",
+      1
+    ],
+    [
+      "ccdcare.com",
+      1
+    ],
+    [
+      "www.qualtrics.com",
+      1
+    ],
+    [
+      "www.gong.io",
+      1
+    ],
+    [
+      "developer.nvidia.com",
+      1
+    ],
+    [
+      "assemblyai.com",
+      1
+    ],
+    [
+      "betakit.com",
+      1
+    ],
+    [
+      "quimple.agency",
+      1
+    ],
+    [
+      "umbral.ai",
+      1
+    ],
+    [
+      "betterwithai.in",
+      1
+    ],
+    [
+      "www.agentflow.digital",
+      1
+    ],
+    [
+      "www.growthcreators.ai",
+      1
+    ],
+    [
+      "www.skool.com",
+      1
+    ],
+    [
+      "evolution-agency.fr",
+      1
+    ],
+    [
+      "www.retently.com",
+      1
+    ],
+    [
+      "hellotars.com",
+      1
+    ],
+    [
+      "flowxo.com",
+      1
+    ],
+    [
+      "docs.chatterbot.us",
+      1
+    ],
+    [
+      "www.customerexperiencedive.com",
+      1
+    ],
+    [
+      "builtin.com",
+      1
+    ],
+    [
+      "www.d3vtech.com",
+      1
+    ],
+    [
+      "rasa.com",
+      1
+    ],
+    [
+      "www.globenewswire.com",
+      1
+    ],
+    [
+      "blog.khanacademy.org",
+      1
+    ],
+    [
+      "www.consumerfinance.gov",
+      1
+    ],
+    [
+      "t.co",
+      1
+    ],
+    [
+      "www.cnbc.com",
+      1
+    ],
+    [
+      "groq.com",
+      1
+    ],
+    [
+      "www.grandviewresearch.com",
+      1
+    ],
+    [
+      "www.accenture.com",
+      1
+    ],
+    [
+      "med.stanford.edu",
+      1
+    ],
+    [
+      "www.deloitte.com",
+      1
+    ],
+    [
+      "ollama.com",
+      1
+    ],
+    [
+      "localhost:11434",
+      1
+    ],
+    [
+      "www.sqmgroup.com",
+      1
+    ],
+    [
+      "www.nber.org",
+      1
+    ],
+    [
+      "www.bentoml.com",
+      1
+    ],
+    [
+      "ui.endpoints.huggingface.co",
+      1
+    ],
+    [
+      "spacy.io",
+      1
+    ],
+    [
+      "www.nltk.org",
+      1
+    ],
+    [
+      "radimrehurek.com",
+      1
+    ],
+    [
+      "www.tensorflow.org",
+      1
+    ],
+    [
+      "pytorch.org",
+      1
+    ],
+    [
+      "voiceglow.org",
+      1
+    ],
+    [
+      "discord.pawan.krd",
+      1
+    ],
+    [
+      "platform.openai.com",
+      1
+    ],
+    [
+      "www.martechcube.com",
+      1
+    ],
+    [
+      "python.langchain.com",
+      1
+    ],
+    [
+      "api.python.langchain.com",
+      1
+    ],
+    [
+      "www.lawnext.com",
+      1
+    ],
+    [
+      "blog.rossintelligence.com",
+      1
+    ],
+    [
+      "www.litera.com",
+      1
+    ],
+    [
+      "www.lawgeex.com",
+      1
+    ],
+    [
+      "tawk.to",
+      1
+    ],
+    [
+      "www.livechat.com",
+      1
+    ],
+    [
+      "console.cloud.google.com",
+      1
+    ],
+    [
+      "mistral.ai",
+      1
+    ],
+    [
+      "poe.sng.link",
+      1
+    ],
+    [
+      "pmc.ncbi.nlm.nih.gov",
+      1
+    ],
+    [
+      "www.paxton.ai",
+      1
+    ],
+    [
+      "dho.stanford.edu",
+      1
+    ],
+    [
+      "www.learneo.com",
+      1
+    ],
+    [
+      "quillbot.com",
+      1
+    ],
+    [
+      "www.zillow.com",
+      1
+    ],
+    [
+      "reports.weforum.org",
+      1
+    ],
+    [
+      "www.redfin.ca",
+      1
+    ],
+    [
+      "www.virtuance.com",
+      1
+    ],
+    [
+      "www.boardwalkpropertyco.com",
+      1
+    ],
+    [
+      "restb.ai",
+      1
+    ],
+    [
+      "localizeos.com",
+      1
+    ],
+    [
+      "www.getplunk.com",
+      1
+    ],
+    [
+      "www.heymarket.com",
+      1
+    ],
+    [
+      "www.marketmuse.com",
+      1
+    ],
+    [
+      "api.airtable.com",
+      1
+    ],
+    [
+      "testzilla.ai",
+      1
+    ],
+    [
+      "support.apple.com",
+      1
+    ],
+    [
+      "help.uber.com",
+      1
+    ],
+    [
+      "apps.shopify.com",
+      1
+    ],
+    [
+      "apps.apple.com",
+      1
+    ],
+    [
+      "inbox.shopify.com",
+      1
+    ],
+    [
+      "help.shopify.com",
+      1
+    ],
+    [
+      "www.zendesk.co.uk",
+      1
+    ],
+    [
+      "cali-ink.com",
+      1
+    ],
+    [
+      "www.vendr.com",
+      1
+    ],
+    [
+      "www.ing.com",
+      1
+    ],
+    [
+      "siliconangle.com",
+      1
+    ],
+    [
+      "a16z.com",
+      1
+    ],
+    [
+      "decagon.ai",
+      1
+    ],
+    [
+      "www.facebook.com",
+      1
+    ],
+    [
+      "landing.flowbridge.app",
+      1
+    ],
+    [
+      "www.fortunebusinessinsights.com",
+      1
+    ],
+    [
+      "manage.wix.com",
+      1
+    ],
+    [
+      "zapier.com",
+      1
+    ],
+    [
+      "central.zapier.com",
+      1
+    ],
+    [
+      "parnidia.com",
+      1
+    ],
+    [
+      "linkedin.com",
+      1
+    ],
+    [
+      "ia.intelijen.es",
+      1
+    ],
+    [
+      "www.mindsightai.agency",
+      1
+    ],
+    [
+      "adanac.ai",
+      1
+    ],
+    [
+      "fr.linkedin.com",
+      1
+    ],
+    [
+      "www.boterra.ai",
+      1
+    ],
+    [
+      "es.linkedin.com",
+      1
+    ],
+    [
+      "boards-api.greenhouse.io",
+      1
+    ],
+    [
+      "api.lever.co",
+      1
+    ],
+    [
+      "www.wikidata.org",
+      1
+    ],
+    [
+      "itunes.apple.com",
+      1
+    ],
+    [
+      "tranco-list.eu",
+      1
+    ],
+    [
+      "ipwho.is",
+      1
+    ],
+    [
+      "www.clarity.ms",
+      1
+    ],
+    [
+      "cdn.heapanalytics.com",
+      1
+    ],
+    [
+      "cdn.segment.com",
+      1
+    ],
+    [
+      "widget.intercom.io",
+      1
+    ],
+    [
+      "wsrv.nl",
+      1
+    ],
+    [
+      "fonts.cdnfonts.com",
+      1
+    ],
+    [
+      "mintlify.b-cdn.net",
+      1
+    ],
+    [
+      "vercel.live",
+      1
+    ],
+    [
+      "flux.deepgram.com",
+      1
+    ],
+    [
+      "www.vonage.ca",
+      1
+    ],
+    [
+      "cartesia.ai",
+      1
+    ],
+    [
+      "www.assemblyai.com",
+      1
+    ],
+    [
+      "www.rime.ai",
+      1
+    ],
+    [
+      "deepgram.com",
+      1
+    ],
+    [
+      "docs.cartesia.ai",
+      1
+    ],
+    [
+      "elevenlabs.io",
+      1
+    ],
+    [
+      "console.twilio.com",
+      1
+    ],
+    [
+      "portal.telnyx.com",
+      1
+    ],
+    [
+      "owasp.org",
+      1
+    ],
+    [
+      "docs.claude.com",
+      1
+    ],
+    [
+      "code.claude.com",
+      1
+    ],
+    [
+      "modelcontextprotocol.io",
+      1
+    ],
+    [
+      "engineering.fb.com",
+      1
+    ],
+    [
+      "www.pwc.com",
+      1
+    ],
+    [
+      "www.entrepreneur.com",
+      1
+    ],
+    [
+      "www.aei.org",
+      1
+    ],
+    [
+      "www.vox.com",
+      1
+    ],
+    [
+      "txt.cohere.ai",
+      1
+    ],
+    [
+      "www.w3.org",
+      1
+    ],
+    [
+      "voicecompass.ai",
+      1
+    ],
+    [
+      "elaineinthebay.netlify.app",
+      1
+    ],
+    [
+      "venngage.com",
+      1
+    ],
+    [
+      "guiltyeats.com",
+      1
+    ],
+    [
+      "portal.azure.com",
+      1
+    ],
+    [
+      "www.luis.ai",
+      1
+    ],
+    [
+      "helpline-hero.com",
+      1
+    ],
+    [
+      "www.newsweek.com",
+      1
+    ],
+    [
+      "voiceflow.zendesk.com",
+      1
+    ],
+    [
+      "theconversation.com",
+      1
+    ],
+    [
+      "levelup.gitconnected.com",
+      1
+    ],
+    [
+      "www.businessofapps.com",
+      1
+    ],
+    [
+      "blogs.microsoft.com",
+      1
+    ],
+    [
+      "workspace.google.com",
+      1
+    ],
+    [
+      "xavidop.me",
+      1
+    ],
+    [
+      "api.openai.com",
+      1
+    ],
+    [
+      "drterifisher.com",
+      1
+    ],
+    [
+      "qdrant.tech",
+      1
+    ],
+    [
+      "prod-files-secure.s3.us-west-2.amazonaws.com",
+      1
+    ],
+    [
+      "www.businessinsider.com",
+      1
+    ],
+    [
+      "www.ncbi.nlm.nih.gov",
+      1
+    ],
+    [
+      "www.nike.com",
+      1
+    ],
+    [
+      "www.openai.com",
+      1
+    ],
+    [
+      "langchain.com",
+      1
+    ],
+    [
+      "redis.io",
+      1
+    ],
+    [
+      "opensearch.org",
+      1
+    ],
+    [
+      "www.unstructured.io",
+      1
+    ],
+    [
+      "nodejs.org",
+      1
+    ],
+    [
+      "docker.com",
+      1
+    ],
+    [
+      "www.theverge.com",
+      1
+    ],
+    [
+      "www.cio.com",
+      1
+    ],
+    [
+      "www.computerweekly.com",
+      1
+    ],
+    [
+      "actions.google.com",
+      1
+    ],
+    [
+      "learnprompting.org",
+      1
+    ],
+    [
+      "www.americanpressinstitute.org",
+      1
+    ],
+    [
+      "www.thoughtco.com",
+      1
+    ],
+    [
+      "www.midjourney.com",
+      1
+    ],
+    [
+      "www.esa.int",
+      1
+    ],
+    [
+      "gusto.com",
+      1
+    ],
+    [
+      "www.mentalfloss.com",
+      1
+    ],
+    [
+      "www.tivopedia.com",
+      1
+    ],
+    [
+      "spectrum.ieee.org",
+      1
+    ],
+    [
+      "customgpt.ai",
+      1
+    ],
+    [
+      "copilot.microsoft.com",
+      1
+    ],
+    [
+      "www.chatbase.co",
+      1
+    ],
+    [
+      "www.loopreturns.com",
+      1
+    ],
+    [
+      "searchenterpriseai.techtarget.com",
+      1
+    ],
+    [
+      "research.ibm.com",
+      1
+    ],
+    [
+      "ai.facebook.com",
+      1
+    ],
+    [
+      "design.google",
+      1
+    ],
+    [
+      "qveraliao.com",
+      1
+    ],
+    [
+      "www.spix-industry.com",
+      1
+    ],
+    [
+      "www.asimovonline.com",
+      1
+    ],
+    [
+      "writingcenter.unc.edu",
+      1
+    ],
+    [
+      "www.drivetime.fm",
+      1
+    ],
+    [
+      "wooliesx.com.au",
+      1
+    ],
+    [
+      "fortune.com",
+      1
+    ],
+    [
+      "womeninvoice.org",
+      1
+    ],
+    [
+      "www.esnipe.com",
+      1
+    ],
+    [
+      "abcnews.go.com",
+      1
+    ],
+    [
+      "www.conventionalcommits.org",
+      1
+    ],
+    [
+      "sonarcloud.io",
+      1
+    ],
+    [
+      "sonar-project.properties",
+      1
+    ],
+    [
+      "circleci.com",
+      1
+    ],
+    [
+      "www.glassdoor.com",
+      1
+    ],
+    [
+      "m.media-amazon.com",
+      1
+    ],
+    [
+      "www.freecodecamp.org",
+      1
+    ],
+    [
+      "developer.microsoft.com",
+      1
+    ],
+    [
+      "www.nngroup.com",
+      1
+    ],
+    [
+      "blog.prototypr.io",
+      1
+    ],
+    [
+      "kathrynzdan.com",
+      1
+    ],
+    [
+      "www.amazon.ca",
+      1
+    ],
+    [
+      "www2.deloitte.com",
+      1
+    ],
+    [
+      "credit-calculator-1-tubadsouza.replit.app",
+      1
+    ],
+    [
+      "blog.research.google",
+      1
+    ],
+    [
+      "www.adept.ai",
+      1
+    ],
+    [
+      "scholar.google.com",
+      1
+    ],
+    [
+      "helixguard.ai",
+      1
+    ],
+    [
+      "us02web.zoom.us",
+      1
+    ],
+    [
+      "utterance-generator.com",
+      1
+    ],
+    [
+      "bit.ly",
+      1
+    ],
+    [
+      "pimylifeup.com",
+      1
+    ],
+    [
+      "wiki.seeedstudio.com",
+      1
+    ],
+    [
+      "www.tomshardware.com",
+      1
+    ],
+    [
+      "wiki.keyestudio.com",
+      1
+    ],
+    [
+      "opensource.org",
+      1
+    ],
+    [
+      "www.gnu.org",
+      1
+    ],
+    [
+      "picovoice.ai",
+      1
+    ],
+    [
+      "voiceaiandvoiceagents.com",
+      1
+    ],
+    [
+      "towardsdatascience.com",
+      1
+    ],
+    [
+      "maartengr.github.io",
+      1
+    ],
+    [
+      "monkeylearn.com",
+      1
+    ],
+    [
+      "www.w3schools.com",
+      1
+    ],
+    [
+      "hwchase17.github.io",
+      1
+    ],
+    [
+      "www.frog.co",
+      1
+    ],
+    [
+      "www.sxsw.com",
+      1
+    ],
+    [
+      "openviewpartners.com",
+      1
+    ],
+    [
+      "trueventures.com",
+      1
+    ],
+    [
+      "www.invisionapp.com",
+      1
+    ],
+    [
+      "www.eventbrite.com",
+      1
+    ],
+    [
+      "www.producthunt.com",
+      1
+    ],
+    [
+      "www.techtoronto.org",
+      1
+    ],
+    [
+      "fancy.com",
+      1
+    ],
+    [
+      "dfj.com",
+      1
+    ],
+    [
+      "www.hustlefund.vc",
+      1
+    ],
+    [
+      "ramen.vc",
+      1
+    ],
+    [
+      "crossculturevc.com",
+      1
+    ],
+    [
+      "jetstream.io",
+      1
+    ],
+    [
+      "www.abstractvc.com",
+      1
+    ],
+    [
+      "shrug.vc",
+      1
+    ],
+    [
+      "courses.lumenlearning.com",
+      1
+    ],
+    [
+      "odannyboy.medium.com",
+      1
+    ],
+    [
+      "vinija.ai",
+      1
+    ],
+    [
+      "gorilla.cs.berkeley.edu",
+      1
+    ],
+    [
+      "www.freethink.com",
+      1
+    ],
+    [
+      "www.behance.net",
+      1
+    ],
+    [
+      "www.scientificamerican.com",
+      1
+    ],
+    [
+      "www.invespcro.com",
+      1
+    ],
+    [
+      "www.investopedia.com",
+      1
+    ],
+    [
+      "vwo.com",
+      1
+    ],
+    [
+      "abtestguide.com",
+      1
+    ]
+  ],
+  "missing": [
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/1vhxJ0GVX_3qkVnB/logo/Wordmark_dark.svg",
+      "count": 828,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/update-agent.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/1vhxJ0GVX_3qkVnB/logo/Wordmark_white.svg",
+      "count": 828,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/update-agent.html"
+      ]
+    },
+    {
+      "ref": "/fonts.googleapis.com",
+      "count": 828,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/update-agent.html"
+      ]
+    },
+    {
+      "ref": "/fonts.gstatic.com",
+      "count": 828,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/update-agent.html"
+      ]
+    },
+    {
+      "ref": "/fonts.googleapis.com/css2",
+      "count": 828,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/update-agent.html"
+      ]
+    },
+    {
+      "ref": "/www.googletagmanager.com/gtag/js",
+      "count": 414,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/agent/get-agent.html",
+        "www.voiceflow.com/docs/api-reference/agent/update-agent.html",
+        "www.voiceflow.com/docs/api-reference/analytics/query-api-tool-usage.html"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/199e8400af961a1e.js",
+      "count": 158,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/_https_/d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/ellipsis-vertical.svg_.html",
+        "www.voiceflow.com/docs/api-reference/_https_/d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/magnifying-glass.svg_.html",
+        "www.voiceflow.com/docs/api-reference/agent/_https_/d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/ellipsis-vertical.svg_.html"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/d587684a0711e366.js",
+      "count": 158,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/_https_/d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/ellipsis-vertical.svg_.html",
+        "www.voiceflow.com/docs/api-reference/_https_/d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/magnifying-glass.svg_.html",
+        "www.voiceflow.com/docs/api-reference/agent/_https_/d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/ellipsis-vertical.svg_.html"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/turbopack-06841cc5ddb2c132.js",
+      "count": 158,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/_https_/d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/ellipsis-vertical.svg_.html",
+        "www.voiceflow.com/docs/api-reference/_https_/d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/magnifying-glass.svg_.html",
+        "www.voiceflow.com/docs/api-reference/agent/_https_/d3gk2c5xim1je2.cloudfront.net/fontawesome/v7.2.0/solid/ellipsis-vertical.svg_.html"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/e",
+      "count": 33,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/1a13cc07715782e36c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/28bb5e6550ef21486c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs",
+      "count": 21,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/blog-category.html",
+        "www.voiceflow.com/blog-category.html",
+        "www.voiceflow.com/blog-category.html"
+      ]
+    },
+    {
+      "ref": "/docs/changelog",
+      "count": 21,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/blog-category.html",
+        "www.voiceflow.com/blog-category.html",
+        "www.voiceflow.com/blog-category.html"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/window.location.href",
+      "count": 11,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/1a13cc07715782e36c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/Must be a valid URL",
+      "count": 10,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/7tXLhWFbjNcyq704/images/icons/documentation.svg",
+      "count": 10,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html",
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html",
+        "www.voiceflow.com/docs/courses/chat-agent-quick-start.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/7tXLhWFbjNcyq704/images/icons/grid.svg",
+      "count": 9,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html",
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html",
+        "www.voiceflow.com/docs/courses/chat-agent-quick-start.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/7tXLhWFbjNcyq704/images/icons/integration.svg",
+      "count": 8,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/home.html",
+        "www.voiceflow.com/docs/courses/home.html",
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/a",
+      "count": 7,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/541dddea07db882f6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/541dddea07db882f6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/5618cdfeb817f44b6c5b.js"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/wSx4TsrcyCGU1FNa/images/tests-cover.avif",
+      "count": 7,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/changelog/changelog.html",
+        "www.voiceflow.com/docs/changelog/changelog.html",
+        "www.voiceflow.com/docs/changelog/changelog.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/KeEstcJ8OOnJejgd/images/pronunciation.avif",
+      "count": 7,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/build/behaviour.html",
+        "www.voiceflow.com/docs/documentation/build/behaviour.html",
+        "www.voiceflow.com/docs/documentation/build/behaviour.html"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${n}",
+      "count": 6,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/2d8564c44b49d83c6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/2dd53f5a4cfe6dd56c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/2dd53f5a4cfe6dd56c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${e}",
+      "count": 6,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/4640d08d7d53a6b86c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/541dddea07db882f6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/be262421abd0ee6f6c5b.js"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/uPQXwAnel1aMDlUg/images/icons/add-data.svg",
+      "count": 6,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html",
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html",
+        "www.voiceflow.com/docs/courses/home.html"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/e.url",
+      "count": 4,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/1a13cc07715782e36c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/5618cdfeb817f44b6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/d587684a0711e3666c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/e,t",
+      "count": 4,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/5618cdfeb817f44b6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/b21970438ab9ed9e6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/f486afc314643ce1.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${r}",
+      "count": 4,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/9091e40ba4b42d376c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/a2b1c0e58c75517b6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/turbopack-06841cc5ddb2c1326c5b.js"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/7tXLhWFbjNcyq704/images/icons/download-m.svg",
+      "count": 4,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/cli/overview.html",
+        "www.voiceflow.com/docs/cli/overview.html",
+        "www.voiceflow.com/docs/courses/simple-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/7tXLhWFbjNcyq704/images/icons/key.svg",
+      "count": 4,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/cli/overview.html",
+        "www.voiceflow.com/docs/cli/overview.html",
+        "www.voiceflow.com/docs/mcp/overview.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/uPQXwAnel1aMDlUg/images/icons/console.svg",
+      "count": 4,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/cli/overview.html",
+        "www.voiceflow.com/docs/cli/overview.html",
+        "www.voiceflow.com/docs/documentation/introduction.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/uPQXwAnel1aMDlUg/images/icons/api.svg",
+      "count": 4,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html",
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html",
+        "www.voiceflow.com/docs/documentation/introduction.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/uPQXwAnel1aMDlUg/images/icons/copy.svg",
+      "count": 4,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html",
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html",
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/docs/documentation/build/s",
+      "count": 4,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/build/querying-the-knowledge-base.html",
+        "www.voiceflow.com/docs/documentation/build/querying-the-knowledge-base.html",
+        "www.voiceflow.com/docs/documentation/build/querying-the-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/../js.hsforms.net/forms/e",
+      "count": 3,
+      "kind": "relative",
+      "pages": [
+        "js.hsforms.net/forms/v2.js",
+        "js.hsforms.net/forms/v2.js",
+        "js.hsforms.net/forms/v2.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/n",
+      "count": 3,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/1a13cc07715782e36c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/5618cdfeb817f44b6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/893b80a74cde24cd6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/r(n",
+      "count": 3,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/409e2ababaceba766c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/848419e4fd11cf296c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/d0dbb5ba444aba2b6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${a}",
+      "count": 3,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/409e2ababaceba766c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/848419e4fd11cf296c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/d0dbb5ba444aba2b6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/e,window.location.origin",
+      "count": 3,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/r",
+      "count": 3,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/541dddea07db882f6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/o",
+      "count": 3,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/893b80a74cde24cd6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/c86d39a9fefd84106c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/d2ea1cc243f4ccae6c5b.js"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/64sKM9xJme1x5KmF/images/icons/webhook.svg",
+      "count": 3,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/api-overview.html",
+        "www.voiceflow.com/docs/api-reference/api-overview.html",
+        "www.voiceflow.com/docs/api-reference/api-overview.html"
+      ]
+    },
+    {
+      "ref": "/_astro/e,location.href",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/_astro/page.BQUjG_5N.js",
+        "www.voiceflow.com/_astro/page.CBZHh--O.js"
+      ]
+    },
+    {
+      "ref": "/demo7615",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/blog/dialogflow",
+        "www.voiceflow.com/blog/dialogflow"
+      ]
+    },
+    {
+      "ref": "/education-demo",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/demo",
+        "www.voiceflow.com/js/vf-cta.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/i,s",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/409e2ababaceba766c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/d0dbb5ba444aba2b6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/i",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/893b80a74cde24cd6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/e,tn",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/t",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/893b80a74cde24cd6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/turbopack-06841cc5ddb2c1326c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${t}",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/9091e40ba4b42d376c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/a2b1c0e58c75517b6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${F(t",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/9091e40ba4b42d376c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/a2b1c0e58c75517b6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${F(a",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/9091e40ba4b42d376c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/a2b1c0e58c75517b6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/),i(",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/9091e40ba4b42d376c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/a2b1c0e58c75517b6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/this",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/a6dad97d9634a72d.js",
+        "www.voiceflow.com/docs/_next/static/chunks/a6dad97d9634a72d6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/a,location.origin",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/b664fc8bb1e7ab0d.js",
+        "www.voiceflow.com/docs/_next/static/chunks/b664fc8bb1e7ab0d6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${j}",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/be262421abd0ee6f6c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/be262421abd0ee6f6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/s",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/c86d39a9fefd84106c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${k}",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/cc5fb492c7259b046c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/cc5fb492c7259b046c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${E}",
+      "count": 2,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/cc5fb492c7259b046c5b.js",
+        "www.voiceflow.com/docs/_next/static/chunks/cc5fb492c7259b046c5b.js"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/64sKM9xJme1x5KmF/images/icons/tools.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/api-overview.html",
+        "www.voiceflow.com/docs/api-reference/api-overview.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/uPQXwAnel1aMDlUg/images/icons/conversation.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/api-overview.html",
+        "www.voiceflow.com/docs/api-reference/api-overview.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/Deti6n82HHVK8mCG/images/icons/publish.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/api-overview.html",
+        "www.voiceflow.com/docs/api-reference/api-overview.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/Deti6n82HHVK8mCG/images/icons/organization.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/api-overview.html",
+        "www.voiceflow.com/docs/api-reference/api-overview.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/7tXLhWFbjNcyq704/images/icons/list.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/api-overview.html",
+        "www.voiceflow.com/docs/api-reference/api-overview.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/7tXLhWFbjNcyq704/images/icons/insights.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/api-overview.html",
+        "www.voiceflow.com/docs/api-reference/api-overview.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/Deti6n82HHVK8mCG/images/icons/tests.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/api-overview.html",
+        "www.voiceflow.com/docs/api-reference/api-overview.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/uPQXwAnel1aMDlUg/images/icons/analytics.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/api-reference/api-overview.html",
+        "www.voiceflow.com/docs/api-reference/api-overview.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/uPQXwAnel1aMDlUg/images/icons/arrow-right.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/cli/overview.html",
+        "www.voiceflow.com/docs/cli/overview.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/7tXLhWFbjNcyq704/images/icons/message.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/home.html",
+        "www.voiceflow.com/docs/courses/home.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/Deti6n82HHVK8mCG/images/icons/phone.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/home.html",
+        "www.voiceflow.com/docs/courses/home.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/7tXLhWFbjNcyq704/images/icons/lock.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/home.html",
+        "www.voiceflow.com/docs/courses/home.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/uPQXwAnel1aMDlUg/images/icons/arrow-up.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/home.html",
+        "www.voiceflow.com/docs/courses/home.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/Deti6n82HHVK8mCG/images/icons/play-s.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/initialization-workflow.html",
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/widget-custom.mp4",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/deploy/widget/custom-web-chat-styling.html",
+        "www.voiceflow.com/docs/documentation/deploy/widget/embedding-the-chat-widget.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/Deti6n82HHVK8mCG/images/icons/question.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/introduction.html",
+        "www.voiceflow.com/docs/documentation/introduction.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/7tXLhWFbjNcyq704/images/icons/date.svg",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/introduction.html",
+        "www.voiceflow.com/docs/documentation/introduction.html"
+      ]
+    },
+    {
+      "ref": "/images/6995bfb8e3e1359ecf9c40c8_64517dac35d9d8ea5fc8b792_632359582225981da99a98d2_HERO-2520How-2520to-2520Become-2520a-2520Conversation-2520Designer-25E2-2580-2594-2520According-2520to-2520a-2520Great-2520One.avif",
+      "count": 2,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/stories.html",
+        "www.voiceflow.com/stories.html"
+      ]
+    },
+    {
+      "ref": "/../js.hsforms.net/forms/this.getSignupType(",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "js.hsforms.net/forms/v2.js"
+      ]
+    },
+    {
+      "ref": "/../js.hsforms.net/forms/e=this.flowOrIntegration,t=this.options.query",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "js.hsforms.net/forms/v2.js"
+      ]
+    },
+    {
+      "ref": "/../js.hsforms.net/forms/`${tp(",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "js.hsforms.net/forms/v2.js"
+      ]
+    },
+    {
+      "ref": "/../js.hsforms.net/forms/l,u",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "js.hsforms.net/forms/v2.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/r,bt.origin",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/bt.origin",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/e",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/Wt.GetEmbedUrl(",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/i",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/Ke",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/r.href",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/%60.html",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/%60%24%7bWt.GetEmbedUrl%28.html",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/M.customUrl",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/k",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/../prod-assets.sequelvideo.com/uploads/toolkit/l",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "prod-assets.sequelvideo.com/uploads/toolkit/sequel.js"
+      ]
+    },
+    {
+      "ref": "/api.html",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/api/index.html"
+      ]
+    },
+    {
+      "ref": "/blog/s",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/blog/healthcare-ai"
+      ]
+    },
+    {
+      "ref": "/blog893e",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/blog/staff-augmentation"
+      ]
+    },
+    {
+      "ref": "/images/logomark-white.svg",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/demo"
+      ]
+    },
+    {
+      "ref": "/cm%5b1%5d.html",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/demo"
+      ]
+    },
+    {
+      "ref": "/a.href",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/demo"
+      ]
+    },
+    {
+      "ref": "/favicons/mstile-150x150.png",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/_mintlify/favicons/voiceflow-009a8802/q7IgIvcII3USklep/_generated/favicon/browserconfig.xml"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/p,location.origin",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/(0,p.addBasePath",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/null!=e",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/P.href",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/x,P.origin",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/y,r",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/(0,n.addBasePath",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/e.canonicalUrl,window.location.href",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/(0,i.addBasePath",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/199e8400af961a1e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/r(a",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/2d8564c44b49d83c6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/i,o",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/2d8564c44b49d83c6c5b.js"
+      ]
+    },
+    {
+      "ref": "/www.googletagmanager.com/gtm.js",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/3c94b65e4dbefe6e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/www.googletagmanager.com/ns.html",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/3c94b65e4dbefe6e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/e instanceof Request",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/3c94b65e4dbefe6e6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/u",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/`https:/${r}.cloudimg.io/`",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${o}",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${t1}",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/${t5}",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/50ecf15ed0642f506c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/b",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/541dddea07db882f6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/r,window.location.origin",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/5618cdfeb817f44b6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/i,l",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/848419e4fd11cf296c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/l",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/893b80a74cde24cd6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/await a(r",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/893b80a74cde24cd6c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/_",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/c86d39a9fefd84106c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/u.toString(",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/c86d39a9fefd84106c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/r.MINTLIFY_ICONS_CDN_URL",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/cc5fb492c7259b046c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/e,location.origin",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/d587684a0711e3666c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/r.url",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/d587684a0711e3666c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/a.url,o",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/d587684a0711e3666c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/e.data",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/eD(e",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/a.data.url.trim(",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/n,e",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/t,e",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/document.referrer",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/a.authorizationUrl",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js"
+      ]
+    },
+    {
+      "ref": "/docs/_next/static/chunks/e.tokenUrl",
+      "count": 1,
+      "kind": "relative",
+      "pages": [
+        "www.voiceflow.com/docs/_next/static/chunks/dff2877daee22ab86c5b.js"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-advanced-step-1-1.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-advanced-step-2-fixed.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-advanced-step-3.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-advanced-step-4.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-advanced-step-5.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-advanced-step-6.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-advanced-step-7.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-advanced-step-8-compressed.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/advanced-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/workflows-1-NEW-2.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/workflows-2.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/workflows-3-NEW.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/workflows-4.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/workflows-5.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/workflows-6.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/workflows-7.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/build-your-first-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/chat.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/chat-agent-quick-start.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/chat-generate.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/chat-agent-quick-start.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/auth-workflow-1.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/auth-workflow-2.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/auth-workflow-3.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/auth-workflow-4.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/auth-workflow-5.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/auth-workflow-6.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/auth-workflow-7.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/auth-workflow-8.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/initialization-workflow.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/voice.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/phone-agent-quick-start.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/voice-publish.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/phone-agent-quick-start.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-simple-step-1.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/simple-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-simple-step-2.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/simple-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-simple-step-3.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/simple-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/kb-simple-step-4-1.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/courses/simple-knowledge-base.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/organizing-workspaces.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/account-management/collaboration.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/collaborators.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/account-management/collaboration.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/button.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/build/steps/buttons.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/cards.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/build/steps/card.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/message.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/build/steps/message.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/call-recording.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/deploy/phone/connect-a-phone-number.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/outbound.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/deploy/phone/outbound-calling.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/widget.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/deploy/widget/embedding-the-chat-widget.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/analytics.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/measure/analytics.html"
+      ]
+    },
+    {
+      "ref": "/mintcdn.com/voiceflow-009a8802/s3P1FU2SwfLb9qjL/videos/evaluations.mp4",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/docs/documentation/measure/evaluations.html"
+      ]
+    },
+    {
+      "ref": "/images",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/index.html"
+      ]
+    },
+    {
+      "ref": "/images/6995bfb8e3e1359ecf9c40c8_64517dac35d9d8ea5fc8b792_632359582225981da99a98d2_HERO-2520How-2520to-2520Become-2520a-2520Conversation-2520Designer-25E2-2580-2594-2520According-2520to-2520a-2520Great-2520One.480w.avif",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/stories.html"
+      ]
+    },
+    {
+      "ref": "/images/6995bfb8e3e1359ecf9c40c8_64517dac35d9d8ea5fc8b792_632359582225981da99a98d2_HERO-2520How-2520to-2520Become-2520a-2520Conversation-2520Designer-25E2-2580-2594-2520According-2520to-2520a-2520Great-2520One.720w.avif",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/stories.html"
+      ]
+    },
+    {
+      "ref": "/images/6995bfb8e3e1359ecf9c40c8_64517dac35d9d8ea5fc8b792_632359582225981da99a98d2_HERO-2520How-2520to-2520Become-2520a-2520Conversation-2520Designer-25E2-2580-2594-2520According-2520to-2520a-2520Great-2520One.1000w.avif",
+      "count": 1,
+      "kind": "root-rel",
+      "pages": [
+        "www.voiceflow.com/stories.html"
+      ]
+    }
+  ],
+  "dynamic": []
+}

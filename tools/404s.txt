@@ -1,0 +1,12 @@
+11	/_astro/images/Grid-Icon.svg
+11	/_astro/images/bubble-6-message.svg
+11	/_astro/images/statistics.svg
+6	/images/Andreia-Guedes.avif
+5	/_astro/images/layers-3-stack.svg
+5	/_astro/images/star-icon.svg
+5	/_astro/images/settings-icon.svg
+2	/favicon.ico
+1	/fonts.googleapis.com
+1	/fonts.gstatic.com
+1	/fonts.googleapis.com/css2
+1	/js/product-shot.js

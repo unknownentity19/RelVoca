@@ -1,0 +1,200 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/docs",
+      "destination": "/docs/documentation/introduction",
+      "permanent": false
+    },
+    {
+      "source": "/docs/api-reference",
+      "destination": "/docs/api-reference/quickstart",
+      "permanent": false
+    },
+    {
+      "source": "/docs/api-reference/conversations-api",
+      "destination": "/docs/api-reference/conversations-api/overview",
+      "permanent": false
+    },
+    {
+      "source": "/docs/changelog",
+      "destination": "/docs/changelog/changelog",
+      "permanent": false
+    },
+    {
+      "source": "/docs/cli",
+      "destination": "/docs/cli/overview",
+      "permanent": false
+    },
+    {
+      "source": "/docs/cli/commands",
+      "destination": "/docs/cli/commands/overview",
+      "permanent": false
+    },
+    {
+      "source": "/docs/cookbook",
+      "destination": "/docs/cookbook/overview",
+      "permanent": false
+    },
+    {
+      "source": "/docs/courses",
+      "destination": "/docs/courses/home",
+      "permanent": false
+    },
+    {
+      "source": "/docs/documentation",
+      "destination": "/docs/documentation/introduction",
+      "permanent": false
+    },
+    {
+      "source": "/docs/documentation/build",
+      "destination": "/docs/documentation/build/overview",
+      "permanent": false
+    },
+    {
+      "source": "/docs/documentation/build/editor",
+      "destination": "/docs/documentation/build/editor/overview",
+      "permanent": false
+    },
+    {
+      "source": "/docs/documentation/build/tools",
+      "destination": "/docs/documentation/build/tools/overview",
+      "permanent": false
+    },
+    {
+      "source": "/docs/documentation/deploy/environments",
+      "destination": "/docs/documentation/deploy/environments/overview",
+      "permanent": false
+    },
+    {
+      "source": "/docs/mcp",
+      "destination": "/docs/mcp/overview",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/_mintlify/:path*",
+      "destination": "/docs/_mintlify/:path*"
+    },
+    {
+      "source": "/_next/:path*",
+      "destination": "/docs/_next/:path*"
+    },
+    {
+      "source": "/api-reference/:path*",
+      "destination": "/docs/api-reference/:path*"
+    },
+    {
+      "source": "/changelog/:path*",
+      "destination": "/docs/changelog/:path*"
+    },
+    {
+      "source": "/cli/:path*",
+      "destination": "/docs/cli/:path*"
+    },
+    {
+      "source": "/cookbook/:path*",
+      "destination": "/docs/cookbook/:path*"
+    },
+    {
+      "source": "/courses/:path*",
+      "destination": "/docs/courses/:path*"
+    },
+    {
+      "source": "/documentation/:path*",
+      "destination": "/docs/documentation/:path*"
+    },
+    {
+      "source": "/mcp/:path*",
+      "destination": "/docs/mcp/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/api/icp-config",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/api/vlead",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/api/vx",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/f5240b06061a5887/vitals",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/docs/_next/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/mintcdn.com/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    }
+  ]
+}

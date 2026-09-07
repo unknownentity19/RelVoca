@@ -1,0 +1,99 @@
+{
+  "name": "relvoca-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local RelVoca site build. Started as an offline HTTrack capture of www.voiceflow.com (2-3 Sep 2026), rebranded to RelVoca on 5 Sep 2026. Not an archive any more, and not redistributable or deployable.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "serve": "node tools/serve.js",
+    "audit": "node tools/audit.js",
+    "verify": "node tools/verify.js",
+    "start": "node tools/serve.js",
+    "rebrand": "node tools/rebrand.js",
+    "pages": "node tools/make-pages.js",
+    "delink": "node tools/delink.js",
+    "build:vercel": "node tools/build-vercel.js",
+    "preview:vercel": "node tools/serve-vercel.js"
+  },
+  "voiceflowArchive": {
+    "documentRoot": "www.voiceflow.com",
+    "projectRootFallback": true,
+    "hostMirrors": [
+      "www.voiceflow.com",
+      "mintcdn.com",
+      "js.hsforms.net",
+      "prod-assets.sequelvideo.com",
+      "www.googletagmanager.com"
+    ],
+    "capture": {
+      "origin": "https://www.voiceflow.com/",
+      "tool": "HTTrack Website Copier",
+      "captured": "2026-09-02/2026-09-03",
+      "rawResponseCache": "_quarantine/httrack-debris/hts-cache/new.zip",
+      "offlineOnly": true
+    },
+    "baseline": {
+      "recordedAt": "2026-09-04",
+      "note": "Regression gate for `npm run verify`. MISSING must never rise above baselineMissing. If a change increases it, revert the change - do not raise the baseline. Lower it deliberately, in the same commit, when a repair genuinely fixes references.",
+      "measures": "Served tree only. tools/audit.js does not skip _quarantine/, so tools/verify.js discounts missing refs originating in _quarantine/ backups before comparing. baselineMissing is therefore lower than the raw missingTotal in tools/audit-report.json whenever a backup is present there.",
+      "baselineMissing": 2302,
+      "baselineMissingDistinct": 1309,
+      "rawMissingAtRecording": 2358,
+      "scannedFiles": 1327,
+      "totalRefs": 141900,
+      "okRefs": 110087,
+      "externalHosts": 431,
+      "history": [
+        {
+          "at": "2026-09-04",
+          "missing": 10601,
+          "distinct": 1607,
+          "note": "before section landing pages were restored to the mirror root"
+        },
+        {
+          "at": "2026-09-04",
+          "missing": 3778,
+          "distinct": 1570,
+          "note": "after stories/events/integrations/industries/solutions/contributors/blog-category landing pages"
+        },
+        {
+          "at": "2026-09-04",
+          "missing": 2302,
+          "distinct": 1309,
+          "note": "settled after reference repair. Remaining load is 641 refs to 68 uncaptured /docs/_next chunks, plus docs-page relative refs and permanent crawler debris. Cannot reach zero."
+        },
+        {
+          "at": "2026-09-05",
+          "missing": 5426,
+          "distinct": 181,
+          "note": "as measured immediately before AND after the RelVoca rebrand - unchanged. NOTE: this is the raw audit.js number, which already exceeded baselineMissing (2302) before any rebrand work began; see preExistingGateFailure below."
+        }
+      ],
+      "preExistingGateFailure": {
+        "observed": "2026-09-05",
+        "rawMissing": 5426,
+        "baselineMissing": 2302,
+        "note": "`npm run verify` was already FAILING by +3124 before the rebrand, on an untouched tree. The rebrand did not change it: missingTotal and missingDistinct are identical before and after. Diagnose the gate separately - RESUME.md records that audit.js over-reports and keeps drifting from serve.js resolution rules."
+      }
+    },
+    "rebranded": {
+      "at": "2026-09-05",
+      "brand": "Voiceflow -> RelVoca",
+      "scope": "visible text, wordmark, favicons, and product links to creator/docs/status/trust/link/media.voiceflow.com",
+      "backup": "_quarantine/pre-rebrand/",
+      "note": "Visible text only. Paths, href/src values, hashed asset names and CSS tokens were not touched, and the on-disk directory www.voiceflow.com/ must keep its name (see tools/ROUTES.md). Reference counts were unchanged by the rebrand.",
+      "tools": [
+        "tools/rebrand.js",
+        "tools/make-logo.js",
+        "tools/swap-logo.js",
+        "tools/make-favicon.js",
+        "tools/make-pages.js",
+        "tools/delink.js",
+        "tools/inject-auth.js"
+      ]
+    }
+  }
+}

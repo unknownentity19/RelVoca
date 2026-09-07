@@ -1,0 +1,51 @@
+# What this repository holds
+#
+# This repo exists to deploy the site, so it tracks the BUILT output in
+# `public/` and not the sources that produced it. That is the opposite of the
+# usual rule, and it is deliberate: the built site and its sources are ~736 MB
+# each, and together they would put the repository past the size GitHub
+# recommends. Vercel serves `public/` directly with no build step, so the
+# sources are not needed to deploy.
+#
+# The sources stay on the machine that built them. `_quarantine/pre-rebrand/`
+# holds a byte-for-byte copy of every file this project modified, which is the
+# only thing that could not be reconstructed — keep that backed up locally.
+
+# --- Capture sources (large, and not needed to deploy) ---------------------
+/www.voiceflow.com/
+/mintcdn.com/
+/fonts.googleapis.com/
+/fonts.gstatic.com/
+/js.hsforms.net/
+/prod-assets.sequelvideo.com/
+/www.googletagmanager.com/
+/d3gk2c5xim1je2.cloudfront.net/
+
+# HTTrack launcher furniture at the project root — crawler artefacts, not site
+# content. The real homepage is public/index.html.
+/index.html
+/backblue.gif
+/fade.gif
+
+# --- Local-only ------------------------------------------------------------
+# 515 MB of pre-change backups. Never publish these.
+/_quarantine/
+.claude/
+.vercel/
+
+# --- OS / editor -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.sublime-workspace
+
+# --- Environment -----------------------------------------------------------
+.env
+.env.local
+*.local
+
+# --- Scratch ---------------------------------------------------------------
+/scratch/
+/_scratch/
+*.log

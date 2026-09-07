@@ -1,0 +1,102 @@
+#!/usr/bin/env node
+/**
+ * Local static server for the voiceflow.com HTTrack mirror.
+ *
+ * The mirror stores pages the way the origin served them: extensionless
+ * (`/pricing`, `/about`). Node's default MIME guessing would send those as
+ * octet-stream and the browser would download instead of render, so we sniff
+ * content and force text/html. Serving from the mirror root also makes the
+ * 2,636 root-relative refs (`/demo`, `/images/...`) resolve without rewriting
+ * a single file.
+ */
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+
+// Serve the primary host as the web root, but keep the whole project reachable:
+// pages reference sibling host mirrors (mintcdn.com, js.hsforms.net, ...) via
+// '../mintcdn.com/...', which a browser normalises to '/mintcdn.com/...'.
+const PROJECT = process.argv[3] || path.join(__dirname, '..');
+const ROOT = process.argv[2] || path.join(PROJECT, 'www.voiceflow.com');
+const PORT = Number(process.env.PORT) || 8080;
+
+const MIME = {
+  '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8',
+  '.json': 'application/json; charset=utf-8', '.md': 'text/plain; charset=utf-8',
+  '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8',
+  '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg', '.gif': 'image/gif', '.webp': 'image/webp',
+  '.avif': 'image/avif', '.ico': 'image/x-icon', '.mp4': 'video/mp4',
+  '.woff2': 'font/woff2', '.woff': 'font/woff', '.ttf': 'font/ttf',
+};
+
+// An extensionless mirror file is HTML if it opens like a document.
+function looksLikeHtml(file) {
+  let fd;
+  try {
+    fd = fs.openSync(file, 'r');
+    const buf = Buffer.alloc(512);
+    const n = fs.readSync(fd, buf, 0, 512, 0);
+    return /<!doctype html|<html|<head|<meta/i.test(buf.slice(0, n).toString('utf8'));
+  } catch { return false; } finally { if (fd !== undefined) fs.closeSync(fd); }
+}
+
+function contentType(file) {
+  const ext = path.extname(file).toLowerCase();
+  if (MIME[ext]) return MIME[ext];
+  if (!ext && looksLikeHtml(file)) return MIME['.html'];
+  return 'application/octet-stream';
+}
+
+// Resolve a URL path to a file, mirroring origin behaviour: exact match first,
+// then `<name>.html`, then `<dir>/index.html`.
+function resolve(urlPath) {
+  const clean = decodeURIComponent(urlPath.split('?')[0].split('#')[0]);
+  // Try the mirror root first, then the project root so sibling host dirs resolve.
+  for (const base of [ROOT, PROJECT]) {
+    const target = path.normalize(path.join(base, clean));
+    if (!target.startsWith(PROJECT)) continue;   // path traversal guard
+    for (const cand of [target, target + '.html', path.join(target, 'index.html')]) {
+      try { if (fs.statSync(cand).isFile()) return cand; } catch {}
+    }
+  }
+  return null;
+}
+
+const missing = new Map();
+
+http.createServer((req, res) => {
+  const file = resolve(req.url);
+  if (!file) {
+    const key = req.url.split('?')[0];
+    missing.set(key, (missing.get(key) || 0) + 1);
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    return res.end('404 ' + key);
+  }
+  const stat = fs.statSync(file);
+  res.writeHead(200, {
+    'Content-Type': contentType(file),
+    'Content-Length': stat.size,
+    'Cache-Control': 'no-cache',
+    'Access-Control-Allow-Origin': '*',
+  });
+  fs.createReadStream(file).pipe(res);
+}).listen(PORT, () => {
+  console.log(`mirror: ${ROOT}`);
+  console.log(`project: ${PROJECT} (sibling host dirs reachable)`);
+  console.log(`serving on http://localhost:${PORT}/`);
+});
+
+// Dump the 404 tally on exit so we learn exactly which assets the crawl missed.
+for (const sig of ['SIGINT', 'SIGTERM']) {
+  process.on(sig, () => {
+    const rows = [...missing.entries()].sort((a, b) => b[1] - a[1]);
+    if (rows.length) {
+      console.log(`\n--- ${rows.length} distinct 404s ---`);
+      for (const [u, n] of rows.slice(0, 200)) console.log(`${String(n).padStart(4)}  ${u}`);
+      fs.writeFileSync(path.join(__dirname, '404s.txt'), rows.map(([u, n]) => `${n}\t${u}`).join('\n'));
+    }
+    process.exit(0);
+  });
+}

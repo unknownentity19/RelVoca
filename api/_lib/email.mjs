@@ -37,6 +37,15 @@ function body(link) {
 </div>`;
 }
 
+/** A coarse, non-identifying reason the client can act on. */
+function classify(message) {
+  const m = String(message || '').toLowerCase();
+  if (m.includes('verify a domain') || m.includes('testing email')) return 'sender_unverified';
+  if (m.includes('rate') || m.includes('too many')) return 'provider_rate_limited';
+  if (m.includes('invalid') && m.includes('to')) return 'recipient_rejected';
+  return 'send_failed';
+}
+
 export async function sendSignInLink(to, link) {
   if (!client) {
     console.warn(`RESEND_API_KEY not set. Sign-in link for ${to}: ${link}`);
@@ -53,9 +62,11 @@ export async function sendSignInLink(to, link) {
     if (error) throw new Error(error.message || JSON.stringify(error));
     return { sent: true };
   } catch (err) {
-    // Most commonly the resend.dev 403: recipient is not the account owner.
+    // The provider's own message is logged but never returned. Resend's 403
+    // names the account owner's address ("you can only send to <owner>"), and
+    // that would be published to anyone who posts to /api/auth/request.
     console.error(`Could not email ${to}: ${err.message}`);
     console.warn(`Sign-in link for ${to}: ${link}`);
-    return { sent: false, reason: err.message };
+    return { sent: false, reason: classify(err.message) };
   }
 }

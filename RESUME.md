@@ -350,3 +350,77 @@ every card looks broken — before *and* after any fix. Two separate
 investigations dead-ended on this. Check `document.visibilityState` before
 concluding that lazy content is broken, and verify the mechanism by invoking the
 load path directly instead of relying on scroll.
+
+---
+
+## Real authentication on Neon (5 September 2026)
+
+Replaced the localStorage demo session with passwordless sign-in backed by Neon
+Postgres and Resend. The site is no longer purely static: `api/` holds four
+Vercel functions and `package.json` now has two runtime dependencies.
+
+### Why passwordless
+
+This tree is a rebranded copy of someone else's site. Asking visitors for a
+password means collecting a credential they probably reuse, for a company that
+does not exist. Magic links avoid it: **no password is ever stored, so a
+database leak exposes nothing reusable** — and the "check your email" popup
+became true rather than a mock.
+
+### Shape
+
+```
+enter email → POST /api/auth/request → "check your email" popup
+            → emailed link
+            → GET /api/auth/callback?token= → session cookie → /dashboard
+```
+
+`/login` and `/signup` hit the *same* endpoint. A new address gets an account,
+a known one gets a session, and the response is byte-identical either way —
+including when rate-limited or when the email fails to send. That is deliberate:
+it means the endpoint cannot be used to discover who has an account.
+
+| File | Role |
+|---|---|
+| `db/schema.sql` | readable source of truth for the three tables |
+| `api/_lib/db.mjs` | Neon client + idempotent schema apply on cold start |
+| `api/_lib/auth.mjs` | tokens, sessions, cookies |
+| `api/_lib/email.mjs` | Resend |
+| `api/auth/{request,callback,me,logout}.mjs` | the endpoints |
+
+### Four things not to undo
+
+1. **Tokens and session ids are stored as SHA-256 hashes, never raw.** A dump of
+   `login_tokens` or `sessions` cannot be replayed into a login.
+2. **`consumeToken` uses `UPDATE ... WHERE used_at IS NULL RETURNING`.** That is
+   what makes a link single-use even if it is opened twice simultaneously — the
+   second call matches no row. A read-then-write would race.
+3. **The session cookie is HttpOnly, Secure, SameSite=Lax.** Lax, not Strict:
+   Strict would drop the cookie on the top-level GET the emailed link performs,
+   so sign-in would appear to succeed and then not be signed in.
+4. **The Neon client is created on first query, not at import.** `neon()` throws
+   immediately on an empty connection string, so building it at module scope made
+   *every* route fail to load when `DATABASE_URL` was missing — including
+   `/api/auth/me`, whose whole job is to degrade to "signed out". Caught in
+   testing before deploy.
+
+### Environment variables (set in the Vercel dashboard)
+
+| Name | Notes |
+|---|---|
+| `DATABASE_URL` | Neon **pooled** connection string |
+| `RESEND_API_KEY` | from resend.com |
+| `MAIL_FROM` | optional; defaults to `RelVoca <onboarding@resend.dev>` |
+| `AUTH_ORIGIN` | optional; otherwise links use the request's own host, so preview deploys work |
+
+**Resend's shared sender only delivers to the Resend account owner's address**
+until a domain is verified — anything else returns 403. Until then only the
+owner receives links. A send failure is never fatal: the link is written to the
+function log and the response stays neutral.
+
+### `.vercelignore` now uploads `api/` and `package.json`
+
+It previously allowed only `public/` and `vercel.json`, which would have made
+every function 404. `package.json` still has **no `build` script** on purpose —
+Vercel runs one when it finds one, and it would fail here because the capture
+sources `build:vercel` copies from are not uploaded.

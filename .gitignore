@@ -27,6 +27,10 @@
 /backblue.gif
 /fade.gif
 
+# --- Dependencies ----------------------------------------------------------
+# Vercel installs these from package-lock.json; never commit the tree.
+/node_modules/
+
 # --- Local-only ------------------------------------------------------------
 # 515 MB of pre-change backups. Never publish these.
 /_quarantine/

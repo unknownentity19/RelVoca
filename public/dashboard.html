@@ -182,26 +182,33 @@
 </div>
 </main>   <script>try{if(/^(localhost|127\.0\.0\.1)$/.test(location.hostname)&&(location.port==='4444'||localStorage.getItem('vf-dev')==='1')){var vfd=document.createElement('script');vfd.src='js/vf-dev.js';vfd.defer=true;document.head.appendChild(vfd)}}catch(e){}</script> <script type="module" src="_astro/Base.astro_astro_type_script_index_0_lang.EQBSJDW75aa6.js?dpl=dpl_FQirkLLtHscmEqwp3MsaUMDDkGLE"></script> <vercel-speed-insights data-props="{&quot;data-astro-cid-hkbrpulz&quot;:true}" data-params="{}" data-pathname="/dashboard"></vercel-speed-insights> <script type="module">var e=()=>{window.si||(window.si=function(...e){window.siq=window.siq||[],window.siq.push(e)})},t=`@vercel/speed-insights`,n=`2.0.0`;function r(){return typeof window<`u`}function i(){return`production`}function a(){return i()===`development`}function o(e,t){if(!e||!t)return e;let n=e;try{let e=Object.entries(t);for(let[t,r]of e)if(!Array.isArray(r)){let e=s(r);e.test(n)&&(n=n.replace(e,`/[${t}]`))}for(let[t,r]of e)if(Array.isArray(r)){let e=s(r.join(`/`));e.test(n)&&(n=n.replace(e,`/[...${t}]`))}return n}catch{return e}}function s(e){return RegExp(`/${c(e)}(?=[/?#]|$)`)}function c(e){return e.replace(/[.*+?^${}()|[\]\\]/g,`\\$&`)}function l(e){return e.scriptSrc?d(e.scriptSrc):a()?`https://va.vercel-scripts.com/v1/speed-insights/script.debug.js`:e.dsn?`https://va.vercel-scripts.com/v1/speed-insights/script.js`:e.basePath?d(`${e.basePath}/speed-insights/script.js`):`/_vercel/speed-insights/script.js`}function u(e,r){let i=e;if(r)try{i={...JSON.parse(r)?.speedInsights,...e}}catch{}let o={sdkn:t+(i.framework?`/${i.framework}`:``),sdkv:n};return i.sampleRate&&(o.sampleRate=i.sampleRate.toString()),i.route&&(o.route=i.route),a()&&i.debug===!1&&(o.debug=`false`),i.dsn&&(o.dsn=i.dsn),i.endpoint?o.endpoint=d(i.endpoint):i.basePath&&(o.endpoint=d(`${i.basePath}/speed-insights/vitals`)),{src:l(i),beforeSend:i.beforeSend,dataset:o}}function d(e){return e.startsWith(`http://`)||e.startsWith(`https://`)||e.startsWith(`/`)?e:`/${e}`}function f(t={},n){var i;if(!r()||t.route===null)return null;e();let{beforeSend:a,src:o,dataset:s}=u(t,n);if(document.head.querySelector(`script[src*="${o}"]`))return null;a&&((i=window.si)==null||i.call(window,`beforeSend`,a));let c=document.createElement(`script`);c.src=o,c.defer=!0;for(let[e,t]of Object.entries(s))c.dataset[e]=t;return c.onerror=()=>{console.log(`[Vercel Speed Insights] Failed to load script from ${o}. Please check if any content blockers are enabled and try again.`)},document.head.appendChild(c),{setRoute:e=>{c.dataset.route=e??void 0}}}function p(){try{return}catch{}}function m(){try{return`{"analytics":{"scriptSrc":"20cf051bb4745933/script.js","viewEndpoint":"20cf051bb4745933/view","eventEndpoint":"20cf051bb4745933/event","sessionEndpoint":"20cf051bb4745933/session"},"speedInsights":{"scriptSrc":"f5240b06061a5887/script.js","endpoint":"f5240b06061a5887/vitals"}}`}catch{return}}customElements.define(`vercel-speed-insights`,class extends HTMLElement{constructor(){super();try{let e=JSON.parse(this.dataset.props??`{}`),t=JSON.parse(this.dataset.params??`{}`);f({route:o(this.dataset.pathname??``,t),...e,framework:`astro`,basePath:p(),beforeSend:window.speedInsightsBeforeSend},m())}catch(e){throw Error(`Failed to parse SpeedInsights properties: ${e}`)}}});</script> <script src="js/relvoca-auth.js"></script><script>
 (function () {
-  // Anonymous visitors have nothing to look at here.
-  if (!window.RelVocaAuth.requireSession()) return;
-  var s = window.RelVocaAuth.get();
-  var ws = s.workspace.split('.')[0];
-  var pretty = ws.charAt(0).toUpperCase() + ws.slice(1);
-  document.getElementById('db-ws-name').textContent = pretty;
-  document.getElementById('db-ws-badge').textContent = pretty.charAt(0).toUpperCase();
-  document.getElementById('db-avatar').textContent = s.name.charAt(0).toUpperCase();
-  document.getElementById('db-hello').textContent = s.name.split(' ')[0];
-  var q = document.getElementById('db-q');
-  q.addEventListener('input', function () {
-    var term = q.value.trim().toLowerCase();
-    var cards = document.querySelectorAll('.db-card');
-    var shown = 0;
-    for (var i = 0; i < cards.length; i++) {
-      var hit = !term || cards[i].textContent.toLowerCase().indexOf(term) !== -1;
-      cards[i].hidden = !hit;
-      if (hit) shown++;
-    }
-    document.getElementById('db-empty').hidden = shown !== 0;
+  // The session lives in an httpOnly cookie, so only the server can answer
+  // who this is. requireSession() resolves to the user, or redirects to
+  // /login and resolves to null.
+  window.RelVocaAuth.requireSession().then(function (s) {
+    if (!s) return;
+
+    var ws = (s.workspace || '').split('.')[0] || 'Workspace';
+    var pretty = ws.charAt(0).toUpperCase() + ws.slice(1);
+    var name = s.name || s.email || 'there';
+
+    document.getElementById('db-ws-name').textContent = pretty;
+    document.getElementById('db-ws-badge').textContent = pretty.charAt(0).toUpperCase();
+    document.getElementById('db-avatar').textContent = name.charAt(0).toUpperCase();
+    document.getElementById('db-hello').textContent = name.split(' ')[0];
+
+    var q = document.getElementById('db-q');
+    q.addEventListener('input', function () {
+      var term = q.value.trim().toLowerCase();
+      var cards = document.querySelectorAll('.db-card');
+      var shown = 0;
+      for (var i = 0; i < cards.length; i++) {
+        var hit = !term || cards[i].textContent.toLowerCase().indexOf(term) !== -1;
+        cards[i].hidden = !hit;
+        if (hit) shown++;
+      }
+      document.getElementById('db-empty').hidden = shown !== 0;
+    });
   });
 })();
 </script></body> 

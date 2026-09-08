@@ -91,26 +91,33 @@ const CSS = `
 
 const JS = `
 (function () {
-  // Anonymous visitors have nothing to look at here.
-  if (!window.RelVocaAuth.requireSession()) return;
-  var s = window.RelVocaAuth.get();
-  var ws = s.workspace.split('.')[0];
-  var pretty = ws.charAt(0).toUpperCase() + ws.slice(1);
-  document.getElementById('db-ws-name').textContent = pretty;
-  document.getElementById('db-ws-badge').textContent = pretty.charAt(0).toUpperCase();
-  document.getElementById('db-avatar').textContent = s.name.charAt(0).toUpperCase();
-  document.getElementById('db-hello').textContent = s.name.split(' ')[0];
-  var q = document.getElementById('db-q');
-  q.addEventListener('input', function () {
-    var term = q.value.trim().toLowerCase();
-    var cards = document.querySelectorAll('.db-card');
-    var shown = 0;
-    for (var i = 0; i < cards.length; i++) {
-      var hit = !term || cards[i].textContent.toLowerCase().indexOf(term) !== -1;
-      cards[i].hidden = !hit;
-      if (hit) shown++;
-    }
-    document.getElementById('db-empty').hidden = shown !== 0;
+  // The session lives in an httpOnly cookie, so only the server can answer
+  // who this is. requireSession() resolves to the user, or redirects to
+  // /login and resolves to null.
+  window.RelVocaAuth.requireSession().then(function (s) {
+    if (!s) return;
+
+    var ws = (s.workspace || '').split('.')[0] || 'Workspace';
+    var pretty = ws.charAt(0).toUpperCase() + ws.slice(1);
+    var name = s.name || s.email || 'there';
+
+    document.getElementById('db-ws-name').textContent = pretty;
+    document.getElementById('db-ws-badge').textContent = pretty.charAt(0).toUpperCase();
+    document.getElementById('db-avatar').textContent = name.charAt(0).toUpperCase();
+    document.getElementById('db-hello').textContent = name.split(' ')[0];
+
+    var q = document.getElementById('db-q');
+    q.addEventListener('input', function () {
+      var term = q.value.trim().toLowerCase();
+      var cards = document.querySelectorAll('.db-card');
+      var shown = 0;
+      for (var i = 0; i < cards.length; i++) {
+        var hit = !term || cards[i].textContent.toLowerCase().indexOf(term) !== -1;
+        cards[i].hidden = !hit;
+        if (hit) shown++;
+      }
+      document.getElementById('db-empty').hidden = shown !== 0;
+    });
   });
 })();
 `;

@@ -39,8 +39,10 @@ Authored by this project, not part of the capture:
 | `www.voiceflow.com/dashboard` | Product shell replacing `creator.voiceflow.com` |
 | `www.voiceflow.com/status` | Service status board replacing `status.voiceflow.com` |
 | `www.voiceflow.com/trust` | Trust centre replacing `trust.voiceflow.com` |
-| `www.voiceflow.com/js/relvoca-auth.js` | Demo session state (localStorage only, no server) |
-| `www.voiceflow.com/js/relvoca-verify.js` | "Check your email" 6-digit code step, shared by login and signup |
+| `www.voiceflow.com/js/relvoca-auth.js` | Session state, read from `/api/auth/me` |
+| `www.voiceflow.com/js/relvoca-verify.js` | "Check your email" link notice, shared by login and signup |
+| `api/auth/*.mjs`, `api/_lib/*.mjs` | Passwordless auth on Neon Postgres + Resend |
+| `db/schema.sql` | Auth schema (users, login_tokens, sessions) |
 | `www.voiceflow.com/images/logo.svg` | RelVoca wordmark (overwrote the Voiceflow one) |
 | `www.voiceflow.com/favicon.png`, `webclip.png` | RelVoca icons |
 

@@ -1,101 +1,88 @@
 /**
- * relvoca-auth.js — demo session state for the offline RelVoca build.
+ * relvoca-auth.js — session state, read from the server.
  *
- * There is no auth server here, so "logged in" means one localStorage record in
- * this browser. Its only job is to drive UI that the captured markup already
- * ships: the nav renders `.nav-pill.is-login`, `.nav-cta` and `.nav-cta.is-authed`
- * side by side and expects something to decide which are visible. This does
- * that, and nothing else.
+ * This used to keep a fake session in localStorage. It now asks
+ * /api/auth/me, which reads an httpOnly cookie the page cannot see. That is
+ * the point: a session token readable by any script on the page is a session
+ * token any injected script can steal.
  *
- * Storage can throw outright (Safari private mode, site-data blocked), so every
- * access is guarded and a failure degrades to "logged out" rather than breaking
- * the page.
+ * Its other job is unchanged, and is the reason the file exists at all: the
+ * captured nav ships both signed-in and signed-out states in the markup and
+ * switches between them on a single attribute:
+ *
+ *   .nav-cta.is-authed                                    { display: none }
+ *   html[data-vf-auth] .nav-auth .is-login                { display: none }
+ *   html[data-vf-auth] .nav-auth .nav-cta:not(.is-authed) { display: none }
+ *   html[data-vf-auth] .nav-auth .nav-cta.is-authed       { display: flex }
+ *
+ * So the whole nav swap is that one attribute. Toggling `hidden` on the buttons
+ * instead loses to those `display` rules.
  */
 (function (window, document) {
   'use strict';
 
-  var KEY = 'relvoca.session';
-
   /**
    * The nav's buttons carry explicit `display` rules, which outrank the user
-   * agent's `[hidden]{display:none}`. Without this the elements stay visible
-   * after `el.hidden = true` and the logged-in and logged-out states render on
-   * top of each other. Injected rather than shipped in a stylesheet so any page
-   * that loads this script is covered.
+   * agent's `[hidden]{display:none}`. Without this, elements we hide with
+   * `el.hidden = true` stay visible.
    */
   (function ensureHiddenWorks() {
-    var css = '[hidden]{display:none !important}';
     var tag = document.createElement('style');
     tag.setAttribute('data-relvoca-auth', '');
-    tag.appendChild(document.createTextNode(css));
+    tag.appendChild(document.createTextNode('[hidden]{display:none !important}'));
     (document.head || document.documentElement).appendChild(tag);
   })();
 
-  function safeGet() {
-    try {
-      var raw = window.localStorage.getItem(KEY);
-      if (!raw) return null;
-      var s = JSON.parse(raw);
-      return s && s.email ? s : null;
-    } catch (e) {
-      return null;
-    }
-  }
-
-  function safeSet(session) {
-    // Throws when storage is unavailable; callers surface that to the user.
-    window.localStorage.setItem(KEY, JSON.stringify(session));
-  }
-
-  function nameFor(email) {
-    var local = String(email).split('@')[0].replace(/[._-]+/g, ' ').trim();
-    return local.replace(/\b[a-z]/g, function (c) {
-      return c.toUpperCase();
-    }) || 'There';
-  }
+  var current = null; // last known user, or null
+  var pending = null; // in-flight /api/auth/me
 
   var Auth = {
-    get: safeGet,
-
-    isAuthed: function () {
-      return !!safeGet();
+    /** Ask the server who is signed in. Cached per page load. */
+    load: function () {
+      if (pending) return pending;
+      pending = fetch('/api/auth/me', {
+        credentials: 'same-origin',
+        headers: { Accept: 'application/json' },
+      })
+        .then(function (r) {
+          return r.ok ? r.json() : { user: null };
+        })
+        .catch(function () {
+          // Offline or the API is down: render as signed out rather than
+          // leaving the nav in a half-painted state.
+          return { user: null };
+        })
+        .then(function (data) {
+          current = (data && data.user) || null;
+          Auth.paint();
+          return current;
+        });
+      return pending;
     },
 
-    login: function (email) {
-      var session = {
-        email: String(email).trim(),
-        name: nameFor(email),
-        workspace: String(email).split('@')[1] || 'workspace',
-        at: Date.now()
-      };
-      safeSet(session);
-      Auth.paint();
-      return session;
+    /** Synchronous read of the last known user. Null until load() resolves. */
+    get: function () {
+      return current;
+    },
+
+    isAuthed: function () {
+      return !!current;
     },
 
     logout: function () {
-      try {
-        window.localStorage.removeItem(KEY);
-      } catch (e) {
-        /* nothing to clear */
-      }
-      Auth.paint();
+      return fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' })
+        .catch(function () {})
+        .then(function () {
+          current = null;
+          Auth.paint();
+          window.location.href = '/';
+        });
     },
 
     /** Show the nav state that matches the session. */
     paint: function () {
-      var authed = Auth.isAuthed();
+      var authed = !!current;
 
-      // The captured stylesheet already carries both nav states and switches
-      // between them on an attribute:
-      //
-      //   .nav-cta.is-authed                             { display: none }
-      //   html[data-vf-auth] .nav-auth .is-login         { display: none }
-      //   html[data-vf-auth] .nav-auth .nav-cta:not(.is-authed) { display: none }
-      //   html[data-vf-auth] .nav-auth .nav-cta.is-authed{ display: flex }
-      //
-      // So the whole nav swap is this one attribute. Toggling `hidden` on the
-      // individual buttons instead would lose to those `display` rules.
       if (authed) document.documentElement.setAttribute('data-vf-auth', '');
       else document.documentElement.removeAttribute('data-vf-auth');
 
@@ -106,19 +93,25 @@
       }
 
       var slots = document.querySelectorAll('[data-auth-field]');
-      var s = Auth.get() || {};
+      var s = current || {};
       for (var j = 0; j < slots.length; j++) {
         var key = slots[j].getAttribute('data-auth-field');
         if (s[key]) slots[j].textContent = s[key];
       }
     },
 
-    /** Send anonymous visitors to /login, preserving where they were headed. */
+    /**
+     * Gate a page on being signed in. Resolves to the user, or redirects to
+     * /login and resolves to null. Async because the answer lives on the
+     * server — callers must await it.
+     */
     requireSession: function () {
-      if (Auth.isAuthed()) return true;
-      location.replace('/login?next=' + encodeURIComponent(location.pathname));
-      return false;
-    }
+      return Auth.load().then(function (user) {
+        if (user) return user;
+        window.location.replace('/login?next=' + encodeURIComponent(window.location.pathname));
+        return null;
+      });
+    },
   };
 
   window.RelVocaAuth = Auth;
@@ -128,12 +121,7 @@
     if (!t) return;
     e.preventDefault();
     Auth.logout();
-    location.href = '/';
   });
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', Auth.paint);
-  } else {
-    Auth.paint();
-  }
+  Auth.load();
 })(window, document);

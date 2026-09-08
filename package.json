@@ -5,7 +5,7 @@
   "description": "Local RelVoca site build. Started as an offline HTTrack capture of www.voiceflow.com (2-3 Sep 2026), rebranded to RelVoca on 5 Sep 2026. Not an archive any more, and not redistributable or deployable.",
   "license": "UNLICENSED",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "scripts": {
     "serve": "node tools/serve.js",
@@ -95,5 +95,9 @@
         "tools/inject-auth.js"
       ]
     }
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "resend": "^4.0.1"
   }
 }

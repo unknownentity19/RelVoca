@@ -124,31 +124,38 @@
   if (!email) return;
 
   function start() {
-    if (!window.RelVocaVerify || !window.RelVocaAuth) return;
+    if (!window.RelVocaVerify) return;
 
-    // Drop the query so a refresh does not reopen the prompt behind the user's
-    // back; the CTA has already prefilled the field from it.
-    try {
-      history.replaceState(null, '', location.pathname);
-    } catch (e) {
-      /* older browsers just keep the query */
+    // Drop the query so a refresh does not re-send behind the user's back;
+    // the CTA has already prefilled the field from it.
+    try { history.replaceState(null, '', location.pathname); } catch (e) {}
+
+    function request(addr) {
+      return fetch('/api/auth/request', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'same-origin',
+        body: JSON.stringify({ email: addr })
+      });
     }
 
-    window.RelVocaVerify.open({
-      email: email,
-      onCancel: function () {
-        var input = document.querySelector('.vf-cta input');
-        if (input) { input.focus(); input.select(); }
-      },
-      onVerified: function (verified) {
-        try {
-          window.RelVocaAuth.login(verified);
-        } catch (err) {
-          // Storage blocked: say so rather than looping on a dead button.
-          alert('Could not start a session \u2014 your browser is blocking site storage.');
-          return;
+    request(email).then(function (r) {
+      if (!r.ok) throw new Error('request failed');
+      window.RelVocaVerify.sent({
+        email: email,
+        onResend: function (addr) { request(addr); },
+        onCancel: function () {
+          var input = document.querySelector('.vf-cta input');
+          if (input) { input.focus(); input.select(); }
         }
-        location.href = '/dashboard';
+      });
+    }).catch(function () {
+      // Surface it rather than leaving the page looking like nothing happened.
+      var bar = document.querySelector('.vf-cta');
+      if (bar) {
+        bar.classList.add('is-invalid');
+        var err = bar.querySelector('.vf-cta-err');
+        if (err) err.textContent = 'We could not send the link just now. Try again in a moment.';
       }
     });
   }

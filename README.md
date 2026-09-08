@@ -83,10 +83,28 @@ No dependencies, no build step, no install — Node's standard library only.
 
 ## Deploying to Vercel
 
+This repository **is** the deployment: it tracks the built `public/` directory,
+not the capture sources. Vercel serves it directly with no build step.
+
+**From GitHub (how it is set up):** import the repo at
+[vercel.com/new](https://vercel.com/new). `vercel.json` already sets
+`outputDirectory: public` and `framework: null`, and `package.json` deliberately
+has no `build` script, so Vercel skips building and just serves the files. No
+settings to fill in.
+
+**Rebuilding after a change to the sources** (which live only on the machine
+that built them):
+
 ```sh
-npm run build:vercel     # generate public/  (~729 MB, 9,411 files)
+npm run build:vercel     # regenerate public/  (~736 MB, 9,417 files)
 npm run preview:vercel   # check it at http://localhost:8081
-npx vercel deploy        # first deploy; add --prod when you are happy
+git add public && git commit && git push
+```
+
+**Deploying straight from the CLI instead**, without GitHub:
+
+```sh
+npx vercel deploy        # add --prod when you are happy
 ```
 
 **Read the scope notice above before you deploy.** Publishing puts real named
@@ -117,12 +135,14 @@ Two deliberate choices worth keeping:
   would probably be fine — but no docs page emits a prefix-less `/images` ref,
   so the rewrite buys nothing and the dependency is not worth taking.
 - **The npm script is `build:vercel`, not `build`.** Vercel runs a `build`
-  script when it finds one; that would fail here, because `.vercelignore`
-  uploads only `public/` and `vercel.json` — never `tools/`.
+  script whenever it finds one. That would fail here in either deploy mode: the
+  capture sources it copies from are not in this repository, and for CLI deploys
+  `.vercelignore` uploads only `public/` and `vercel.json`. Renaming this script
+  to `build` breaks deployment.
 
 ### Size
 
-729 MB across 9,411 files. The largest single file is 5.8 MB, so Vercel's 100 MB
+736 MB across 9,417 files. The largest single file is 5.8 MB, so Vercel's 100 MB
 per-file limit is not a concern, but check the total against your plan's limits
 before the first deploy. If you need it smaller, `/docs` plus its images
 (`mintcdn.com/`) is 354 MB — 43% of the deployment — and dropping it is the only

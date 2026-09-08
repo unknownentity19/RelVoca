@@ -56,14 +56,28 @@ export default async function handler(req, res) {
     // Someone trying to bury a stranger's inbox gets no signal either way.
     if ((await recentTokenCount(user.id, TOKEN_TTL_MIN)) >= MAX_PER_WINDOW) {
       console.warn(`rate limit: ${email} already has ${MAX_PER_WINDOW} live tokens`);
-      return res.status(200).json({ ok: true, email });
+      return res.status(200).json({ ok: true, email, delivered: true });
     }
 
     const token = await issueToken(user.id);
     const link = `${originOf(req)}/api/auth/callback?token=${encodeURIComponent(token)}`;
-    await sendSignInLink(email, link); // failures are logged, not surfaced
+    const result = await sendSignInLink(email, link);
 
-    return res.status(200).json({ ok: true, email });
+    // `delivered` reports whether the mail provider accepted the message. It is
+    // safe to return: the send is attempted for every syntactically valid
+    // address, whether or not an account already existed, so the outcome
+    // depends on the recipient's deliverability and never on account status.
+    //
+    // Without it the page says "check your email" after a rejected send and the
+    // visitor waits for a message that was never sent — which is exactly what
+    // happens on a fresh Resend account, where the shared sender only delivers
+    // to the account owner until a domain is verified.
+    return res.status(200).json({
+      ok: true,
+      email,
+      delivered: result.sent,
+      reason: result.sent ? undefined : result.reason,
+    });
   } catch (err) {
     console.error('auth/request failed:', err);
     return res.status(500).json({ error: 'server_error' });

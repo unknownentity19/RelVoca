@@ -139,8 +139,27 @@
       });
     }
 
+    function fail(message) {
+      // Surface it rather than leaving the page looking like nothing happened.
+      var bar = document.querySelector('.vf-cta');
+      if (bar) {
+        bar.classList.add('is-invalid');
+        var err = bar.querySelector('.vf-cta-err');
+        if (err) err.textContent = message;
+      }
+    }
+
     request(email).then(function (r) {
       if (!r.ok) throw new Error('request failed');
+      return r.json();
+    }).then(function (data) {
+      // Only show "check your email" if the mail provider accepted it.
+      if (data && data.delivered === false) {
+        fail('We could not deliver a link to that address. On this build only '
+          + 'the mailbox the Resend account was created with can receive mail, '
+          + 'until a sending domain is verified.');
+        return;
+      }
       window.RelVocaVerify.sent({
         email: email,
         onResend: function (addr) { request(addr); },
@@ -150,13 +169,7 @@
         }
       });
     }).catch(function () {
-      // Surface it rather than leaving the page looking like nothing happened.
-      var bar = document.querySelector('.vf-cta');
-      if (bar) {
-        bar.classList.add('is-invalid');
-        var err = bar.querySelector('.vf-cta-err');
-        if (err) err.textContent = 'We could not send the link just now. Try again in a moment.';
-      }
+      fail('We could not send the link just now. Try again in a moment.');
     });
   }
 

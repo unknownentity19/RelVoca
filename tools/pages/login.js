@@ -108,10 +108,22 @@ const JS = `
         alert.classList.add('on');
         return;
       }
-      window.RelVocaVerify.sent({
-        email: value,
-        onResend: function (addr) { request(addr); },
-        onCancel: function () { email.focus(); email.select(); }
+      return r.json().then(function (data) {
+        // Only claim we sent something if the mail provider took it. Saying
+        // "check your email" after a rejected send leaves people waiting for a
+        // message that does not exist.
+        if (data && data.delivered === false) {
+          alert.textContent = 'We could not deliver a link to that address. '
+            + 'On this build only the mailbox the Resend account was created with '
+            + 'can receive mail, until a sending domain is verified.';
+          alert.classList.add('on');
+          return;
+        }
+        window.RelVocaVerify.sent({
+          email: value,
+          onResend: function (addr) { request(addr); },
+          onCancel: function () { email.focus(); email.select(); }
+        });
       });
     }).catch(function () {
       busy(false, 'Email me a sign-in link');

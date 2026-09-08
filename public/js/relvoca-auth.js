@@ -33,36 +33,6 @@
     (document.head || document.documentElement).appendChild(tag);
   })();
 
-  /**
-   * Let the captured CTA accept any email domain.
-   *
-   * vf-cta.js refuses free-mail addresses before it will submit, showing
-   * "Please use your work email." and never firing. That was Voiceflow's
-   * lead-qualification rule; here the same form creates accounts, so it locked
-   * out everyone on gmail, outlook, icloud and 18 other domains.
-   *
-   * Emptying the list via /api/icp-config is not enough: that config feeds
-   * VFQualify.check(), while the CTA reads the hardcoded VFQualify.freemail
-   * array directly. The array is emptied *in place* rather than reassigned,
-   * because vf-cta.js captures a reference to it and would never see a new one.
-   *
-   * vf-qualify.js is deferred and may not have run yet, so this retries briefly
-   * and gives up rather than polling forever.
-   */
-  (function allowAnyEmailDomain() {
-    function clear() {
-      var q = window.VFQualify;
-      if (!q || !Array.isArray(q.freemail)) return false;
-      q.freemail.length = 0;
-      return true;
-    }
-    if (clear()) return;
-    var tries = 0;
-    var timer = setInterval(function () {
-      if (clear() || ++tries > 40) clearInterval(timer);
-    }, 50);
-  })();
-
   var current = null; // last known user, or null
   var pending = null; // in-flight /api/auth/me
 

@@ -1,45 +1,13 @@
 {
-  "_comment": "OFFLINE ARCHIVAL STUB - not part of the original www.voiceflow.com crawl. The live site served this from a serverless route; the HTTrack mirror could not capture it, so the homepage's /js/vf-qualify.js got a 404 here. This static file reproduces the response shape that vf-qualify.js accepts (freemail[] and own[] are required arrays; competitors[]/excluded[] optional arrays; minEmp/maxRank optional numbers) and its values are copied verbatim from vf-qualify.js's own built-in fallbacks, so page behaviour is identical to the un-stubbed path. Inert: static data only, no network activity.",
+  "_comment": "Config for /js/vf-qualify.js. Originally an OFFLINE ARCHIVAL STUB reproducing Voiceflow's own lead-qualification rules. Those rules are deliberately neutralised here: they existed to filter sales leads, and this site uses the same form to create real accounts. As captured they refused any personal address (21 free-mail domains, gmail.com included), any company under 200 employees, and 10 whole industries -- so most people simply could not sign up, and the form failed without submitting. Empty lists and permissive thresholds let every address through to /api/auth/request, which does its own syntax check. Inert: static data only, no network activity.",
   "_stub": true,
-  "freemail": [
-    "gmail.com",
-    "yahoo.com",
-    "hotmail.com",
-    "outlook.com",
-    "icloud.com",
-    "aol.com",
-    "proton.html",
-    "protonmail.com",
-    "live.com",
-    "msn.com",
-    "me.com",
-    "mail.com",
-    "gmx.com",
-    "yandex.com",
-    "qq.com",
-    "duck.com",
-    "hey.com",
-    "fastmail.com",
-    "zoho.com",
-    "yopmail.com",
-    "mailinator.com"
-  ],
+  "freemail": [],
   "own": [
     "voiceflow.com"
   ],
   "competitors": [],
-  "minEmp": 200,
-  "maxRank": 150000,
-  "excluded": [
-    "government administration",
-    "religious institutions",
-    "political organization",
-    "higher education",
-    "education management",
-    "primary/secondary education",
-    "e-learning",
-    "nonprofit organization management",
-    "philanthropy",
-    "fund-raising"
-  ]
+  "minEmp": 0,
+  "maxRank": 100000000,
+  "excluded": [],
+  "_neutralised": "2026-09-05: freemail/excluded emptied, minEmp/maxRank relaxed"
 }

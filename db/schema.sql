@@ -20,7 +20,11 @@ CREATE TABLE IF NOT EXISTS users (
   name          text,
   workspace     text,
   created_at    timestamptz NOT NULL DEFAULT now(),
-  last_login_at timestamptz
+  last_login_at timestamptz,
+  -- Set when the emailed link is followed. Signing in does not require it:
+  -- the session starts immediately and verification confirms the address
+  -- afterwards, so a mail outage never locks anyone out.
+  email_verified_at timestamptz
 );
 
 CREATE TABLE IF NOT EXISTS login_tokens (

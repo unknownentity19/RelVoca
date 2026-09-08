@@ -1,13 +1,19 @@
 /**
  * relvoca-verify.js — the "check your email" notice.
  *
- * Shared by /login and /signup. This used to show a 6-digit code and print the
- * code on screen, which gave the game away. There is a real mail path now, so
- * the popup just reports what happened: a link was sent, click it to sign in.
- * Nothing to type, nothing to fake.
+ * Shared by /login and /signup. The visitor is already signed in by the time
+ * this appears — the session starts on submit, so nothing here gates access.
+ * It reports what happened to the verification email and gets out of the way.
+ *
+ * No code is ever displayed. An earlier version printed the one-time code on
+ * screen, which made the whole flow read as a mock.
+ *
+ * The wording follows `delivered`, so it never promises an email that was not
+ * actually sent — the sending domain cannot always deliver, and claiming
+ * otherwise leaves people waiting for a message that does not exist.
  *
  * Usage:
- *   RelVocaVerify.sent({ email, onResend })   // show the notice
+ *   RelVocaVerify.sent({ email, delivered, continueTo, onResend })
  *   RelVocaVerify.close()
  *
  * Styles are injected here so the component is self-contained. They read the
@@ -74,11 +80,11 @@
       '<div class="rv-card">' +
       '<div class="rv-icon">' + ICON + '</div>' +
       '<h2 id="rv-title">Check your email</h2>' +
-      '<p class="rv-lede">We sent a sign-in link to</p>' +
+      '<p class="rv-lede" id="rv-lede">We sent a verification link to</p>' +
       '<span class="rv-mail" id="rv-mail"></span>' +
-      '<p class="rv-hint">The link signs you in straight away. It works once and expires in 15 minutes.</p>' +
-      '<button class="rv-btn" id="rv-done" type="button">Got it</button>' +
-      '<p class="rv-foot">Wrong address or nothing arrived? ' +
+      '<p class="rv-hint" id="rv-hint">You&#8217;re signed in already &#8212; opening the link just confirms your address.</p>' +
+      '<button class="rv-btn" id="rv-done" type="button">Continue to dashboard</button>' +
+      '<p class="rv-foot" id="rv-foot">Nothing arrived? ' +
       '<button type="button" id="rv-resend">Send again</button>' +
       '<span class="rv-sep">&#183;</span>' +
       '<button type="button" id="rv-back">Use a different email</button></p>' +
@@ -87,7 +93,10 @@
 
     els = {
       veil: veil,
+      lede: veil.querySelector('#rv-lede'),
       mail: veil.querySelector('#rv-mail'),
+      hint: veil.querySelector('#rv-hint'),
+      foot: veil.querySelector('#rv-foot'),
       done: veil.querySelector('#rv-done'),
       resend: veil.querySelector('#rv-resend'),
       back: veil.querySelector('#rv-back'),
@@ -125,20 +134,53 @@
 
   function close(wantsDifferentEmail) {
     if (!els) return;
+    var to = state && state.continueTo;
+    var cb = state && state.onCancel;
+
     els.veil.removeAttribute('data-open');
     document.documentElement.style.overflow = '';
-    var cb = state && state.onCancel;
     state = null;
-    if (wantsDifferentEmail && typeof cb === 'function') cb();
+
+    if (wantsDifferentEmail) {
+      if (typeof cb === 'function') cb();
+      return;
+    }
+    // Dismissing means "carry on", and they are already signed in.
+    if (to) window.location.href = to;
   }
 
   window.RelVocaVerify = {
-    /** Show the notice. `onResend(email)` re-triggers the request. */
+    /**
+     * Show the notice. `delivered === false` means the mail provider refused
+     * the message, so the copy drops the promise of an email entirely rather
+     * than sending someone to an empty inbox.
+     */
     sent: function (opts) {
       if (!els) build();
-      state = { email: opts.email, onResend: opts.onResend, onCancel: opts.onCancel };
+      state = {
+        email: opts.email,
+        onResend: opts.onResend,
+        onCancel: opts.onCancel,
+        continueTo: opts.continueTo || '/dashboard',
+      };
 
+      var delivered = opts.delivered !== false;
       els.mail.textContent = opts.email;
+
+      if (delivered) {
+        els.veil.querySelector('#rv-title').textContent = 'Check your email';
+        els.lede.textContent = 'We sent a verification link to';
+        els.hint.textContent =
+          'You\u2019re signed in already \u2014 opening the link just confirms your address.';
+        els.foot.hidden = false;
+      } else {
+        els.veil.querySelector('#rv-title').textContent = 'You\u2019re signed in';
+        els.lede.textContent = 'Signed in as';
+        els.hint.textContent =
+          'We could not send a verification email to this address, so your account is unverified for now. Everything else works.';
+        els.foot.hidden = true;
+      }
+
       els.resend.disabled = false;
       els.resend.textContent = 'Send again';
 

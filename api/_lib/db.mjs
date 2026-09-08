@@ -56,6 +56,10 @@ export function ensureSchema() {
         last_login_at timestamptz
       )`;
 
+    // Added after the first deployment, so it has to be a separate statement:
+    // CREATE TABLE IF NOT EXISTS does nothing to a table that already exists.
+    await sql`ALTER TABLE users ADD COLUMN IF NOT EXISTS email_verified_at timestamptz`;
+
     await sql`
       CREATE TABLE IF NOT EXISTS login_tokens (
         token_hash bytea PRIMARY KEY,

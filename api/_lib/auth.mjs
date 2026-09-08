@@ -91,10 +91,14 @@ export async function consumeToken(token) {
     RETURNING user_id`;
   if (!rows.length) return null;
 
+  // Following the link is the proof of mailbox ownership, so this is where the
+  // address becomes verified. COALESCE keeps the first verification date.
   const users = await sql`
-    UPDATE users SET last_login_at = now()
+    UPDATE users
+       SET last_login_at = now(),
+           email_verified_at = COALESCE(email_verified_at, now())
      WHERE id = ${rows[0].user_id}
-    RETURNING id, email, name, workspace`;
+    RETURNING id, email, name, workspace, email_verified_at`;
   return users[0] ?? null;
 }
 

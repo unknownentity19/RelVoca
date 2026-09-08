@@ -2,15 +2,27 @@
  * POST /api/auth/request  { email }
  *
  * The single entry point for both signing up and signing in. A new address gets
- * an account; a known one just gets a link. The response is identical either
- * way, and identical again when the address is rate-limited or the email fails
- * to send — so this endpoint cannot be used to discover who has an account.
+ * an account; a known one is signed back in.
+ *
+ * The session starts here, immediately, rather than waiting for the emailed
+ * link to be followed. That is a deliberate trade: it means possession of the
+ * mailbox is no longer proven, so this is not authentication in the strict
+ * sense — anyone can sign in as any address they type. It was chosen because
+ * the deployment cannot reliably send mail (the sending domain is hosted
+ * elsewhere), and gating access on an email that may never arrive would leave
+ * the site unusable.
+ *
+ * The verification link is still issued and still emailed when it can be. It
+ * confirms the address afterwards, recorded as users.email_verified_at.
  *
  * Always 200 with {ok:true}. The only 4xx is a malformed address, which reveals
  * nothing about the account behind it.
  */
 import { ensureSchema } from '../_lib/db.mjs';
-import { findOrCreateUser, issueToken, recentTokenCount, TOKEN_TTL_MIN } from '../_lib/auth.mjs';
+import {
+  findOrCreateUser, issueToken, recentTokenCount, createSession, sessionCookie,
+  TOKEN_TTL_MIN,
+} from '../_lib/auth.mjs';
 import { sendSignInLink } from '../_lib/email.mjs';
 
 const EMAIL_RE = /^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/;
@@ -52,8 +64,12 @@ export default async function handler(req, res) {
     await ensureSchema();
     const user = await findOrCreateUser(email);
 
-    // Over the limit: stop, but answer exactly as if a link had been sent.
-    // Someone trying to bury a stranger's inbox gets no signal either way.
+    // Sign in first, so the outcome never depends on mail delivery.
+    const secret = await createSession(user.id, req.headers['user-agent']);
+    res.setHeader('Set-Cookie', sessionCookie(secret));
+
+    // Over the limit on verification mails: still signed in, just no new email.
+    // Someone trying to bury a stranger's inbox gets no extra signal.
     if ((await recentTokenCount(user.id, TOKEN_TTL_MIN)) >= MAX_PER_WINDOW) {
       console.warn(`rate limit: ${email} already has ${MAX_PER_WINDOW} live tokens`);
       return res.status(200).json({ ok: true, email, delivered: true });
@@ -63,15 +79,11 @@ export default async function handler(req, res) {
     const link = `${originOf(req)}/api/auth/callback?token=${encodeURIComponent(token)}`;
     const result = await sendSignInLink(email, link);
 
-    // `delivered` reports whether the mail provider accepted the message. It is
-    // safe to return: the send is attempted for every syntactically valid
-    // address, whether or not an account already existed, so the outcome
-    // depends on the recipient's deliverability and never on account status.
-    //
-    // Without it the page says "check your email" after a rejected send and the
-    // visitor waits for a message that was never sent — which is exactly what
-    // happens on a fresh Resend account, where the shared sender only delivers
-    // to the account owner until a domain is verified.
+    // `delivered` reports whether the mail provider accepted the message, so
+    // the page can promise an email only when one actually went out. It is safe
+    // to return: the send is attempted for every syntactically valid address,
+    // whether or not an account already existed, so it reflects the recipient's
+    // deliverability and never account status.
     return res.status(200).json({
       ok: true,
       email,

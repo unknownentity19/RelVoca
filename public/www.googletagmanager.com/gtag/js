@@ -1,0 +1,36 @@
+/*
+ * OFFLINE ARCHIVAL STUB - www.googletagmanager.com/gtag/js
+ *
+ * Not part of the original crawl. 414 mirrored pages (mostly /docs/*) preload
+ * and load Google's gtag.js with the GA4 measurement id G-F0KHK5CXY4. That is a
+ * third-party host, so offline it can never resolve and any page code touching
+ * window.dataLayer or gtag() would throw a ReferenceError.
+ *
+ * This file defines exactly the globals the real gtag.js publishes - dataLayer,
+ * gtag, google_tag_manager - as inert no-ops. It records nothing, contacts
+ * nothing, and starts no timers. Queued dataLayer entries are left in place so a
+ * reader inspecting the archive can still see what the page would have sent.
+ *
+ * Placed at the path the mirror requests so no archived HTML had to be edited.
+ */
+(function () {
+  'use strict';
+  if (typeof window === 'undefined') { return; }
+  var w = window;
+
+  // Real gtag.js creates the queue if the inline snippet has not already.
+  w.dataLayer = w.dataLayer || [];
+
+  // The inline GA4 snippet normally defines gtag(); define it only if missing so
+  // an archived page that ships its own copy keeps the original bytes in charge.
+  if (typeof w.gtag !== 'function') {
+    w.gtag = function () { w.dataLayer.push(arguments); };
+  }
+
+  // Some tag code feature-detects the container registry before using it.
+  w.google_tag_manager = w.google_tag_manager || {};
+  w.google_tag_data = w.google_tag_data || {};
+
+  // Marker so an inspector can tell a stubbed load from a real one.
+  w.__gtagOfflineStub = true;
+})();
